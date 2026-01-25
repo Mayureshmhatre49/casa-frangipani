@@ -18,15 +18,18 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
+
 <body class="antialiased bg-[#0A0A0A] text-white selection:bg-[#D4AF37]/20 selection:text-white font-dm-sans">
+  
+
     <!-- Hero Section -->
     <main class="relative min-h-screen w-full overflow-hidden flex flex-col lg:flex-row border-b border-white/5">
         <!-- Animated Background Carousel & Decorative layers -->
         <div class="absolute inset-0 z-0">
             <div class="hero-bg-carousel">
-                <div class="hero-bg-slide active"><img src="https://images.unsplash.com/photo-1575664344328-ef0d7d2b3dae" alt="Casa Frangipani luxury villa" class="w-full h-full object-cover"/></div>
-                <div class="hero-bg-slide"><img src="https://images.unsplash.com/photo-1580823648685-fa304676ed09" alt="Casa Frangipani pool view" class="w-full h-full object-cover"/></div>
-                <div class="hero-bg-slide"><img src="https://img.rocket.new/generatedImages/rocket_gen_img_1f5b876e3-1769288748376.png" alt="Casa Frangipani interior" class="w-full h-full object-cover"/></div>
+                <div class="hero-bg-slide active"><img src="https://img.vistarooms.com/gallery/casa-frangipani-657c43.jpg" alt="Casa Frangipani luxury villa" class="w-full h-full object-cover"/></div>
+                <div class="hero-bg-slide"><img src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg" alt="Casa Frangipani pool view" class="w-full h-full object-cover"/></div>
+                <div class="hero-bg-slide"><img src="https://img.vistarooms.com/gallery/casa-frangipani-9e5e0c.jpg" alt="Casa Frangipani interior" class="w-full h-full object-cover"/></div>
             </div>
             <div class="absolute inset-0 bg-gradient-to-br from-black/95 via-black/70 to-black/50"></div>
             <div class="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/60"></div>
@@ -82,10 +85,7 @@
                 </div>
 
                 <div class="flex flex-wrap gap-4 animate-fade-in-up">
-                    <a href="#booking" class="group relative overflow-hidden flex items-center gap-2.5 bg-[#D4AF37] text-black px-8 py-4 rounded-lg font-semibold text-sm hover:bg-[#B8941F] transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-[0_10px_30px_rgba(212,175,55,0.3)]">
-                        <i data-lucide="calendar" class="w-5 h-5 relative z-10"></i>
-                        <span class="relative z-10">Check Availability</span>
-                    </a>
+                
                     <a href="https://wa.me/919876543210" target="_blank" class="group relative overflow-hidden flex items-center gap-2.5 border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-sm hover:bg-white/10 hover:border-[#D4AF37] transition-all duration-300 backdrop-blur-md transform hover:scale-105 hover:-translate-y-1 shadow-lg">
                         <i data-lucide="message-circle" class="w-5 h-5"></i>
                         <span>WhatsApp Enquiry</span>
@@ -173,6 +173,8 @@
         </div>
     </section>
 
+  
+
     <!-- About The Villa -->
     <section class="py-24 px-6 md:px-12 bg-black border-b border-white/5 relative overflow-hidden">
         <div class="absolute top-[20%] right-[10%] w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-[128px] pointer-events-none"></div>
@@ -214,7 +216,7 @@
                 <div class="relative">
                     <div class="absolute -top-4 -right-4 w-32 h-32 bg-[#D4AF37]/20 rounded-full blur-3xl"></div>
                     <img 
-                        src="https://images.unsplash.com/photo-1660731513683-4cb0c9ac09b8" 
+                        src="https://img.vistarooms.com/gallery/casa-frangipani-9e5e0c.jpg" 
                         alt="Casa Frangipani living room with teakwood interiors and pool view"
                         class="rounded-2xl border border-white/10 relative z-10 shadow-2xl"
                     />
@@ -323,7 +325,7 @@
                 <div class="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all animate-on-scroll">
                     <div class="relative h-64 overflow-hidden">
                         <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1dd87e411-1769287083497.png" 
+                            src="https://img.vistarooms.com/gallery/casa-frangipani-3b392f.jpg" 
                             alt="Ground floor bedroom with pool access at Casa Frangipani"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
@@ -352,7 +354,7 @@
                 <div class="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all animate-on-scroll" style="transition-delay: 100ms">
                     <div class="relative h-64 overflow-hidden">
                         <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_11aa5b17d-1769287083914.png" 
+                            src="https://img.vistarooms.com/gallery/casa-frangipani-5c1a08.jpg" 
                             alt="First floor bedroom with mountain views at Casa Frangipani"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
@@ -381,7 +383,7 @@
                 <div class="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all animate-on-scroll" style="transition-delay: 200ms">
                     <div class="relative h-64 overflow-hidden">
                         <img 
-                            src="https://images.unsplash.com/photo-1690003608775-f9103716edbd" 
+                            src="https://img.vistarooms.com/gallery/casa-frangipani-a8d0fb.jpg" 
                             alt="Spacious living room with pool view at Casa Frangipani"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
@@ -407,7 +409,7 @@
                 <div class="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all animate-on-scroll" style="transition-delay: 300ms">
                     <div class="relative h-64 overflow-hidden">
                         <img 
-                            src="https://images.unsplash.com/photo-1497366672149-e5e4b4d34eb3" 
+                            src="https://img.vistarooms.com/gallery/casa-frangipani-9629f7.jpg" 
                             alt="Dining area for 10+ guests at Casa Frangipani"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
@@ -431,7 +433,7 @@
             </div>
 
             <!-- Experiences -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 mt-4 gap-6">
                 <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-[#D4AF37]/30 transition-all group animate-on-scroll">
                     <div class="w-14 h-14 rounded-full bg-[#D4AF37]/10 flex items-center justify-center mb-4 group-hover:bg-[#D4AF37]/20 transition-colors">
                         <i data-lucide="cake" class="w-7 h-7 text-[#D4AF37]"></i>
@@ -474,10 +476,10 @@
             </div>
 
             <!-- Gallery -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 mt-4 gap-4">
                 <div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden border border-white/10 group animate-on-scroll">
                     <img 
-                        src="https://img.rocket.new/generatedImages/rocket_gen_img_101b3ce93-1769287084103.png" 
+                        src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg" 
                         alt="Casa Frangipani pool and villa exterior"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
@@ -486,7 +488,7 @@
 
                 <div class="relative rounded-2xl overflow-hidden border border-white/10 group animate-on-scroll" style="transition-delay: 100ms">
                     <img 
-                        src="https://img.rocket.new/generatedImages/rocket_gen_img_187e059f5-1769287082493.png" 
+                        src="https://img.vistarooms.com/gallery/casa-frangipani-2c9b15.jpg" 
                         alt="Casa Frangipani bedroom"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
@@ -494,7 +496,7 @@
 
                 <div class="relative rounded-2xl overflow-hidden border border-white/10 group animate-on-scroll" style="transition-delay: 150ms">
                     <img 
-                        src="https://img.rocket.new/generatedImages/rocket_gen_img_10cb3cf83-1768794049643.png" 
+                        src="https://img.vistarooms.com/gallery/casa-frangipani-483f65.jpg" 
                         alt="Casa Frangipani mountain views"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
@@ -502,7 +504,7 @@
 
                 <div class="relative rounded-2xl overflow-hidden border border-white/10 group animate-on-scroll" style="transition-delay: 200ms">
                     <img 
-                        src="https://images.unsplash.com/photo-1722247521731-14d1b192bfb4" 
+                        src="https://img.vistarooms.com/gallery/casa-frangipani-72d47e.jpg" 
                         alt="Casa Frangipani living area"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
@@ -510,27 +512,13 @@
 
                 <div class="relative rounded-2xl overflow-hidden border border-white/10 group animate-on-scroll" style="transition-delay: 250ms">
                     <img 
-                        src="https://images.unsplash.com/photo-1676088933950-bae87cf34fee" 
+                        src="https://img.vistarooms.com/gallery/casa-frangipani-a74712.jpg" 
                         alt="Casa Frangipani dining area"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                 </div>
 
-                <div class="relative rounded-2xl overflow-hidden border border-white/10 group animate-on-scroll" style="transition-delay: 300ms">
-                    <img 
-                        src="https://images.unsplash.com/photo-1646083329373-1b594623558e" 
-                        alt="Casa Frangipani garden"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                </div>
-
-                <div class="relative rounded-2xl overflow-hidden border border-white/10 group animate-on-scroll" style="transition-delay: 350ms">
-                    <img 
-                        src="https://images.unsplash.com/photo-1725849177184-c4a9d3aea842" 
-                        alt="Casa Frangipani outdoor seating"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                </div>
+               
             </div>
         </div>
     </section>
@@ -553,16 +541,20 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
-                <!-- Map Placeholder -->
-                <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] h-96 animate-on-scroll">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="text-center">
-                            <i data-lucide="map" class="w-16 h-16 text-[#D4AF37]/50 mx-auto mb-4"></i>
-                            <p class="text-stone-500 text-sm">Alibaug, Maharashtra</p>
-                            <p class="text-stone-600 text-xs mt-2">2 hours from Mumbai</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Google Map -->
+        <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] h-126 animate-on-scroll">
+            <iframe
+                class="absolute inset-0 w-full h-full grayscale contrast-125 brightness-90"
+                src="https://www.google.com/maps?q=Hestia%20Villas%20%E2%80%93%20Casa%20Frangipani,%20Dhokawade,%20Awas,%20Maharashtra%20402208&output=embed"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <!-- Optional Glass Overlay (brand match) -->
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-black/30"></div>
+        </div>
+
 
                 <!-- Nearby Attractions -->
                 <div class="space-y-6 animate-on-scroll" style="transition-delay: 100ms">
@@ -752,6 +744,44 @@
         </div>
     </section>
 
+    <style>/* Force true viewport floating */
+#floating-video {
+position: fixed !important;
+  inset: auto auto 1.5rem 1.5rem;
+  z-index: 999999 !important;
+  transform: none !important;
+  will-change: transform;
+  transform: none !important; /* escape transform contexts */
+}
+
+</style>
+
+     <!-- Floating Video -->
+<div id="floating-video"
+     class="fixed bottom-6 left-6 z-[999999]
+            w-72 h-44 rounded-2xl overflow-hidden
+            border border-white/10 shadow-2xl
+            bg-black
+            opacity-0 scale-95 pointer-events-none
+            transition-all duration-500 ease-out">
+
+    <!-- Close Button -->
+    <button id="floating-video-close"
+            class="absolute top-2 right-2 z-10
+                   w-7 h-7 rounded-full
+                   bg-black/70 backdrop-blur
+                   text-white text-sm
+                   flex items-center justify-center
+                   hover:bg-black transition">
+        ✕
+    </button>
+
+    <video class="w-full h-full object-cover opacity-95"
+           playsinline muted loop autoplay controls>
+        <source src="https://img.vistarooms.com/gallery/casa-frangipani-edf7.MP4" type="video/mp4">
+    </video>
+</div>
+
     <!-- Footer -->
     <footer class="border-t border-white/10 bg-black pt-20 pb-12 px-6 md:px-12 text-sm relative">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -820,22 +850,7 @@
             observer.observe(element);
         });
 
-        // Booking Form Handler
-        const bookingForm = document.getElementById('bookingForm');
-        if (bookingForm) {
-            bookingForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form data
-                const formData = new FormData(bookingForm);
-                
-                // Show success message (you can customize this)
-                alert('Thank you for your booking request! We will contact you shortly.');
-                
-                // Reset form
-                bookingForm.reset();
-            });
-        }
+        // Booking Form Handler removed to allow Livewire / normal POST to function correctly
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -911,6 +926,38 @@
         })();
     </script>
 <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+
+
+
+<script>
+(function () {
+    const floatingVideo = document.getElementById('floating-video');
+    const closeBtn = document.getElementById('floating-video-close');
+
+    let isClosed = false;
+
+    function handleScroll() {
+        if (isClosed) return;
+
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        if (scrollPercent >= 40) {
+            floatingVideo.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+            floatingVideo.classList.add('opacity-100', 'scale-100');
+        }
+    }
+
+    closeBtn.addEventListener('click', () => {
+        floatingVideo.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+        isClosed = true;
+    });
+
+    window.addEventListener('scroll', handleScroll);
+})();
+</script>
+
 
     @livewireScripts
 </body>

@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+use App\Http\Controllers\BookingController;
+
+Route::post('/booking/enquire', [BookingController::class, 'enquire'])->name('booking.enquire');
+
 // Admin: simple calendar view
 Route::get('/admin/calendar', function () {
     return view('admin.calendar');

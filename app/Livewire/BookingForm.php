@@ -5,7 +5,9 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Services\BookingService;
 use App\Models\Booking;
+use App\Mail\BookingReceived;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\ValidationException;
 
 class BookingForm extends Component
@@ -18,6 +20,7 @@ class BookingForm extends Component
     public $phone;
     public $email;
     public $customer_notes;
+    public $submitted = false;
 
     protected function rules()
     {
@@ -51,12 +54,29 @@ class BookingForm extends Component
         try {
             $prepared = $bookingService->prepareBookingData($data);
 
-            DB::transaction(function () use ($prepared) {
-                Booking::create($prepared);
+            $booking = null;
+            DB::transaction(function () use ($prepared, &$booking) {
+                $booking = Booking::create($prepared);
             });
 
-            session()->flash('success', 'Booking request received — we will contact you shortly.');
+            // Send notification email to admin and customer (if provided)
+            try {
+                $adminEmail = env('ADMIN_EMAIL', config('mail.from.address')) ?: 'owner@example.com';
+                if ($adminEmail) {
+                    Mail::to($adminEmail)->send(new BookingReceived($booking));
+                }
+                if (!empty($this->email)) {
+                    Mail::to($this->email)->send(new BookingReceived($booking, true));
+                }
+            } catch (\Exception $e) {
+                // Log but don't block user flow; admin mail failures shouldn't break booking
+                // logger()->error('Booking email send failed: '.$e->getMessage());
+            }
 
+            // mark as submitted so the Livewire view can show a thank-you panel
+            $this->submitted = true;
+
+            // clear inputs (keep submitted state)
             $this->reset(['check_in', 'check_out', 'guest_count', 'name', 'phone', 'email', 'customer_notes']);
 
         } catch (ValidationException $e) {
@@ -67,5 +87,12 @@ class BookingForm extends Component
     public function render()
     {
         return view('livewire.booking-form');
+    }
+
+    public function resetForm()
+    {
+        $this->submitted = false;
+        session()->forget('success');
+        $this->reset(['check_in', 'check_out', 'guest_count', 'name', 'phone', 'email', 'customer_notes']);
     }
 }
