@@ -86,7 +86,7 @@
 
                 <div class="flex flex-wrap gap-4 animate-fade-in-up">
                 
-                    <a href="https://wa.me/919876543210" target="_blank" class="group relative overflow-hidden flex items-center gap-2.5 border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-sm hover:bg-white/10 hover:border-[#D4AF37] transition-all duration-300 backdrop-blur-md transform hover:scale-105 hover:-translate-y-1 shadow-lg">
+                    <a href="https://wa.me/919881149629" target="_blank" class="group relative overflow-hidden flex items-center gap-2.5 border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-sm hover:bg-white/10 hover:border-[#D4AF37] transition-all duration-300 backdrop-blur-md transform hover:scale-105 hover:-translate-y-1 shadow-lg">
                         <i data-lucide="message-circle" class="w-5 h-5"></i>
                         <span>WhatsApp Enquiry</span>
                     </a>
@@ -110,10 +110,10 @@
                 {{-- Livewire booking form --}}
                 <livewire:booking-form />
 
-                <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-center gap-6 animate-fade-in-up">
+                {{-- <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-center gap-6 animate-fade-in-up">
                     <div class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-[#D4AF37]"></i><span class="text-[10px] text-stone-500 uppercase">Secure Payment</span></div>
                     <div class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-[#D4AF37]"></i><span class="text-[10px] text-stone-500 uppercase">Instant Confirm</span></div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </main>
@@ -180,7 +180,7 @@
         <div class="absolute top-[20%] right-[10%] w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-[128px] pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto">
-            <div class="mb-16 animate-on-scroll">
+            <div class="mb-8 animate-on-scroll">
                 <span class="inline-block py-1 px-3 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-widest text-stone-300 mb-6">
                     Your Private Paradise
                 </span>
@@ -721,7 +721,7 @@
                         Check Availability
                     </span>
                 </a>
-                <a href="https://wa.me/919876543210" target="_blank" class="w-full md:w-auto px-8 py-4 rounded-lg border border-white/20 text-white font-medium text-sm hover:bg-white/5 transition-all duration-300 hover:border-white/40 flex items-center justify-center gap-2">
+                <a href="https://wa.me/919881149629" target="_blank" class="w-full md:w-auto px-8 py-4 rounded-lg border border-white/20 text-white font-medium text-sm hover:bg-white/5 transition-all duration-300 hover:border-white/40 flex items-center justify-center gap-2">
                     <i data-lucide="message-circle" class="w-4 h-4"></i>
                     WhatsApp Enquiry
                 </a>

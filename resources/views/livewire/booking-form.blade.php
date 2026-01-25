@@ -62,7 +62,7 @@
         </button>
     </div>
 
-    <p class="text-xs text-gray-400 text-center mt-2">No payment required • Instant response</p>
+    <p class="text-xs text-gray-400 text-center mt-2">Instant response</p>
 
 </form>
 @else
