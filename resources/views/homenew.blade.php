@@ -86,7 +86,7 @@
                                     <span class="text-sm font-medium tracking-wide text-white">Check Availability</span>
                                     <i data-lucide="arrow-right" class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>
                                 </a>
-                                <a href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani" class="group flex items-center justify-between w-full p-1 border-b border-white/30 hover:border-white transition-colors pb-2">
+                                <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani" class="group flex items-center justify-between w-full p-1 border-b border-white/30 hover:border-white transition-colors pb-2">
                                     <span class="text-sm font-medium tracking-wide text-white">WhatsApp for Booking</span>
                                     <i data-lucide="message-circle" class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>
                                 </a>
