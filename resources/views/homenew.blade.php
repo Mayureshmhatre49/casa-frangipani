@@ -481,7 +481,7 @@
 
             <div class="max-w-5xl mx-auto mb-12 text-center">
                 <div class="inline-flex items-center gap-3 px-6 py-3 bg-brown-dark/5 rounded-full">
-                    <img src="https://img.vistarooms.com/gallery/casa-frangipani-cd9529.jpg" alt="Google Reviews" class="h-5">
+                    <img src="https://demo.hestiavillas.in/google.png" alt="Google Reviews" class="h-5">
                     <span class="text-brown-dark font-heading font-bold">4.5/5</span>
                     <span class="text-brown-dark/60">from 47 reviews</span>
                 </div>
