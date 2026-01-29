@@ -16,6 +16,9 @@ class BookingForm extends Component
     public $check_out;
     public $guest_count = 2;
 
+    public $occasion;
+    public $food_provision;
+
     public $name;
     public $phone;
     public $email;
@@ -29,6 +32,9 @@ class BookingForm extends Component
             'check_out' => 'required|date|after:check_in',
             'guest_count' => 'required|integer|min:1',
 
+            'occasion' => 'nullable|string',
+            'food_provision' => 'nullable|string',
+
             'name' => 'required|string',
             'phone' => 'required|string',
             'email' => 'nullable|email',
@@ -39,6 +45,8 @@ class BookingForm extends Component
     {
         $this->validate();
 
+        $notes = trim((!empty($this->occasion) ? "Occasion: {$this->occasion}\n" : '') . (!empty($this->food_provision) ? "Food: {$this->food_provision}\n" : '') . ($this->customer_notes ?? ''));
+
         $data = [
             'check_in' => $this->check_in,
             'check_out' => $this->check_out,
@@ -46,7 +54,7 @@ class BookingForm extends Component
             'customer_name' => $this->name,
             'customer_phone' => $this->phone,
             'customer_email' => $this->email,
-            'customer_notes' => $this->customer_notes,
+            'customer_notes' => $notes,
             'status' => 'pending',
             'source' => 'website',
         ];

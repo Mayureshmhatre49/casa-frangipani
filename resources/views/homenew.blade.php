@@ -107,9 +107,9 @@
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-20 animate-on-scroll">
                     <span class="text-xs uppercase tracking-[0.4em] text-brown-dark/40 font-medium mb-4 block">The Villa Experience</span>
-                    <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter text-brown-dark mb-6">A Sanctuary of <br> Private Luxury</h2>
+                    <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter text-brown-dark mb-6">A Private Villa Experience</h2>
                     <p class="text-brown-dark/60 text-lg max-w-2xl mx-auto leading-relaxed">
-                        Escape to Casa Frangipani, where contemporary elegance meets tropical serenity. Every detail is designed for your comfort and privacy.
+                        Focus on privacy, comfort, indoor-outdoor living and peaceful surroundings — the perfect setting for groups, celebrations and mindful getaways.
                     </p>
                 </div>
 
@@ -159,8 +159,8 @@
         <section id="amenities" class="bg-brown-dark border-t border-white/5 py-32 px-6 relative">
             <div class="w-full max-w-6xl mx-auto relative z-10">
                 <div class="text-center mb-16 animate-on-scroll">
-                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Luxury Amenities</h3>
-                    <p class="text-white/50 text-lg">Every comfort and convenience for an unforgettable stay</p>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Villa Amenities</h3>
+                    <p class="text-white/50 text-lg">Private pool, AC bedrooms, fully-equipped kitchen, daily housekeeping and attentive caretaker service.</p>
                 </div>
 
                 <div class="flex flex-col gap-4">
@@ -455,23 +455,19 @@
                     <img src="https://img.vistarooms.com/gallery/casa-frangipani-e08efc.jpg" class="w-full h-full object-cover grayscale" alt="Family relaxing by pool at luxury villa in Alibaug">
                 </div>
                 
-                <div class="relative z-10 w-full max-w-lg bg-white p-12 md:p-16 rounded-2xl shadow-[0_40px_100px_rgba(0,0,0,0.1)] text-center">
-                    <div class="w-24 h-24 mx-auto mb-8 rounded-2xl overflow-hidden border-4 border-white shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1697725351522-7d63b2e64698" class="w-full h-full object-cover" alt="Priya Sharma guest portrait">
+                <div class="relative z-10 w-full max-w-lg bg-white p-12 md:p-16 rounded-2xl shadow-[0_40px_100px_rgba(0,0,0,0.1)] text-left">
+                    <div class="mb-4 text-xs uppercase tracking-[0.3em] text-brown-dark/40 font-medium">Top Review</div>
+                    <h4 class="text-2xl font-heading font-bold mb-1 text-brown-dark">Kayan Kalthia</h4>
+                    <p class="text-[12px] text-brown-dark/40 uppercase tracking-widest mb-4">few months ago • 5/5</p>
+                    <div class="flex gap-2 mb-4">
+                        <span class="text-[10px] uppercase px-2 py-1 bg-brown-dark/5 rounded text-brown-dark">Stay</span>
+                        <span class="text-[10px] uppercase px-2 py-1 bg-brown-dark/5 rounded text-brown-dark">Food</span>
+                        <span class="text-[10px] uppercase px-2 py-1 bg-brown-dark/5 rounded text-brown-dark">Service</span>
+                        <span class="text-[10px] uppercase px-2 py-1 bg-brown-dark/5 rounded text-brown-dark">View</span>
                     </div>
-                    <h4 class="text-xl font-heading font-bold mb-1 text-brown-dark">Priya Sharma</h4>
-                    <p class="text-[10px] text-brown-dark/40 uppercase tracking-widest mb-6">Mumbai, India</p>
-                    <div class="flex justify-center gap-1 mb-8">
-                        <i data-lucide="star" class="size-5 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-5 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-5 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-5 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-5 fill-terracotta text-terracotta"></i>
-                    </div>
-                    <div class="text-3xl font-bold text-brown-dark/20 mb-6 italic">"</div>
-                    <p class="text-sm font-bold uppercase tracking-widest mb-8 text-brown-dark">An unforgettable family weekend</p>
+
                     <p class="text-sm leading-relaxed text-brown-dark/60">
-                        Casa Frangipani exceeded all our expectations. The pool was spotless, the bedrooms spacious and comfortable, and the caretaker Ramesh was incredibly helpful. Our kids loved the outdoor space and we appreciated the privacy. Perfect escape from Mumbai!
+                        We stayed at this villa for our 24th birthday weekend, and overall, it was a wonderful experience. The staff were incredibly helpful and accommodating, ensuring everything ran smoothly during our stay. The service was excellent, and we truly enjoyed celebrating our birthday in such a beautiful setting. There were some booking hiccups with pre-planning, but once we arrived the on-ground team made our weekend fantastic — thank you!
                     </p>
                 </div>
 
@@ -493,81 +489,86 @@
 
             <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
-                    <div class="flex gap-1 mb-4">
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    <div class="flex gap-1 mb-4 text-terracotta">
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
                     </div>
-                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Perfect for couples</h5>
-                    <p class="text-sm text-brown-dark/60 mb-3">Amazing villa for our anniversary. The private pool and outdoor dining made it so romantic. Highly recommend!</p>
-                    <p class="text-xs text-brown-dark/40">- Rahul & Meera, Pune</p>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Aditya Doshi</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">The caretakers are really nice. Very prompt and kind service. The Indian food especially is very tasty, even for kids. The pool area is very relaxing. 5 rooms are big and have luxurious bathrooms. Plenty of parking.</p>
+                    <p class="text-xs text-brown-dark/40">few months ago • Stay • Food • Service • Amenities</p>
                 </div>
+
                 <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
-                    <div class="flex gap-1 mb-4">
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    <div class="flex gap-1 mb-4 text-terracotta">
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
                     </div>
-                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Exceeded expectations</h5>
-                    <p class="text-sm text-brown-dark/60 mb-3">The photos don't do it justice! Spacious, clean, and the caretaker was always available. Will definitely return.</p>
-                    <p class="text-xs text-brown-dark/40">- Anjali Desai, Mumbai</p>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Amol Sakharkar</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">The Manager and Staff were very polite and helpful. The property was great.</p>
+                    <p class="text-xs text-brown-dark/40">few months ago • Stay • Service</p>
                 </div>
+
                 <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
-                    <div class="flex gap-1 mb-4">
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    <div class="flex gap-1 mb-4 text-terracotta">
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
                     </div>
-                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Great for families</h5>
-                    <p class="text-sm text-brown-dark/60 mb-3">Our kids had a blast in the pool while we relaxed. Kitchen was well-equipped for cooking our own meals. Perfect!</p>
-                    <p class="text-xs text-brown-dark/40">- Kapoor Family, Delhi</p>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Sweta Das</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">Beautiful villa. The staff is so helpful and even go out of their way to help you — food is a big plus. It's a great place to just wind down.</p>
+                    <p class="text-xs text-brown-dark/40">few months ago • Stay • Food • Service • View</p>
                 </div>
+
                 <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
-                    <div class="flex gap-1 mb-4">
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    <div class="flex gap-1 mb-4 text-terracotta">
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
                     </div>
-                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Peaceful retreat</h5>
-                    <p class="text-sm text-brown-dark/60 mb-3">Loved the privacy and tranquility. Close to beaches but felt like a world away. Exactly what we needed.</p>
-                    <p class="text-xs text-brown-dark/40">- Vikram Singh, Bangalore</p>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Vaishali Dixit</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">Our stay at Casa Frangipani was nothing short of amazing. The villa is spacious, beautifully furnished, and the staff ensured every need was met. Truly an unforgettable experience!</p>
+                    <p class="text-xs text-brown-dark/40">1 year ago • Stay • Service • View • Amenities</p>
                 </div>
+
                 <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
-                    <div class="flex gap-1 mb-4">
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    <div class="flex gap-1 mb-4 text-terracotta">
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
                     </div>
-                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Luxury at its best</h5>
-                    <p class="text-sm text-brown-dark/60 mb-3">Everything was top-notch - from the linens to the pool maintenance. Worth every penny for a special occasion.</p>
-                    <p class="text-xs text-brown-dark/40">- Neha & Arjun, Mumbai</p>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Sejal Loomba</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">This house is truly beautiful and thoughtfully appointed. It was incredibly clean, and the team went above and beyond with their efficiency and kindness.</p>
+                    <p class="text-xs text-brown-dark/40">few months ago • Food • Service • View • Amenities</p>
                 </div>
+
                 <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
-                    <div class="flex gap-1 mb-4">
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
-                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    <div class="flex gap-1 mb-4 text-terracotta">
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta"></i>
                     </div>
-                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Excellent service</h5>
-                    <p class="text-sm text-brown-dark/60 mb-3">Ramesh (caretaker) was fantastic - helped us arrange everything from groceries to local tours. Highly professional.</p>
-                    <p class="text-xs text-brown-dark/40">- Sanjay Mehta, Ahmedabad</p>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Sushmit Guha</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">We stayed this Independence Day weekend and it was nothing short of magical. Amazing villa, neatly maintained, huge pool and an above-par service team made our stay memorable for years to come.</p>
+                    <p class="text-xs text-brown-dark/40">few months ago • Stay • Food • Service • Amenities</p>
                 </div>
             </div>
 
             <div class="mt-12 text-center">
-                <a href="https://www.google.com/maps" target="_blank" class="inline-flex items-center gap-2 text-brown-dark border-b border-brown-dark pb-1 hover:text-terracotta hover:border-terracotta transition-colors">
+                <a href="https://www.google.com/search?sca_esv=ae1e161c6b0f2947&hl=en-IN&gl=in&sxsrf=ANbL-n5fWei2sTOzltCC_YOQKdwQE8ahMw:1769710825335&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOdtWRbU-w05lsUvcniPUTUdjOKXUFv8zGeIDBW0uMPQ6BC161K7biPCOKsOq_WHQpT6K46uGP8qK7pVfaZiyhc7elrB6XtBm1X9cSWizgmFEOdsWF3B9oyT3I_awXZ1JAcUCbxk%3D&q=Hestia+Villas+%E2%80%93+Casa+Frangipani,+Alibag+Reviews&sa=X&ved=2ahUKEwicquXIrrGSAxWFkq8BHd0wAMgQ0bkNegQIJxAH&biw=1536&bih=695&dpr=1.25&aic=0" target="_blank" class="inline-flex items-center gap-2 text-brown-dark border-b border-brown-dark pb-1 hover:text-terracotta hover:border-terracotta transition-colors">
                     Read all Google Reviews
                     <i data-lucide="external-link" class="size-4"></i>
                 </a>
@@ -695,16 +696,7 @@
 
                     <div class="lg:col-span-7 animate-on-scroll">
                         <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60474.67!2d72.8777!3d18.6298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be88d0a09e8c5b7%3A0x7e5c4b7b1b7e6b7!2sAlibaug%2C%20Maharashtra!5e0!3m2!1sen!2sin"
-                                width="100%"
-                                height="100%"
-                                style="border:0;"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                                class="w-full h-full">
-                            </iframe>
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.3892498035643!2d72.87403629678954!3d18.780798600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d7d573f95589%3A0x5f4413d8627101a3!2sHestia%20Villas%20%E2%80%93%20Casa%20Frangipani%2C%20Alibag!5e0!3m2!1sen!2sin!4v1769708322420!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
