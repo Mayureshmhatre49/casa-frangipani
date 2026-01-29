@@ -185,7 +185,7 @@
                                 <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
                                     <i data-lucide="thermometer" class="size-3"></i> Depth
                                 </div>
-                                <span class="text-white text-sm">4-6 feet</span>
+                                <span class="text-white text-sm">4 feet</span>
                             </div>
                             <div class="flex flex-col gap-1">
                                 <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
@@ -214,7 +214,7 @@
                                 <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
                                     <i data-lucide="bed" class="size-3"></i> Bedrooms
                                 </div>
-                                <span class="text-white text-sm">All 4 Rooms</span>
+                                <span class="text-white text-sm">All 6 Rooms</span>
                             </div>
                             <div class="flex flex-col gap-1">
                                 <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
