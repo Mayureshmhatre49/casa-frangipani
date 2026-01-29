@@ -401,7 +401,7 @@
 
                     <div class="lg:col-span-9 relative animate-on-scroll" id="gallery-display">
                         <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer" id="main-gallery-image-container">
-                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_101b3ce93-1769287084103.png" 
+                            <img src="https://img.vistarooms.com/gallery/casa-frangipani-cd9529.jpg" 
                                  class="w-full h-full object-cover transition-opacity duration-500 opacity-100 hover:scale-105 transition-transform duration-700" 
                                  id="main-gallery-image" 
                                  alt="Private 25ft swimming pool with sun loungers and tropical landscaping at Casa Frangipani luxury villa">
@@ -481,7 +481,7 @@
 
             <div class="max-w-5xl mx-auto mb-12 text-center">
                 <div class="inline-flex items-center gap-3 px-6 py-3 bg-brown-dark/5 rounded-full">
-                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_130ac0827-1768584699189.png" alt="Google Reviews" class="h-5">
+                    <img src="https://img.vistarooms.com/gallery/casa-frangipani-cd9529.jpg" alt="Google Reviews" class="h-5">
                     <span class="text-brown-dark font-heading font-bold">4.5/5</span>
                     <span class="text-brown-dark/60">from 47 reviews</span>
                 </div>
