@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+Route::get('/home-new', function () {
+    return view('homenew');
+})->name('home.new');
+
+
+
 use App\Http\Controllers\BookingController;
 
 Route::post('/booking/enquire', [BookingController::class, 'enquire'])->name('booking.enquire');

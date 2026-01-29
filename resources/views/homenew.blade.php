@@ -1,0 +1,959 @@
+@extends('layouts.app')
+
+@section('title', 'Casa Frangipani - Luxury Villa Rental in Alibaug | Private Pool & Premium Amenities')
+
+@section('meta_description', 'Book your stay at Casa Frangipani, an exclusive luxury villa in Alibaug with private pool, 4 AC bedrooms, full kitchen, and personalized concierge service.')
+
+@section('content')
+
+
+{{-- ================= NAVIGATION ================= --}}
+<nav id="main-nav" class="fixed top-0 left-0 w-full z-50 p-6 md:p-10 flex items-center justify-between pointer-events-none transition-all duration-500">
+    <a href="{{ url('/') }}" class="text-2xl font-heading font-bold tracking-tight pointer-events-auto text-white" id="nav-logo">
+        Casa Frangipani
+    </a>
+
+    <div class="hidden md:flex items-center gap-2 p-1 bg-white/10 backdrop-blur-md rounded-full border border-white/10 pointer-events-auto">
+        <a href="#villa" class="px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:bg-white/10">Villa</a>
+        <a href="#amenities" class="px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:bg-white/10">Amenities</a>
+        <a href="#gallery" class="px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:bg-white/10">Gallery</a>
+        <a href="#reviews" class="px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:bg-white/10">Reviews</a>
+        <a href="#location" class="px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:bg-white/10">Location</a>
+        <a href="#booking" class="px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest bg-white text-brown-dark">Book Now</a>
+    </div>
+
+    <div class="md:hidden pointer-events-auto">
+        <button id="mobile-menu-btn" class="p-3 bg-white/20 backdrop-blur-md rounded-full text-white border border-white/10">
+            <i data-lucide="menu" class="size-5"></i>
+        </button>
+    </div>
+</nav>
+
+{{-- ================= MOBILE MENU ================= --}}
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-brown-dark/95 backdrop-blur-xl hidden flex-col items-center justify-center gap-8 p-6">
+    <button id="mobile-menu-close" class="absolute top-6 right-6 p-3 bg-white/10 rounded-full text-white">
+        <i data-lucide="x" class="size-5"></i>
+    </button>
+    <a href="#villa" class="text-2xl font-heading text-white">Villa</a>
+    <a href="#amenities" class="text-2xl font-heading text-white">Amenities</a>
+    <a href="#gallery" class="text-2xl font-heading text-white">Gallery</a>
+    <a href="#reviews" class="text-2xl font-heading text-white">Reviews</a>
+    <a href="#location" class="text-2xl font-heading text-white">Location</a>
+    <a href="#booking" class="px-8 py-4 bg-terracotta text-white rounded-full font-bold">Book Now</a>
+</div>
+
+<main>
+        <!-- Hero Section -->
+        <header class="relative w-full h-screen overflow-hidden flex flex-col justify-end pb-12 md:pb-24">
+            <div class="absolute inset-0 z-0 bg-black">
+                <img src="https://img.vistarooms.com/gallery/casa-frangipani-657c43.jpg" class="w-full h-full object-cover animate-cinematic opacity-1" alt="Casa Frangipani luxury villa exterior with private swimming pool at sunset, surrounded by tropical gardens in Alibaug">
+                <div class="absolute inset-0 bg-gradient-to-t from-brown-dark via-brown-dark/20 to-transparent opacity-80"></div>
+                <div class="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
+            </div>
+
+            <div class="absolute top-32 right-6 md:right-12 z-20 flex flex-col items-end gap-2 animate-slide-up delay-2500 opacity-0">
+                <div class="px-4 py-2 rounded-lg bg-black/40 backdrop-blur-md border border-white/10 flex items-center gap-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse"></span>
+                    <span class="text-xs font-mono tracking-wider uppercase text-white/90">Available This Weekend</span>
+                </div>
+            </div>
+
+            <div class="relative z-10 w-full max-w-[90rem] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
+                <div class="md:col-span-7 relative">
+                    <div class="flex items-center gap-3 mb-6 animate-slide-up delay-1200 opacity-0">
+                        <span class="h-[1px] w-8 bg-white/60"></span>
+                        <span class="text-xs font-mono uppercase tracking-widest text-white/80">Alibaug, Maharashtra</span>
+                    </div>
+                    <h1 class="font-heading font-bold text-white leading-[0.85] tracking-tight">
+                        <span class="block text-[15vw] md:text-[9rem] lg:text-[11rem] animate-slide-up delay-1400 opacity-0 drop-shadow-2xl">Experience</span>
+                        <div class="flex items-baseline gap-4 md:gap-8 -mt-2 md:-mt-8 animate-slide-up delay-1600 opacity-0">
+                            <span class="text-[15vw] md:text-[9rem] lg:text-[11rem] font-serif italic font-thin text-white/60">Private</span>
+                            <span class="text-[15vw] md:text-[9rem] lg:text-[11rem] drop-shadow-2xl">Luxury</span>
+                        </div>
+                    </h1>
+                </div>
+
+                <div class="md:col-span-4 md:col-start-9 flex flex-col justify-end pb-4 md:pb-8">
+                    <div class="relative overflow-hidden bg-brown-dark/60 backdrop-blur-2xl border border-white/10 p-8 rounded-2xl shadow-2xl animate-slide-up delay-1800 opacity-0 ring-1 ring-white/5">
+                        <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/5 to-transparent z-0 pointer-events-none animate-shimmer"></div>
+
+                        <div class="relative z-10">
+                            <p class="text-lg md:text-xl text-white font-light leading-relaxed mb-8 antialiased drop-shadow-md">
+                                An exclusive private villa in Alibaug with fully serviced pool, premium amenities, and personalized concierge service.
+                            </p>
+                            <div class="flex flex-col gap-4">
+                                <a href="#booking" class="group flex items-center justify-between w-full p-1 border-b border-white/30 hover:border-white transition-colors pb-2">
+                                    <span class="text-sm font-medium tracking-wide text-white">Check Availability</span>
+                                    <i data-lucide="arrow-right" class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+                                <a href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani" class="group flex items-center justify-between w-full p-1 border-b border-white/30 hover:border-white transition-colors pb-2">
+                                    <span class="text-sm font-medium tracking-wide text-white">WhatsApp for Booking</span>
+                                    <i data-lucide="message-circle" class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-slide-up delay-2200 opacity-0">
+                <span class="text-[10px] uppercase tracking-widest text-white/40">Scroll</span>
+                <div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
+            </div>
+        </header>
+
+        <!-- Villa Experience Section -->
+        <section id="villa" class="py-32 px-6 md:px-10 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 animate-on-scroll">
+                    <span class="text-xs uppercase tracking-[0.4em] text-brown-dark/40 font-medium mb-4 block">The Villa Experience</span>
+                    <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter text-brown-dark mb-6">A Sanctuary of <br> Private Luxury</h2>
+                    <p class="text-brown-dark/60 text-lg max-w-2xl mx-auto leading-relaxed">
+                        Escape to Casa Frangipani, where contemporary elegance meets tropical serenity. Every detail is designed for your comfort and privacy.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8 animate-on-scroll">
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="shield-check" class="size-7 text-terracotta"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-heading font-semibold mb-2">Complete Privacy</h3>
+                                <p class="text-brown-dark/60 leading-relaxed">Surrounded by 3-acre private grounds with secure perimeter, gated entry, and dedicated caretaker ensuring your peace of mind.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="heart" class="size-7 text-terracotta"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-heading font-semibold mb-2">Exceptional Comfort</h3>
+                                <p class="text-brown-dark/60 leading-relaxed">Four spacious bedrooms with premium linens, central AC, en-suite bathrooms, and thoughtful amenities for a 5-star experience.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="trees" class="size-7 text-terracotta"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-heading font-semibold mb-2">Indoor-Outdoor Living</h3>
+                                <p class="text-brown-dark/60 leading-relaxed">Seamless flow between air-conditioned interiors and tropical gardens, with covered verandas, outdoor dining, and poolside lounging.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 animate-on-scroll">
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden">
+                            <img src="https://img.vistarooms.com/gallery/casa-frangipani-657c43.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Modern living room with large windows overlooking tropical garden at Casa Frangipani villa">
+                        </div>
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden mt-12">
+                            <img src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Luxurious bedroom with king-size bed and contemporary furnishings in Alibaug villa">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenities Section -->
+        <section id="amenities" class="bg-brown-dark border-t border-white/5 py-32 px-6 relative">
+            <div class="w-full max-w-6xl mx-auto relative z-10">
+                <div class="text-center mb-16 animate-on-scroll">
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Luxury Amenities</h3>
+                    <p class="text-white/50 text-lg">Every comfort and convenience for an unforgettable stay</p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <div class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-4 md:p-6 bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl transition-all duration-300 animate-on-scroll">
+                        <div class="col-span-1 md:col-span-4 flex items-center gap-6">
+                            <div class="w-20 h-20 md:w-24 md:h-24 bg-terracotta/20 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="waves" class="size-10 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl text-white font-heading font-semibold">Private Swimming Pool</h4>
+                                <p class="text-xs text-white/40 mt-1 uppercase tracking-wider">Temperature Controlled</p>
+                            </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-6 grid grid-cols-3 gap-y-4 gap-x-2 border-l border-white/10 pl-6">
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="ruler" class="size-3"></i> Length
+                                </div>
+                                <span class="text-white text-sm">25 feet</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="thermometer" class="size-3"></i> Depth
+                                </div>
+                                <span class="text-white text-sm">4-6 feet</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="droplets" class="size-3"></i> Maintenance
+                                </div>
+                                <span class="text-white text-sm">Daily Cleaning</span>
+                            </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-2 flex items-center justify-end">
+                            <span class="text-xl font-serif italic text-white">Premium</span>
+                        </div>
+                    </div>
+
+                    <div class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-4 md:p-6 bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl transition-all duration-300 animate-on-scroll">
+                        <div class="col-span-1 md:col-span-4 flex items-center gap-6">
+                            <div class="w-20 h-20 md:w-24 md:h-24 bg-terracotta/20 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="snowflake" class="size-10 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl text-white font-heading font-semibold">Air Conditioning</h4>
+                                <p class="text-xs text-white/40 mt-1 uppercase tracking-wider">Energy Efficient</p>
+                            </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-6 grid grid-cols-3 gap-y-4 gap-x-2 border-l border-white/10 pl-6">
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="bed" class="size-3"></i> Bedrooms
+                                </div>
+                                <span class="text-white text-sm">All 4 Rooms</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="sofa" class="size-3"></i> Living
+                                </div>
+                                <span class="text-white text-sm">Main Area</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="zap" class="size-3"></i> Control
+                                </div>
+                                <span class="text-white text-sm">Individual</span>
+                            </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-2 flex items-center justify-end">
+                            <span class="text-xl font-serif italic text-white">Essential</span>
+                        </div>
+                    </div>
+
+                    <div class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-4 md:p-6 bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl transition-all duration-300 animate-on-scroll">
+                        <div class="col-span-1 md:col-span-4 flex items-center gap-6">
+                            <div class="w-20 h-20 md:w-24 md:h-24 bg-terracotta/20 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="chef-hat" class="size-10 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl text-white font-heading font-semibold">Fully Equipped Kitchen</h4>
+                                <p class="text-xs text-white/40 mt-1 uppercase tracking-wider">Chef Ready</p>
+                            </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-6 grid grid-cols-3 gap-y-4 gap-x-2 border-l border-white/10 pl-6">
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="flame" class="size-3"></i> Stove
+                                </div>
+                                <span class="text-white text-sm">4-Burner Gas</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="microwave" class="size-3"></i> Appliances
+                                </div>
+                                <span class="text-white text-sm">Full Set</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="utensils" class="size-3"></i> Utensils
+                                </div>
+                                <span class="text-white text-sm">Complete</span>
+                            </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-2 flex items-center justify-end">
+                            <span class="text-xl font-serif italic text-white">Included</span>
+                        </div>
+                    </div>
+
+                    <div class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-4 md:p-6 bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl transition-all duration-300 animate-on-scroll">
+                        <div class="col-span-1 md:col-span-4 flex items-center gap-6">
+                            <div class="w-20 h-20 md:w-24 md:h-24 bg-terracotta/20 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="sparkles" class="size-10 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl text-white font-heading font-semibold">Daily Housekeeping</h4>
+                                <p class="text-xs text-white/40 mt-1 uppercase tracking-wider">Professional Service</p>
+                            </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-6 grid grid-cols-3 gap-y-4 gap-x-2 border-l border-white/10 pl-6">
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="clock" class="size-3"></i> Timing
+                                </div>
+                                <span class="text-white text-sm">9am - 6pm</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="shirt" class="size-3"></i> Laundry
+                                </div>
+                                <span class="text-white text-sm">Included</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="bed-double" class="size-3"></i> Linens
+                                </div>
+                                <span class="text-white text-sm">Fresh Daily</span>
+                            </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-2 flex items-center justify-end">
+                            <span class="text-xl font-serif italic text-white">Premium</span>
+                        </div>
+                    </div>
+
+                    <div class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-4 md:p-6 bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl transition-all duration-300 animate-on-scroll">
+                        <div class="col-span-1 md:col-span-4 flex items-center gap-6">
+                            <div class="w-20 h-20 md:w-24 md:h-24 bg-terracotta/20 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="wifi" class="size-10 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl text-white font-heading font-semibold">WiFi & Power Backup</h4>
+                                <p class="text-xs text-white/40 mt-1 uppercase tracking-wider">High Speed</p>
+                            </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-6 grid grid-cols-3 gap-y-4 gap-x-2 border-l border-white/10 pl-6">
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="gauge" class="size-3"></i> Speed
+                                </div>
+                                <span class="text-white text-sm">100 Mbps</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="battery-charging" class="size-3"></i> Backup
+                                </div>
+                                <span class="text-white text-sm">Generator</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="signal" class="size-3"></i> Coverage
+                                </div>
+                                <span class="text-white text-sm">All Areas</span>
+                            </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-2 flex items-center justify-end">
+                            <span class="text-xl font-serif italic text-white">Essential</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-32 px-6 md:px-10 bg-cream">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-5xl md:text-6xl font-heading font-bold text-center mb-24 tracking-tighter text-brown-dark animate-on-scroll">Villa Gallery</h2>
+                
+                <div class="grid lg:grid-cols-12 gap-20 items-start">
+                    <div class="lg:col-span-3 space-y-8 border-l border-brown-dark/10 pl-8 animate-on-scroll" id="gallery-list">
+                        <div class="group cursor-pointer gallery-tab active" 
+                             data-room="Pool View" 
+                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg"
+                             data-desc="25ft temperature-controlled private pool surrounded by tropical landscaping with sun loungers and outdoor shower."
+                             data-sleeps="Outdoor" data-size="Pool Area" data-view="Garden">
+                            <h4 class="text-lg font-heading font-bold text-brown-dark">Pool View</h4>
+                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">Outdoor Area</p>
+                        </div>
+                        <div class="group cursor-pointer gallery-tab opacity-30 hover:opacity-100 transition-opacity" 
+                             data-room="Master Bedroom" 
+                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-5c1a08.jpg"
+                             data-desc="Spacious king-size bedroom with en-suite bathroom, air conditioning, premium linens, and private balcony with garden views."
+                             data-sleeps="Sleeps 2" data-size="35 sq.m" data-view="Garden View">
+                            <h4 class="text-lg font-heading font-bold text-brown-dark">Master Bedroom</h4>
+                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">King Size</p>
+                        </div>
+                        <div class="group cursor-pointer gallery-tab opacity-30 hover:opacity-100 transition-opacity" 
+                             data-room="Living Area" 
+                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-9e5e0c.jpg"
+                             data-desc="Open-plan living and dining area with contemporary furnishings, large windows, and seamless access to outdoor terrace."
+                             data-sleeps="Main Space" data-size="60 sq.m" data-view="Pool View">
+                            <h4 class="text-lg font-heading font-bold text-brown-dark">Living Area</h4>
+                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">Open Plan</p>
+                        </div>
+                        <div class="group cursor-pointer gallery-tab opacity-30 hover:opacity-100 transition-opacity" 
+                             data-room="Outdoor Deck" 
+                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-5f41a0.jpg"
+                             data-desc="Covered outdoor dining area with ceiling fans, ambient lighting, and tropical garden surroundings perfect for al fresco meals."
+                             data-sleeps="Outdoor" data-size="Dining Area" data-view="Garden">
+                            <h4 class="text-lg font-heading font-bold text-brown-dark">Outdoor Deck</h4>
+                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">Dining Space</p>
+                        </div>
+                        <div class="group cursor-pointer gallery-tab opacity-30 hover:opacity-100 transition-opacity" 
+                             data-room="Kitchen" 
+                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-2cafa4.jpg"
+                             data-desc="Fully equipped modern kitchen with gas stove, microwave, refrigerator, complete cookware, and granite countertops."
+                             data-sleeps="Chef Ready" data-size="20 sq.m" data-view="Functional">
+                            <h4 class="text-lg font-heading font-bold text-brown-dark">Kitchen</h4>
+                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">Full Equipment</p>
+                        </div>
+                        <div class="group cursor-pointer gallery-tab opacity-30 hover:opacity-100 transition-opacity" 
+                             data-room="Guest Rooms" 
+                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-0c3c0b.jpg"
+                             data-desc="Three additional bedrooms with queen/twin beds, air conditioning, premium linens, and shared bathrooms with modern fixtures."
+                             data-sleeps="Sleeps 6" data-size="25 sq.m each" data-view="Garden">
+                            <h4 class="text-lg font-heading font-bold text-brown-dark">Guest Rooms</h4>
+                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">3 Bedrooms</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-9 relative animate-on-scroll" id="gallery-display">
+                        <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer" id="main-gallery-image-container">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_101b3ce93-1769287084103.png" 
+                                 class="w-full h-full object-cover transition-opacity duration-500 opacity-100 hover:scale-105 transition-transform duration-700" 
+                                 id="main-gallery-image" 
+                                 alt="Private 25ft swimming pool with sun loungers and tropical landscaping at Casa Frangipani luxury villa">
+                        </div>
+                        
+                        <div class="absolute top-10 right-10 w-80 bg-white/90 backdrop-blur-md p-10 rounded-2xl shadow-2xl">
+                            <h3 class="text-3xl font-heading font-bold mb-6 text-brown-dark" id="gallery-title">Pool View</h3>
+                            <p class="text-sm leading-relaxed text-brown-dark/60 mb-8" id="gallery-desc">
+                                25ft temperature-controlled private pool surrounded by tropical landscaping with sun loungers and outdoor shower.
+                            </p>
+                        </div>
+
+                        <div class="mt-12 flex flex-wrap gap-12 md:gap-20">
+                            <div class="space-y-2">
+                                <p class="text-[10px] font-bold text-brown-dark/30 uppercase tracking-wider">Type</p>
+                                <p class="text-3xl font-heading font-bold text-brown-dark" id="gallery-sleeps">Outdoor</p>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-[10px] font-bold text-brown-dark/30 uppercase tracking-wider">Space</p>
+                                <p class="text-3xl font-heading font-bold text-brown-dark" id="gallery-size">Pool Area</p>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-[10px] font-bold text-brown-dark/30 uppercase tracking-wider">View</p>
+                                <p class="text-3xl font-heading font-bold text-brown-dark" id="gallery-view">Garden</p>
+                            </div>
+                        </div>
+
+                        <!-- <div class="mt-8 text-center">
+                            <button class="px-8 py-4 bg-brown-dark text-white rounded-full font-medium hover:bg-brown-dark/90 transition-colors inline-flex items-center gap-2">
+                                <i data-lucide="maximize" class="size-5"></i>
+                                View Full Gallery
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-32 px-6 md:px-10 bg-white">
+            <div class="max-w-7xl mx-auto text-center mb-32 animate-on-scroll">
+                <span class="text-xs uppercase tracking-[0.4em] text-brown-dark/40 font-medium mb-4 block">Guest Experiences</span>
+                <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter text-brown-dark">What Our Guests Say</h2>
+            </div>
+
+            <div class="relative h-[600px] max-w-5xl mx-auto flex items-center justify-center mb-20">
+                <div class="absolute left-0 top-1/2 -translate-y-1/2 -rotate-12 w-48 h-64 rounded-2xl overflow-hidden shadow-xl hidden md:block">
+                    <img src="https://img.vistarooms.com/gallery/casa-frangipani-877335.jpg" class="w-full h-full object-cover grayscale" alt="Happy guest enjoying stay at Casa Frangipani villa">
+                </div>
+                <div class="absolute left-24 top-1/2 -translate-y-1/3 rotate-6 w-48 h-64 rounded-2xl overflow-hidden shadow-xl hidden md:block">
+                    <img src="https://img.vistarooms.com/gallery/casa-frangipani-e08efc.jpg" class="w-full h-full object-cover grayscale" alt="Family relaxing by pool at luxury villa in Alibaug">
+                </div>
+                
+                <div class="relative z-10 w-full max-w-lg bg-white p-12 md:p-16 rounded-2xl shadow-[0_40px_100px_rgba(0,0,0,0.1)] text-center">
+                    <div class="w-24 h-24 mx-auto mb-8 rounded-2xl overflow-hidden border-4 border-white shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1697725351522-7d63b2e64698" class="w-full h-full object-cover" alt="Priya Sharma guest portrait">
+                    </div>
+                    <h4 class="text-xl font-heading font-bold mb-1 text-brown-dark">Priya Sharma</h4>
+                    <p class="text-[10px] text-brown-dark/40 uppercase tracking-widest mb-6">Mumbai, India</p>
+                    <div class="flex justify-center gap-1 mb-8">
+                        <i data-lucide="star" class="size-5 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-5 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-5 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-5 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-5 fill-terracotta text-terracotta"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-brown-dark/20 mb-6 italic">"</div>
+                    <p class="text-sm font-bold uppercase tracking-widest mb-8 text-brown-dark">An unforgettable family weekend</p>
+                    <p class="text-sm leading-relaxed text-brown-dark/60">
+                        Casa Frangipani exceeded all our expectations. The pool was spotless, the bedrooms spacious and comfortable, and the caretaker Ramesh was incredibly helpful. Our kids loved the outdoor space and we appreciated the privacy. Perfect escape from Mumbai!
+                    </p>
+                </div>
+
+                <div class="absolute right-24 top-1/2 -translate-y-1/4 -rotate-6 w-48 h-64 rounded-2xl overflow-hidden shadow-xl hidden md:block">
+                    <img src="https://img.vistarooms.com/gallery/casa-frangipani-951391.jpg" class="w-full h-full object-cover grayscale" alt="Couple enjoying romantic getaway at luxury villa">
+                </div>
+                <div class="absolute right-0 top-1/2 -translate-y-1/2 rotate-12 w-48 h-64 rounded-2xl overflow-hidden shadow-xl hidden md:block">
+                    <img src="https://img.vistarooms.com/gallery/casa-frangipani-9629f7.jpg" class="w-full h-full object-cover grayscale" alt="Guest relaxing in villa living room">
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto mb-12 text-center">
+                <div class="inline-flex items-center gap-3 px-6 py-3 bg-brown-dark/5 rounded-full">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_130ac0827-1768584699189.png" alt="Google Reviews" class="h-5">
+                    <span class="text-brown-dark font-heading font-bold">4.5/5</span>
+                    <span class="text-brown-dark/60">from 47 reviews</span>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    </div>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Perfect for couples</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">Amazing villa for our anniversary. The private pool and outdoor dining made it so romantic. Highly recommend!</p>
+                    <p class="text-xs text-brown-dark/40">- Rahul & Meera, Pune</p>
+                </div>
+                <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    </div>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Exceeded expectations</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">The photos don't do it justice! Spacious, clean, and the caretaker was always available. Will definitely return.</p>
+                    <p class="text-xs text-brown-dark/40">- Anjali Desai, Mumbai</p>
+                </div>
+                <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    </div>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Great for families</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">Our kids had a blast in the pool while we relaxed. Kitchen was well-equipped for cooking our own meals. Perfect!</p>
+                    <p class="text-xs text-brown-dark/40">- Kapoor Family, Delhi</p>
+                </div>
+                <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    </div>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Peaceful retreat</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">Loved the privacy and tranquility. Close to beaches but felt like a world away. Exactly what we needed.</p>
+                    <p class="text-xs text-brown-dark/40">- Vikram Singh, Bangalore</p>
+                </div>
+                <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    </div>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Luxury at its best</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">Everything was top-notch - from the linens to the pool maintenance. Worth every penny for a special occasion.</p>
+                    <p class="text-xs text-brown-dark/40">- Neha & Arjun, Mumbai</p>
+                </div>
+                <div class="p-6 bg-brown-dark/5 rounded-2xl animate-on-scroll">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                        <i data-lucide="star" class="size-4 fill-terracotta text-terracotta"></i>
+                    </div>
+                    <h5 class="font-heading font-bold mb-2 text-brown-dark">Excellent service</h5>
+                    <p class="text-sm text-brown-dark/60 mb-3">Ramesh (caretaker) was fantastic - helped us arrange everything from groceries to local tours. Highly professional.</p>
+                    <p class="text-xs text-brown-dark/40">- Sanjay Mehta, Ahmedabad</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://www.google.com/maps" target="_blank" class="inline-flex items-center gap-2 text-brown-dark border-b border-brown-dark pb-1 hover:text-terracotta hover:border-terracotta transition-colors">
+                    Read all Google Reviews
+                    <i data-lucide="external-link" class="size-4"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Ideal For Section -->
+        <section class="py-32 px-6 md:px-10 bg-cream border-t border-brown-dark/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8 animate-on-scroll">
+                    <div class="space-y-4">
+                        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-brown-dark/40">Perfect For</p>
+                        <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter text-brown-dark">Crafted for <br> Every Occasion</h2>
+                    </div>
+                    <p class="text-sm text-brown-dark/60 max-w-sm leading-relaxed">
+                        Whether celebrating, reconnecting, or collaborating, Casa Frangipani adapts to your needs with personalized services.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="group relative aspect-video rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_133b50765-1769318194008.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" alt="Family enjoying pool time at luxury villa in Alibaug">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-2">01</span>
+                            <h3 class="text-2xl font-heading font-bold mb-3">Family Retreats</h3>
+                            <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">Kids' pool toys, board games, Netflix access, safe gated environment, and family-friendly outdoor spaces.</p>
+                        </div>
+                    </div>
+                    <div class="group relative aspect-video rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1563782043-62aeffcf5093" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" alt="Romantic dinner setup on villa deck for couples">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-2">02</span>
+                            <h3 class="text-2xl font-heading font-bold mb-3">Romantic Getaways</h3>
+                            <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">Private dinner setup, rose petals, champagne on arrival (₹5,000 add-on), couples spa arrangements available.</p>
+                        </div>
+                    </div>
+                    <div class="group relative aspect-video rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1efa8c9a1-1769536965141.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" alt="Corporate team meeting in villa living area">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-2">03</span>
+                            <h3 class="text-2xl font-heading font-bold mb-3">Corporate Offsites</h3>
+                            <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">Projector + screen, conference table setup, high-speed WiFi, catering partners, team-building space.</p>
+                        </div>
+                    </div>
+                    <div class="group relative aspect-video rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_172b6b9da-1767942355283.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" alt="Birthday celebration setup by pool at luxury villa">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-2">04</span>
+                            <h3 class="text-2xl font-heading font-bold mb-3">Celebrations</h3>
+                            <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">Birthday/anniversary decoration services, cake arrangements, DJ setup available, party-friendly layout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="py-32 px-6 md:px-10 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 animate-on-scroll">
+                    <span class="text-xs uppercase tracking-[0.4em] text-brown-dark/40 font-medium mb-4 block">Location</span>
+                    <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter text-brown-dark mb-6">Easy Access <br> from Mumbai</h2>
+                    <p class="text-brown-dark/60 text-lg max-w-2xl mx-auto">
+                        Just 2.5 hours from Mumbai, Casa Frangipani is perfectly positioned for weekend escapes with nearby beaches and attractions.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-12 items-start">
+                    <div class="lg:col-span-5 space-y-8 animate-on-scroll">
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="car" class="size-7 text-terracotta"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-heading font-bold mb-2 text-brown-dark">By Road from Mumbai</h3>
+                                <p class="text-brown-dark/60 leading-relaxed mb-2">2.5 hours drive (140 km) via NH66 and Pen-Khopoli Road. Well-maintained highways with clear signage.</p>
+                                <p class="text-sm text-brown-dark/40">GPS Coordinates: 18.6298° N, 72.8777° E</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="ship" class="size-7 text-terracotta"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-heading font-bold mb-2 text-brown-dark">Ferry Option</h3>
+                                <p class="text-brown-dark/60 leading-relaxed mb-2">Gateway of India to Mandwa Jetty (1 hour ferry), then 15 minutes by road to villa. Scenic and convenient.</p>
+                                <p class="text-sm text-brown-dark/40">Ferry Timings: 7am - 7pm (hourly)</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="waves" class="size-7 text-terracotta"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-heading font-bold mb-2 text-brown-dark">Nearby Beaches</h3>
+                                <ul class="text-brown-dark/60 leading-relaxed space-y-1">
+                                    <li>• Kihim Beach - 5 km (10 min drive)</li>
+                                    <li>• Awas Beach - 8 km (15 min drive)</li>
+                                    <li>• Alibaug Beach - 12 km (20 min drive)</li>
+                                    <li>• Kashid Beach - 35 km (45 min drive)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="coffee" class="size-7 text-terracotta"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-heading font-bold mb-2 text-brown-dark">Dining & Attractions</h3>
+                                <ul class="text-brown-dark/60 leading-relaxed space-y-1">
+                                    <li>• Sanman Restaurant - 3 km (seafood)</li>
+                                    <li>• Boardwalk by Flamboyante - 5 km (cafe)</li>
+                                    <li>• Alibaug Fort - 12 km (historic site)</li>
+                                    <li>• Kolaba Fort - 15 km (sea fort)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="https://www.google.com/maps/dir//18.6298,72.8777" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-brown-dark text-white rounded-full font-medium hover:bg-brown-dark/90 transition-colors">
+                                <i data-lucide="map-pin" class="size-5"></i>
+                                Get Directions
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 animate-on-scroll">
+                        <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60474.67!2d72.8777!3d18.6298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be88d0a09e8c5b7%3A0x7e5c4b7b1b7e6b7!2sAlibaug%2C%20Maharashtra!5e0!3m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="w-full h-full">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section id="booking" class="py-32 px-6 md:px-10 bg-brown-dark text-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter mb-6">Plan Your Stay</h2>
+                    <p class="text-white/60 text-lg">Fill out the form below and we'll get back to you within 2 hours to confirm your booking.</p>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <livewire:booking-form />
+                </div>
+            </div>
+        </section>
+    </main>
+
+{{-- ================= FOOTER ================= --}}
+<footer class="py-16 px-6 md:px-12 border-t border-brown-dark/10 bg-cream">
+    <div class="max-w-7xl mx-auto text-center">
+        <p class="text-brown-dark/40 text-sm">
+            © {{ now()->year }} Casa Frangipani. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+@endsection
+
+@push('scripts')
+<script>
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('bg-brown-dark/80','backdrop-blur-xl','border-b','border-white/10');
+        } else {
+            nav.classList.remove('bg-brown-dark/80','backdrop-blur-xl','border-b','border-white/10');
+        }
+    });
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+    mobileMenuBtn?.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+    });
+
+    mobileMenuClose?.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+    });
+
+    document.getElementById('booking-form')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you! We will contact you shortly.');
+        e.target.reset();
+    });
+
+    // Gallery Tab Switcher (matches Rocket reference)
+    const galleryTabs = document.querySelectorAll('.gallery-tab');
+    const mainGalleryImage = document.getElementById('main-gallery-image');
+    const galleryTitle = document.getElementById('gallery-title');
+    const galleryDesc = document.getElementById('gallery-desc');
+    const gallerySleeps = document.getElementById('gallery-sleeps');
+    const gallerySize = document.getElementById('gallery-size');
+    const galleryView = document.getElementById('gallery-view');
+
+    galleryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            galleryTabs.forEach(t => {
+                t.classList.add('opacity-30');
+                t.classList.remove('active');
+            });
+            tab.classList.remove('opacity-30');
+            tab.classList.add('active');
+
+            const data = tab.dataset;
+            if (mainGalleryImage) {
+                mainGalleryImage.style.opacity = '0';
+
+                setTimeout(() => {
+                    mainGalleryImage.src = data.image;
+                    mainGalleryImage.alt = `${data.room} at Casa Frangipani luxury villa - ${data.desc}`;
+                    if (galleryTitle) galleryTitle.textContent = data.room;
+                    if (galleryDesc) galleryDesc.textContent = data.desc;
+                    if (gallerySleeps) gallerySleeps.textContent = data.sleeps;
+                    if (gallerySize) gallerySize.textContent = data.size;
+                    if (galleryView) galleryView.textContent = data.view;
+
+                    mainGalleryImage.onload = () => {
+                        mainGalleryImage.style.opacity = '1';
+                    };
+                    setTimeout(() => {
+                        mainGalleryImage.style.opacity = '1';
+                    }, 100);
+                }, 300);
+            }
+        });
+    });
+
+    // Intersection Observer for slide/cinematic reveals (hero elements)
+    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.05 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe a broad set of animation utility classes used in the template
+    document.querySelectorAll('.animate-on-scroll, .animate-slide-up, .animate-fade-in-up, .animate-cinematic, .animate-shimmer, .animate-width-expand').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Flatpickr date range -> populate Livewire form inputs (targets .date-range-picker)
+    (function(){
+        function initPickers(){
+            if (typeof flatpickr === 'undefined') return;
+
+            document.querySelectorAll('.date-range-picker').forEach(function(el){
+                // prevent double-init
+                if (el.__flatpickrInitialized) return;
+                el.__flatpickrInitialized = true;
+
+                const setHiddenDates = (startStr, endStr) => {
+                    const form = el.closest('form');
+                    let inputIn = form ? form.querySelector('#check_in_hidden') : null;
+                    let inputOut = form ? form.querySelector('#check_out_hidden') : null;
+                    if (!inputIn) inputIn = document.getElementById('check_in_hidden');
+                    if (!inputOut) inputOut = document.getElementById('check_out_hidden');
+
+                    if (inputIn){ inputIn.value = startStr; inputIn.dispatchEvent(new Event('input', { bubbles: true })); }
+                    if (inputOut){ inputOut.value = endStr; inputOut.dispatchEvent(new Event('input', { bubbles: true })); }
+
+                    // update optional visible display helpers (if present)
+                    const dispIn = document.getElementById('display_check_in');
+                    const dispOut = document.getElementById('display_check_out');
+                    function fmt(d){ if (!d) return ''; const dt = new Date(d); if (isNaN(dt)) return d; return dt.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }); }
+                    if (dispIn) dispIn.textContent = fmt(startStr);
+                    if (dispOut) dispOut.textContent = fmt(endStr);
+                }
+
+                const fp = flatpickr(el, {
+                    mode: 'range',
+                    dateFormat: 'Y-m-d',
+                    allowInput: true,
+                    onChange: function(selectedDates, dateStr, instance){
+                        const start = selectedDates[0] ?? null;
+                        const end = selectedDates[1] ?? null;
+                        const startStr = start ? instance.formatDate(start, 'Y-m-d') : '';
+                        const endStr = end ? instance.formatDate(end, 'Y-m-d') : '';
+                        setHiddenDates(startStr, endStr);
+                    },
+                    onClose: function(selectedDates, dateStr, instance){
+                        // ensure hidden inputs set on close
+                        const start = selectedDates[0] ?? null;
+                        const end = selectedDates[1] ?? null;
+                        const startStr = start ? instance.formatDate(start, 'Y-m-d') : '';
+                        const endStr = end ? instance.formatDate(end, 'Y-m-d') : '';
+                        setHiddenDates(startStr, endStr);
+                    },
+                    onValueUpdate: function(selectedDates, dateStr, instance){
+                        // handle manual input changes
+                        if (dateStr && dateStr.indexOf('—') !== -1) {
+                            const parts = dateStr.split('—').map(s => s.trim());
+                            setHiddenDates(parts[0] || '', parts[1] || '');
+                        }
+                    }
+                });
+
+                // attach fp reference and fallback trigger
+                el._flatpickr = fp;
+
+                // Fallback: open picker on click if not visible/initialized yet
+                el.addEventListener('click', function(){
+                    if (el._flatpickr) el._flatpickr.open();
+                });
+
+                // Ensure hidden inputs are set just before the form is submitted (safety net)
+                const parentForm = el.closest('form');
+                if (parentForm && !parentForm.__dateSubmitHandlerAttached) {
+                    parentForm.__dateSubmitHandlerAttached = true;
+                    // use capture phase to make sure this runs before other submit handlers (Livewire)
+                    parentForm.addEventListener('submit', function(){
+                        const inputIn = parentForm.querySelector('#check_in_hidden');
+                        const inputOut = parentForm.querySelector('#check_out_hidden');
+                        if (inputIn && inputOut && !(inputIn.value && inputOut.value)) {
+                            // try to parse from picker value
+                            const val = el.value || '';
+                            if (val && val.indexOf('—') !== -1) {
+                                const parts = val.split('—').map(s => s.trim());
+                                if (!inputIn.value) inputIn.value = parts[0] || '';
+                                if (!inputOut.value) inputOut.value = parts[1] || '';
+                                inputIn.dispatchEvent(new Event('input', { bubbles: true }));
+                                inputOut.dispatchEvent(new Event('input', { bubbles: true }));
+                            }
+                        }
+                    }, true);
+
+                    parentForm.querySelectorAll('button[type="submit"]').forEach(function(btn){
+                        btn.addEventListener('click', function(){
+                            const inputIn = parentForm.querySelector('#check_in_hidden');
+                            const inputOut = parentForm.querySelector('#check_out_hidden');
+                            const val = el.value || '';
+                            if (inputIn && inputOut && val && val.indexOf('—') !== -1) {
+                                const parts = val.split('—').map(s => s.trim());
+                                if (!inputIn.value) inputIn.value = parts[0] || '';
+                                if (!inputOut.value) inputOut.value = parts[1] || '';
+                                inputIn.dispatchEvent(new Event('input', { bubbles: true }));
+                                inputOut.dispatchEvent(new Event('input', { bubbles: true }));
+                            }
+                        });
+                    });
+                }
+            });
+        }
+
+        // Wait for flatpickr to be available (handles deferred script load)
+        function waitForFlatpickr(cb, timeout = 8000, interval = 100){
+            const start = Date.now();
+            (function check(){
+                if (window.flatpickr) return cb();
+                if (Date.now() - start > timeout) return; // give up after timeout
+                setTimeout(check, interval);
+            })();
+        }
+
+        waitForFlatpickr(function(){
+            // Initialize after Livewire loads so Livewire has attached listeners
+            document.addEventListener('livewire:load', initPickers);
+            // Fallback if Livewire not present yet
+            document.addEventListener('DOMContentLoaded', function(){ setTimeout(initPickers, 50); });
+
+            // Re-run icon render and pickers after Livewire updates (forms can be re-rendered)
+            document.addEventListener('livewire:update', function(){
+                if (window.lucide) lucide.createIcons();
+                setTimeout(initPickers, 50);
+            });
+
+            // Also run immediately once flatpickr exists
+            setTimeout(initPickers, 50);
+        }, 8000);
+    })();
+</script>
+@endpush

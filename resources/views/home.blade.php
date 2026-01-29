@@ -26,13 +26,13 @@
     <main class="relative min-h-screen w-full overflow-hidden flex flex-col lg:flex-row border-b border-white/5">
         <!-- Animated Background Carousel & Decorative layers -->
         <div class="absolute inset-0 z-0">
-            <div class="hero-bg-carousel">
+            <div class="hero-bg-carousel" style="background-image: url('https://img.vistarooms.com/gallery/casa-frangipani-657c43.jpg'); background-size: cover; background-position: center;">
                 <div class="hero-bg-slide active"><img src="https://img.vistarooms.com/gallery/casa-frangipani-657c43.jpg" alt="Casa Frangipani luxury villa" class="w-full h-full object-cover"/></div>
                 <div class="hero-bg-slide"><img src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg" alt="Casa Frangipani pool view" class="w-full h-full object-cover"/></div>
                 <div class="hero-bg-slide"><img src="https://img.vistarooms.com/gallery/casa-frangipani-9e5e0c.jpg" alt="Casa Frangipani interior" class="w-full h-full object-cover"/></div>
             </div>
-            <div class="absolute inset-0 bg-gradient-to-br from-black/95 via-black/70 to-black/50"></div>
-            <div class="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/60"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-black/20 via-black/10 to-transparent pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-radial from-transparent via-black/8 to-transparent pointer-events-none"></div>
         </div>
 
         <!-- Floating decorative elements -->
@@ -846,7 +846,8 @@ position: fixed !important;
             });
         }, observerOptions);
 
-        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+        // Observe both generic 'animate-on-scroll' and utility animate-* classes used across the page
+        document.querySelectorAll('.animate-on-scroll, .animate-fade-in-up, .animate-width-expand, .animate-float-slow, .animate-float-slower, .animate-pulse-slower').forEach(element => {
             observer.observe(element);
         });
 
@@ -871,7 +872,9 @@ position: fixed !important;
         (function(){
             const slides = document.querySelectorAll('.hero-bg-slide');
             if (!slides.length) return;
-            let idx = 0;
+            // Ensure one active slide exists initially
+            let idx = Array.from(slides).findIndex(s => s.classList.contains('active'));
+            if (idx === -1) { idx = 0; slides[0].classList.add('active'); }
             setInterval(()=>{
                 slides[idx].classList.remove('active');
                 idx = (idx+1) % slides.length;
@@ -881,15 +884,33 @@ position: fixed !important;
 
         // Flatpickr date range -> populate Livewire form inputs (targets .date-range-picker)
         (function(){
-            if (!window.flatpickr) return;
+            function setHiddenDates(inVal, outVal, el){
+                const form = el ? el.closest('form') : null;
+                let inputIn = form ? form.querySelector('#check_in_hidden') : null;
+                let inputOut = form ? form.querySelector('#check_out_hidden') : null;
+                if (!inputIn) inputIn = document.getElementById('check_in_hidden');
+                if (!inputOut) inputOut = document.getElementById('check_out_hidden');
+
+                if (inputIn){ inputIn.value = inVal || ''; inputIn.dispatchEvent(new Event('input', { bubbles: true })); }
+                if (inputOut){ inputOut.value = outVal || ''; inputOut.dispatchEvent(new Event('input', { bubbles: true })); }
+
+                // update optional visible display helpers (if present)
+                const dispIn = document.getElementById('display_check_in');
+                const dispOut = document.getElementById('display_check_out');
+                function fmt(d){ if (!d) return ''; const dt = new Date(d); if (isNaN(dt)) return d; return dt.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }); }
+                if (dispIn) dispIn.textContent = fmt(inVal);
+                if (dispOut) dispOut.textContent = fmt(outVal);
+            }
 
             function initPickers(){
+                if (typeof flatpickr === 'undefined') return;
+
                 document.querySelectorAll('.date-range-picker').forEach(function(el){
                     // prevent double-init
                     if (el.__flatpickrInitialized) return;
                     el.__flatpickrInitialized = true;
 
-                    flatpickr(el, {
+                    const fp = flatpickr(el, {
                         mode: 'range',
                         dateFormat: 'Y-m-d',
                         onChange: function(selectedDates, dateStr, instance){
@@ -898,14 +919,7 @@ position: fixed !important;
                             const startStr = start ? instance.formatDate(start, 'Y-m-d') : '';
                             const endStr = end ? instance.formatDate(end, 'Y-m-d') : '';
 
-                            const form = el.closest('form');
-                            let inputIn = form ? form.querySelector('#check_in_hidden') : null;
-                            let inputOut = form ? form.querySelector('#check_out_hidden') : null;
-                            if (!inputIn) inputIn = document.getElementById('check_in_hidden');
-                            if (!inputOut) inputOut = document.getElementById('check_out_hidden');
-
-                            if (inputIn){ inputIn.value = startStr; inputIn.dispatchEvent(new Event('input', { bubbles: true })); }
-                            if (inputOut){ inputOut.value = endStr; inputOut.dispatchEvent(new Event('input', { bubbles: true })); }
+                            setHiddenDates(startStr, endStr, el);
 
                             if (startStr && endStr) {
                                 el.value = startStr + ' — ' + endStr;
@@ -914,15 +928,89 @@ position: fixed !important;
                             } else {
                                 el.value = '';
                             }
+                        },
+                        onClose: function(selectedDates, dateStr, instance){
+                            // Ensure both inputs are set if possible when user closes picker
+                            const parts = (dateStr || '').split('—').map(s => s.trim());
+                            setHiddenDates(parts[0] || '', parts[1] || '', el);
+                        },
+                        onValueUpdate: function(selectedDates, dateStr, instance){
+                            // keep hidden inputs synced when internal value changes
+                            const parts = (dateStr || '').split('—').map(s => s.trim());
+                            setHiddenDates(parts[0] || '', parts[1] || '', el);
                         }
                     });
+
+                    // attach fp reference and fallback trigger
+                    el._flatpickr = fp;
+
+                    // Fallback: open picker on click if not visible/initialized yet
+                    el.addEventListener('click', function(){ if (el._flatpickr) el._flatpickr.open(); });
+
+                    // Ensure hidden inputs are set just before the form is submitted (safety net)
+                    const parentForm = el.closest('form');
+                    if (parentForm && !parentForm.__dateSubmitHandlerAttached) {
+                        parentForm.__dateSubmitHandlerAttached = true;
+                        // use capture phase to make sure this runs before other submit handlers (Livewire)
+                        parentForm.addEventListener('submit', function(){
+                            const inputIn = parentForm.querySelector('#check_in_hidden');
+                            const inputOut = parentForm.querySelector('#check_out_hidden');
+                            if (inputIn && inputOut && !(inputIn.value && inputOut.value)) {
+                                // try to parse from picker value
+                                const val = el.value || '';
+                                if (val && val.indexOf('—') !== -1) {
+                                    const parts = val.split('—').map(s => s.trim());
+                                    if (!inputIn.value) inputIn.value = parts[0] || '';
+                                    if (!inputOut.value) inputOut.value = parts[1] || '';
+                                    inputIn.dispatchEvent(new Event('input', { bubbles: true }));
+                                    inputOut.dispatchEvent(new Event('input', { bubbles: true }));
+                                }
+                            }
+                        }, true);
+
+                        // Also ensure a click on any submit button sets the values immediately (extra safety)
+                        parentForm.querySelectorAll('button[type="submit"]').forEach(function(btn){
+                            btn.addEventListener('click', function(){
+                                const inputIn = parentForm.querySelector('#check_in_hidden');
+                                const inputOut = parentForm.querySelector('#check_out_hidden');
+                                const val = el.value || '';
+                                if (inputIn && inputOut && val && val.indexOf('—') !== -1) {
+                                    const parts = val.split('—').map(s => s.trim());
+                                    if (!inputIn.value) inputIn.value = parts[0] || '';
+                                    if (!inputOut.value) inputOut.value = parts[1] || '';
+                                    inputIn.dispatchEvent(new Event('input', { bubbles: true }));
+                                    inputOut.dispatchEvent(new Event('input', { bubbles: true }));
+                                }
+                            });
+                        });
+                    }
+                        });
+                    }
                 });
             }
 
-            // Initialize after Livewire loads so Livewire has attached listeners
-            document.addEventListener('livewire:load', initPickers);
-            // Fallback if Livewire not present yet
-            document.addEventListener('DOMContentLoaded', function(){ setTimeout(initPickers, 50); });
+            // Wait for flatpickr to be available (handles deferred script load)
+            function waitForFlatpickr(cb, timeout = 8000, interval = 100){
+                const start = Date.now();
+                (function check(){
+                    if (window.flatpickr) return cb();
+                    if (Date.now() - start > timeout) return; // give up after timeout
+                    setTimeout(check, interval);
+                })();
+            }
+
+            waitForFlatpickr(function(){
+                // Initialize after Livewire loads so Livewire has attached listeners
+                document.addEventListener('livewire:load', initPickers);
+                // Fallback if Livewire not present yet
+                document.addEventListener('DOMContentLoaded', function(){ setTimeout(initPickers, 50); });
+
+                // Re-run icon render and pickers after Livewire updates (forms can be re-rendered)
+                document.addEventListener('livewire:update', function(){ if (window.lucide) lucide.createIcons(); setTimeout(initPickers, 50); });
+
+                // Also run immediately once flatpickr exists
+                setTimeout(initPickers, 50);
+            }, 8000);
         })();
     </script>
 <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>

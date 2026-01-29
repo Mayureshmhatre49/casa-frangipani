@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom animations and helper classes */
+@layer components {
+  /* Hero background carousel */
+  .hero-bg-carousel { position: relative; width: 100%; height: 100%; min-height: 60vh; }
+  .hero-bg-slide { position: absolute; inset: 0; opacity: 0; transform: scale(1.04); transition: opacity 1s ease, transform 1s cubic-bezier(0.22, 1, 0.36, 1); }
+  .hero-bg-slide.active { opacity: 1; z-index: 0; transform: scale(1); }
+  .hero-bg-slide img { width: 100%; height: 100%; object-fit: cover; display: block; filter: none; }
+
+  /* Simple reveal animations */
+  .animate-fade-in-up { opacity: 0; transform: translateY(12px); transition: opacity .7s ease, transform .7s ease; }
+  .animate-width-expand { transform-origin: left; transform: scaleX(0); transition: transform .9s cubic-bezier(0.22, 1, 0.36, 1); }
+  .animate-float-slow { animation: floatSlow 8s ease-in-out infinite; }
+  .animate-float-slower { animation: floatSlower 12s ease-in-out infinite; }
+  .animate-pulse-slower { animation: pulseSlower 3.5s ease-in-out infinite; }
+
+  /* When intersection observer adds .is-visible */
+  .is-visible.animate-fade-in-up { opacity: 1; transform: translateY(0); }
+  .is-visible.animate-width-expand { transform: scaleX(1); }
+
+  /* Slide-up reveal (used across Rocket templates) */
+  .animate-slide-up { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(0.22,1,0.36,1); }
+  .is-visible.animate-slide-up { opacity: 1; transform: translateY(0); }
+
+  /* Cinematic entrance for hero image */
+  .animate-cinematic { opacity: 0; transform: scale(1.06); transition: opacity 1.2s ease, transform 1.6s cubic-bezier(0.22,1,0.36,1); }
+  .is-visible.animate-cinematic { opacity: 1; transform: scale(1); }
+
+  /* Shimmer background (thin highlight) */
+  .bg-shimmer { background-image: linear-gradient(90deg, rgba(212,175,55,0.04) 0%, rgba(212,175,55,0.25) 50%, rgba(212,175,55,0.04) 100%); background-size: 200% 100%; animation: shimmerMove 3s linear infinite; }
+
+  /* Delay utilities (used in template as 'delay-1200' etc.) */
+  .delay-1200 { transition-delay: 1.2s !important; }
+  .delay-1400 { transition-delay: 1.4s !important; }
+  .delay-1600 { transition-delay: 1.6s !important; }
+  .delay-1800 { transition-delay: 1.8s !important; }
+  .delay-2200 { transition-delay: 2.2s !important; }
+  .delay-2500 { transition-delay: 2.5s !important; }
+}
+
+
+@layer utilities {
+  @keyframes floatSlow { 0%{ transform: translateY(0) } 50%{ transform: translateY(-10px) } 100%{ transform: translateY(0) } }
+  @keyframes floatSlower { 0%{ transform: translateY(0) } 50%{ transform: translateY(-18px) } 100%{ transform: translateY(0) } }
+  @keyframes pulseSlower { 0%{ opacity: 1 } 50%{ opacity: 0.65 } 100%{ opacity: 1 } }
+  @keyframes shimmerMove { 0%{ background-position: 200% 0 } 100%{ background-position: -200% 0 } }
+}
