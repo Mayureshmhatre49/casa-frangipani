@@ -9,7 +9,7 @@
 
 {{-- ================= NAVIGATION ================= --}}
 <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 p-6 md:p-10 flex items-center justify-between pointer-events-none transition-all duration-500">
-    <a href="{{ url('/') }}" class="text-2xl font-heading font-bold tracking-tight pointer-events-auto text-white" id="nav-logo">
+    <a href="#" class="text-2xl font-heading font-bold tracking-tight pointer-events-auto text-white" id="nav-logo">
         Casa Frangipani
     </a>
 
