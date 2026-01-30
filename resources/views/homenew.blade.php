@@ -64,13 +64,46 @@
                         <span class="h-[1px] w-8 bg-white/60"></span>
                         <span class="text-xs font-mono uppercase tracking-widest text-white/80">Alibaug, Maharashtra</span>
                     </div>
-                    <h1 class="font-heading font-bold text-white leading-[0.85] tracking-tight">
-                        <span class="block text-[15vw] md:text-[9rem] lg:text-[11rem] animate-slide-up delay-1400 opacity-0 drop-shadow-2xl">Experience</span>
-                        <div class="flex items-baseline gap-4 md:gap-8 -mt-2 md:-mt-8 animate-slide-up delay-1600 opacity-0">
-                            <span class="text-[15vw] md:text-[9rem] lg:text-[11rem] font-serif italic font-thin text-white/60">Private</span>
-                            <span class="text-[15vw] md:text-[9rem] lg:text-[11rem] drop-shadow-2xl">Luxury</span>
-                        </div>
-                    </h1>
+                    <h1 class="font-heading font-bold text-white tracking-tight leading-none md:leading-[0.95]">
+
+    <!-- EXPERIENCE -->
+    <span
+        class="block 
+        text-[clamp(3rem,12vw,8rem)] 
+        md:text-[clamp(4rem,8vw,6.5rem)] 
+        lg:text-[clamp(6rem,7vw,9.5rem)] 
+        xl:text-[10rem]
+        animate-slide-up delay-1400 opacity-0 drop-shadow-2xl">
+        Experience
+    </span>
+
+    <!-- PRIVATE LUXURY -->
+    <span
+        class="flex items-baseline gap-3 md:gap-6 mt-1 md:mt-0
+        animate-slide-up delay-1600 opacity-0">
+
+        <span
+            class="font-serif italic font-light text-white/60
+            text-[clamp(3.2rem,9vw,5rem)] 
+            md:text-[clamp(3.5rem,5vw,4rem)] 
+            lg:text-[4.5rem]">
+            Private
+        </span>
+
+        <span
+            class="font-heading font-bold drop-shadow-2xl
+            text-[clamp(3rem,11vw,7rem)] 
+            md:text-[clamp(3.5rem,6vw,6rem)] 
+            lg:text-[8rem]
+            xl:text-[9.5rem]">
+            Luxury
+        </span>
+
+    </span>
+
+</h1>
+
+
                 </div>
 
                 <div class="md:col-span-4 md:col-start-9 flex flex-col justify-end pb-4 md:pb-8">
@@ -155,290 +188,287 @@
             </div>
         </section>
 
-        <!-- Amenities Section -->
-        <section id="amenities" class="bg-brown-dark border-t border-white/5 py-20 md:py-32 px-4 md:px-10 relative">
-            <div class="w-full max-w-6xl mx-auto relative z-10">
-                <div class="text-center mb-16 animate-on-scroll">
-                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Villa Amenities</h3>
-                    <p class="text-white/50 text-lg">Private pool, AC bedrooms, fully-equipped kitchen, daily housekeeping and attentive caretaker service.</p>
-                </div>
+       @php
+    // Amenities Section
+  
+    $amenities = [
+        [
+            'icon' => 'waves',
+            'title' => 'Private Swimming Pool',
+            'subtitle' => 'Temperature Controlled',
+            'badge_type' => 'premium',
+            'specs' => [
+                ['icon' => 'ruler', 'label' => 'Length', 'value' => '40 feet'],
+                ['icon' => 'thermometer', 'label' => 'Depth', 'value' => '4.5 feet'],
+                ['icon' => 'maximize-2', 'label' => 'Width', 'value' => '20 feet'],
+            ]
+        ],
+        [
+            'icon' => 'snowflake',
+            'title' => 'Air Conditioning',
+            'subtitle' => 'Energy Efficient',
+            'badge_type' => 'essential',
+            'specs' => [
+                ['icon' => 'bed', 'label' => 'Bedrooms', 'value' => '6 Bedrooms'],
+                ['icon' => 'sofa', 'label' => 'Living', 'value' => 'Living Room'],
+                ['icon' => 'gamepad2', 'label' => 'Games', 'value' => 'Games Room'],
+            ]
+        ],
+        [
+            'icon' => 'sparkles',
+            'title' => 'Daily Housekeeping',
+            'subtitle' => 'Professional Service',
+            'badge_type' => 'premium',
+            'specs' => [
+                ['icon' => 'clock', 'label' => 'Timing', 'value' => '9am – 6pm'],
+                ['icon' => 'shirt', 'label' => 'Laundry', 'value' => 'Available at extra cost'],
+                ['icon' => 'bed-double', 'label' => 'Linens', 'value' => 'Fresh Daily'],
+            ]
+        ],
+        [
+            'icon' => 'wifi',
+            'title' => 'WiFi & Power Backup',
+            'subtitle' => 'High Speed Internet',
+            'badge_type' => 'essential',
+            'specs' => [
+                ['icon' => 'gauge', 'label' => 'Speed', 'value' => '30 Mbps'],
+                ['icon' => 'battery-charging', 'label' => 'Backup', 'value' => 'Generator'],
+                ['icon' => 'signal', 'label' => 'Coverage', 'value' => 'All Areas'],
+            ]
+        ],
+    ];
+@endphp
 
-                <div class="flex flex-col gap-4">
-                    <div class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-4 md:p-6 bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl transition-all duration-300 animate-on-scroll">
-                        <div class="col-span-1 md:col-span-4 flex items-center gap-6">
-                            <div class="w-20 h-20 md:w-24 md:h-24 bg-terracotta/20 rounded-xl flex items-center justify-center shrink-0">
-                                <i data-lucide="waves" class="size-10 text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg md:text-xl text-white font-heading font-semibold">Private Swimming Pool</h4>
-                                <p class="text-[10px] md:text-xs text-white/40 mt-1 uppercase tracking-wider">Temperature Controlled</p>
-                            </div>
-                        </div>
-                        <div class="col-span-1 md:col-span-6 grid grid-cols-3 gap-y-4 gap-x-2 border-l border-white/10 pl-6">
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="ruler" class="size-3"></i> Length
-                                </div>
-                                <span class="text-white text-sm">25 feet</span>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="thermometer" class="size-3"></i> Depth
-                                </div>
-                                <span class="text-white text-sm">4 feet</span>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="droplets" class="size-3"></i> Maintenance
-                                </div>
-                                <span class="text-white text-sm">Daily Cleaning</span>
-                            </div>
-                        </div>
-                        <div class="col-span-1 md:col-span-2 flex items-center justify-end">
-                            <span class="text-xl font-serif italic text-white">Premium</span>
-                        </div>
-                    </div>
 
-                    <div class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-4 md:p-6 bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl transition-all duration-300 animate-on-scroll">
-                        <div class="col-span-1 md:col-span-4 flex items-center gap-6">
-                            <div class="w-20 h-20 md:w-24 md:h-24 bg-terracotta/20 rounded-xl flex items-center justify-center shrink-0">
-                                <i data-lucide="snowflake" class="size-10 text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl text-white font-heading font-semibold">Air Conditioning</h4>
-                                <p class="text-xs text-white/40 mt-1 uppercase tracking-wider">Energy Efficient</p>
-                            </div>
-                        </div>
-                        <div class="col-span-1 md:col-span-6 grid grid-cols-3 gap-y-4 gap-x-2 border-l border-white/10 pl-6">
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="bed" class="size-3"></i> Bedrooms
-                                </div>
-                                <span class="text-white text-sm">All 6 Rooms</span>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="sofa" class="size-3"></i> Living
-                                </div>
-                                <span class="text-white text-sm">Main Area</span>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="zap" class="size-3"></i> Control
-                                </div>
-                                <span class="text-white text-sm">Individual</span>
-                            </div>
-                        </div>
-                        <div class="col-span-1 md:col-span-2 flex items-center justify-end">
-                            <span class="text-xl font-serif italic text-white">Essential</span>
-                        </div>
-                    </div>
+<section id="amenities" class="bg-brown-dark border-t border-white/5 py-20 md:py-32 px-4 md:px-10 relative">
+    <div class="w-full max-w-6xl mx-auto relative z-10">
 
-                    <div class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-4 md:p-6 bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl transition-all duration-300 animate-on-scroll">
-                        <div class="col-span-1 md:col-span-4 flex items-center gap-6">
-                            <div class="w-20 h-20 md:w-24 md:h-24 bg-terracotta/20 rounded-xl flex items-center justify-center shrink-0">
-                                <i data-lucide="chef-hat" class="size-10 text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl text-white font-heading font-semibold">Fully Equipped Kitchen</h4>
-                                <p class="text-xs text-white/40 mt-1 uppercase tracking-wider">Chef Ready</p>
-                            </div>
-                        </div>
-                        <div class="col-span-1 md:col-span-6 grid grid-cols-3 gap-y-4 gap-x-2 border-l border-white/10 pl-6">
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="flame" class="size-3"></i> Stove
-                                </div>
-                                <span class="text-white text-sm">4-Burner Gas</span>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="microwave" class="size-3"></i> Appliances
-                                </div>
-                                <span class="text-white text-sm">Full Set</span>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="utensils" class="size-3"></i> Utensils
-                                </div>
-                                <span class="text-white text-sm">Complete</span>
-                            </div>
-                        </div>
-                        <div class="col-span-1 md:col-span-2 flex items-center justify-end">
-                            <span class="text-xl font-serif italic text-white">Included</span>
-                        </div>
-                    </div>
+        <!-- Heading -->
+        <div class="text-center mb-16 animate-on-scroll">
+            <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
+                Villa Amenities
+            </h3>
+            <p class="text-white/50 text-lg max-w-2xl mx-auto">
+                Private pool, AC bedrooms, fully-equipped kitchen, daily housekeeping and attentive caretaker service.
+            </p>
+        </div>
 
-                    <div class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-4 md:p-6 bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl transition-all duration-300 animate-on-scroll">
-                        <div class="col-span-1 md:col-span-4 flex items-center gap-6">
-                            <div class="w-20 h-20 md:w-24 md:h-24 bg-terracotta/20 rounded-xl flex items-center justify-center shrink-0">
-                                <i data-lucide="sparkles" class="size-10 text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl text-white font-heading font-semibold">Daily Housekeeping</h4>
-                                <p class="text-xs text-white/40 mt-1 uppercase tracking-wider">Professional Service</p>
-                            </div>
-                        </div>
-                        <div class="col-span-1 md:col-span-6 grid grid-cols-3 gap-y-4 gap-x-2 border-l border-white/10 pl-6">
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="clock" class="size-3"></i> Timing
-                                </div>
-                                <span class="text-white text-sm">9am - 6pm</span>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="shirt" class="size-3"></i> Laundry
-                                </div>
-                                <span class="text-white text-sm">Included</span>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="bed-double" class="size-3"></i> Linens
-                                </div>
-                                <span class="text-white text-sm">Fresh Daily</span>
-                            </div>
-                        </div>
-                        <div class="col-span-1 md:col-span-2 flex items-center justify-end">
-                            <span class="text-xl font-serif italic text-white">Premium</span>
-                        </div>
-                    </div>
+        <!-- Amenity Cards -->
+        <div class="flex flex-col gap-5">
 
-                    <div class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-4 md:p-6 bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl transition-all duration-300 animate-on-scroll">
-                        <div class="col-span-1 md:col-span-4 flex items-center gap-6">
-                            <div class="w-20 h-20 md:w-24 md:h-24 bg-terracotta/20 rounded-xl flex items-center justify-center shrink-0">
-                                <i data-lucide="wifi" class="size-10 text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl text-white font-heading font-semibold">WiFi & Power Backup</h4>
-                                <p class="text-xs text-white/40 mt-1 uppercase tracking-wider">High Speed</p>
-                            </div>
-                        </div>
-                        <div class="col-span-1 md:col-span-6 grid grid-cols-3 gap-y-4 gap-x-2 border-l border-white/10 pl-6">
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="gauge" class="size-3"></i> Speed
-                                </div>
-                                <span class="text-white text-sm">100 Mbps</span>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="battery-charging" class="size-3"></i> Backup
-                                </div>
-                                <span class="text-white text-sm">Generator</span>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
-                                    <i data-lucide="signal" class="size-3"></i> Coverage
-                                </div>
-                                <span class="text-white text-sm">All Areas</span>
-                            </div>
-                        </div>
-                        <div class="col-span-1 md:col-span-2 flex items-center justify-end">
-                            <span class="text-xl font-serif italic text-white">Essential</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            @foreach($amenities as $amenity)
+                <div class="group grid grid-cols-1 md:grid-cols-12 gap-6 items-center
+                    p-5 md:p-6 bg-white/5 hover:bg-white/10
+                    border border-white/5 rounded-2xl md:rounded-3xl
+                    transition-all duration-300
+                    hover:-translate-y-0.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+                    animate-on-scroll">
 
-        <!-- Gallery Section -->
-        <section id="gallery" class="py-20 md:py-32 px-4 md:px-10 bg-cream">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-center mb-16 md:mb-24 tracking-tighter text-brown-dark animate-on-scroll">Villa Gallery</h2>
-                
-                <div class="grid lg:grid-cols-12 gap-12 md:gap-20 items-start">
-                    <div class="lg:col-span-3 space-y-8 border-l border-brown-dark/10 pl-4 lg:pl-8 animate-on-scroll" id="gallery-list">
-                        <div class="group cursor-pointer gallery-tab active" 
-                             data-room="Pool View" 
-                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg"
-                             data-desc="25ft temperature-controlled private pool surrounded by tropical landscaping with sun loungers and outdoor shower."
-                             data-sleeps="Outdoor" data-size="Pool Area" data-view="Garden">
-                            <h4 class="text-lg font-heading font-bold text-brown-dark">Pool View</h4>
-                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">Outdoor Area</p>
+                    <!-- Icon + Title -->
+                    <div class="col-span-1 md:col-span-4 flex flex-col sm:flex-row sm:items-center gap-4 md:gap-6">
+                        <div class="w-20 h-20 md:w-24 md:h-24 bg-terracotta/20 rounded-xl flex items-center justify-center shrink-0">
+                            <i data-lucide="{{ $amenity['icon'] }}" class="size-10 text-white"></i>
                         </div>
-                        <div class="group cursor-pointer gallery-tab opacity-30 hover:opacity-100 transition-opacity" 
-                             data-room="Master Bedroom" 
-                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-5c1a08.jpg"
-                             data-desc="Spacious king-size bedroom with en-suite bathroom, air conditioning, premium linens, and private balcony with garden views."
-                             data-sleeps="Sleeps 2" data-size="35 sq.m" data-view="Garden View">
-                            <h4 class="text-lg font-heading font-bold text-brown-dark">Master Bedroom</h4>
-                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">King Size</p>
-                        </div>
-                        <div class="group cursor-pointer gallery-tab opacity-30 hover:opacity-100 transition-opacity" 
-                             data-room="Living Area" 
-                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-9e5e0c.jpg"
-                             data-desc="Open-plan living and dining area with contemporary furnishings, large windows, and seamless access to outdoor terrace."
-                             data-sleeps="Main Space" data-size="60 sq.m" data-view="Pool View">
-                            <h4 class="text-lg font-heading font-bold text-brown-dark">Living Area</h4>
-                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">Open Plan</p>
-                        </div>
-                        <div class="group cursor-pointer gallery-tab opacity-30 hover:opacity-100 transition-opacity" 
-                             data-room="Outdoor Deck" 
-                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-5f41a0.jpg"
-                             data-desc="Covered outdoor dining area with ceiling fans, ambient lighting, and tropical garden surroundings perfect for al fresco meals."
-                             data-sleeps="Outdoor" data-size="Dining Area" data-view="Garden">
-                            <h4 class="text-lg font-heading font-bold text-brown-dark">Outdoor Deck</h4>
-                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">Dining Space</p>
-                        </div>
-                        <div class="group cursor-pointer gallery-tab opacity-30 hover:opacity-100 transition-opacity" 
-                             data-room="Kitchen" 
-                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-2cafa4.jpg"
-                             data-desc="Fully equipped modern kitchen with gas stove, microwave, refrigerator, complete cookware, and granite countertops."
-                             data-sleeps="Chef Ready" data-size="20 sq.m" data-view="Functional">
-                            <h4 class="text-lg font-heading font-bold text-brown-dark">Kitchen</h4>
-                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">Full Equipment</p>
-                        </div>
-                        <div class="group cursor-pointer gallery-tab opacity-30 hover:opacity-100 transition-opacity" 
-                             data-room="Guest Rooms" 
-                             data-image="https://img.vistarooms.com/gallery/casa-frangipani-0c3c0b.jpg"
-                             data-desc="Three additional bedrooms with queen/twin beds, air conditioning, premium linens, and shared bathrooms with modern fixtures."
-                             data-sleeps="Sleeps 6" data-size="25 sq.m each" data-view="Garden">
-                            <h4 class="text-lg font-heading font-bold text-brown-dark">Guest Rooms</h4>
-                            <p class="text-[10px] text-brown-dark/40 uppercase tracking-wider">3 Bedrooms</p>
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-9 relative animate-on-scroll" id="gallery-display">
-                        <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer" id="main-gallery-image-container">
-                            <img src="https://img.vistarooms.com/gallery/casa-frangipani-cd9529.jpg" 
-                                 class="w-full h-full object-cover transition-opacity duration-500 opacity-100 hover:scale-105 transition-transform duration-700" 
-                                 id="main-gallery-image" 
-                                 alt="Private 25ft swimming pool with sun loungers and tropical landscaping at Casa Frangipani luxury villa">
-                        </div>
-                        
-                        <div class="hidden md:block absolute top-8 right-6 md:right-10 w-64 md:w-80 bg-white/90 backdrop-blur-md p-6 md:p-10 rounded-2xl shadow-2xl">
-                            <h3 class="text-2xl md:text-3xl font-heading font-bold mb-4 md:mb-6 text-brown-dark" id="gallery-title">Pool View</h3>
-                            <p class="text-xs md:text-sm leading-relaxed text-brown-dark/60 mb-6 md:mb-8" id="gallery-desc">
-                                25ft temperature-controlled private pool surrounded by tropical landscaping with sun loungers and outdoor shower.
+                        <div>
+                            <h4 class="text-lg md:text-xl text-white font-heading font-semibold">
+                                {{ $amenity['title'] }}
+                            </h4>
+                            <p class="text-[10px] md:text-xs text-white/40 mt-1 uppercase tracking-wider">
+                                {{ $amenity['subtitle'] }}
                             </p>
                         </div>
-
-                        <div class="mt-12 flex flex-wrap gap-12 md:gap-20">
-                            <div class="space-y-2">
-                                <p class="text-[10px] font-bold text-brown-dark/30 uppercase tracking-wider">Type</p>
-                                <p class="text-3xl font-heading font-bold text-brown-dark" id="gallery-sleeps">Outdoor</p>
-                            </div>
-                            <div class="space-y-2">
-                                <p class="text-[10px] font-bold text-brown-dark/30 uppercase tracking-wider">Space</p>
-                                <p class="text-3xl font-heading font-bold text-brown-dark" id="gallery-size">Pool Area</p>
-                            </div>
-                            <div class="space-y-2">
-                                <p class="text-[10px] font-bold text-brown-dark/30 uppercase tracking-wider">View</p>
-                                <p class="text-3xl font-heading font-bold text-brown-dark" id="gallery-view">Garden</p>
-                            </div>
-                        </div>
-
-                        <!-- <div class="mt-8 text-center">
-                            <button class="px-8 py-4 bg-brown-dark text-white rounded-full font-medium hover:bg-brown-dark/90 transition-colors inline-flex items-center gap-2">
-                                <i data-lucide="maximize" class="size-5"></i>
-                                View Full Gallery
-                            </button>
-                        </div> -->
                     </div>
+
+                    <!-- Specs -->
+                    <div class="col-span-1 md:col-span-6
+                        grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-4
+                        md:border-l md:border-white/10 md:pl-6 mt-4 md:mt-0">
+
+                        @foreach($amenity['specs'] as $spec)
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-1.5 text-white/50 text-xs uppercase tracking-wide">
+                                    <i data-lucide="{{ $spec['icon'] }}" class="size-3"></i>
+                                    {{ $spec['label'] }}
+                                </div>
+                                <span class="text-white text-sm">
+                                    {{ $spec['value'] }}
+                                </span>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <!-- Badge -->
+                    <div class="col-span-1 md:col-span-2 flex items-center justify-start md:justify-end">
+                        @if($amenity['badge_type'] === 'premium')
+                            <span class="inline-flex items-center justify-center
+                                px-4 py-1.5 rounded-full
+                                text-xs md:text-sm font-serif italic tracking-wide
+                                border backdrop-blur-md
+                                bg-terracotta/20 border-terracotta/40 text-white">
+                                Premium
+                            </span>
+                        @else
+                            <span class="inline-flex items-center justify-center
+                                px-4 py-1.5 rounded-full
+                                text-xs md:text-sm font-serif italic tracking-wide
+                                border backdrop-blur-md
+                                bg-white/10 border-white/20 text-white/80">
+                                Essential
+                            </span>
+                        @endif
+                    </div>
+
+                </div>
+            @endforeach
+
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+       <section id="gallery" class="bg-cream py-20 md:py-32 px-4 md:px-10">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Heading -->
+        <div class="mb-16 md:mb-24 text-center">
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark">
+                Villa Gallery
+            </h2>
+            <p class="mt-4 text-brown-dark/50 max-w-xl mx-auto">
+                A curated walkthrough of spaces designed for comfort, leisure, and togetherness.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+            <!-- LEFT: THUMB STACK -->
+            <div class="lg:col-span-3 order-2 lg:order-1">
+
+                <!-- Mobile -->
+                <div class="flex lg:hidden gap-4 overflow-x-auto pb-2">
+                    <!-- Repeat same buttons as desktop -->
+                </div>
+
+                <!-- Desktop -->
+                <div class="hidden lg:flex flex-col gap-5">
+
+                    <button class="gallery-thumb active"
+                        data-image="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg"
+                        data-title="Private Pool"
+                        data-desc="A temperature-controlled private pool surrounded by lush tropical landscaping and sun loungers.">
+                        <img src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg">
+                        <span>Private Pool</span>
+                    </button>
+
+                    <button class="gallery-thumb"
+                        data-image="https://img.vistarooms.com/gallery/casa-frangipani-5c1a08.jpg"
+                        data-title="Master Suite"
+                        data-desc="Elegant king-size bedroom with premium linens, ensuite bathroom, and serene garden views.">
+                        <img src="https://img.vistarooms.com/gallery/casa-frangipani-5c1a08.jpg">
+                        <span>Master Suite</span>
+                    </button>
+
+                    <button class="gallery-thumb"
+                        data-image="https://img.vistarooms.com/gallery/casa-frangipani-9e5e0c.jpg"
+                        data-title="Living Lounge"
+                        data-desc="Open-plan living area with contemporary seating and seamless indoor-outdoor flow.">
+                        <img src="https://img.vistarooms.com/gallery/casa-frangipani-9e5e0c.jpg">
+                        <span>Living Lounge</span>
+                    </button>
+
+                    <button class="gallery-thumb"
+                        data-image="https://img.vistarooms.com/gallery/casa-frangipani-9629f7.jpg"
+                        data-title="Dining Pavilion"
+                        data-desc="Spacious dining area ideal for shared meals, celebrations, and relaxed conversations.">
+                        <img src="https://img.vistarooms.com/gallery/casa-frangipani-9629f7.jpg">
+                        <span>Dining Pavilion</span>
+                    </button>
+
+                    <button class="gallery-thumb"
+                        data-image="https://img.vistarooms.com/gallery/casa-frangipani-2c9b15.jpg"
+                        data-title="Recreation Room"
+                        data-desc="Dedicated entertainment space with indoor games for all ages to unwind and have fun.">
+                        <img src="https://img.vistarooms.com/gallery/casa-frangipani-2c9b15.jpg">
+                        <span>Recreation Room</span>
+                    </button>
+
+                    <button class="gallery-thumb"
+                        data-image="https://img.vistarooms.com/gallery/casa-frangipani-483f65.jpg"
+                        data-title="Entertainment Zone"
+                        data-desc="Comfortable media space for movie nights, music, and relaxed indoor entertainment.">
+                        <img src="https://img.vistarooms.com/gallery/casa-frangipani-483f65.jpg">
+                        <span>Entertainment Zone</span>
+                    </button>
+
+                    <button class="gallery-thumb"
+                        data-image="https://img.vistarooms.com/gallery/casa-frangipani-a74712.jpg"
+                        data-title="Luxury Bathroom"
+                        data-desc="Modern bathroom with premium fittings, ample space, and hotel-style comfort.">
+                        <img src="https://img.vistarooms.com/gallery/casa-frangipani-a74712.jpg">
+                        <span>Luxury Bathroom</span>
+                    </button>
+
                 </div>
             </div>
-        </section>
+
+            <!-- RIGHT: IMAGE -->
+            <div class="lg:col-span-9 order-1 lg:order-2 relative">
+
+                <div class="aspect-[16/10] rounded-3xl overflow-hidden bg-brown-dark/10">
+                    <img id="gallery-main-image"
+                        src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg"
+                        class="w-full h-full object-cover transition-all duration-700 ease-out">
+                </div>
+
+                <!-- GLASS INFO -->
+                <div class="absolute bottom-6 right-6 md:bottom-10 md:right-10
+                    bg-white/60 backdrop-blur-xl border border-white/40
+                    rounded-2xl p-6 md:p-8 max-w-sm shadow-xl">
+
+                    <h3 id="gallery-title"
+                        class="text-xl md:text-2xl font-heading font-bold text-brown-dark mb-2">
+                        Private Pool
+                    </h3>
+
+                    <p id="gallery-desc"
+                        class="text-sm text-brown-dark/70 leading-relaxed">
+                        A temperature-controlled private pool surrounded by lush tropical landscaping and sun loungers.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    const thumbs = document.querySelectorAll('.gallery-thumb');
+    const mainImage = document.getElementById('gallery-main-image');
+    const title = document.getElementById('gallery-title');
+    const desc = document.getElementById('gallery-desc');
+
+    thumbs.forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+            thumbs.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            mainImage.style.opacity = 0;
+
+            setTimeout(() => {
+                mainImage.src = btn.dataset.image;
+                title.textContent = btn.dataset.title;
+                desc.textContent = btn.dataset.desc;
+                mainImage.style.opacity = 1;
+            }, 250);
+        });
+    });
+</script>
+
+
+
+
 
         <!-- Reviews Section -->
         <section id="reviews" class="py-32 px-6 md:px-10 bg-white">
@@ -625,83 +655,211 @@
             </div>
         </section>
 
-        <!-- Location Section -->
-        <section id="location" class="py-32 px-6 md:px-10 bg-white">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12 md:mb-20 animate-on-scroll">
-                    <span class="text-xs uppercase tracking-[0.4em] text-brown-dark/40 font-medium mb-3 block">Location</span>
-                    <h2 class="text-2xl md:text-5xl font-heading font-bold tracking-tighter text-brown-dark mb-4 md:mb-6">Easy Access from Mumbai</h2>
-                    <p class="text-brown-dark/60 text-sm md:text-lg max-w-2xl mx-auto">
-                        Just 2.5 hours from Mumbai, Casa Frangipani is perfectly positioned for weekend escapes with nearby beaches and attractions.
+        <!--Youtub Videos-->
+        <section id="villa-videos" class="bg-cream  pb-20 px-4 md:px-10">
+    <div class="max-w-6xl mx-auto">
+
+        <!-- Heading -->
+        <div class="text-center mb-14 md:mb-20">
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark">
+                Experience the Villa
+            </h2>
+            <p class="mt-4 text-brown-dark/50 max-w-xl mx-auto">
+                Step inside the villa through immersive video walkthroughs.
+            </p>
+        </div>
+
+        <!-- Videos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+
+            <!-- Video 1 -->
+            <div>
+                <div class="relative aspect-video rounded-3xl overflow-hidden bg-brown-dark/10 shadow-lg">
+                    <iframe
+                        class="absolute inset-0 w-full h-full"
+                        src="https://www.youtube.com/embed/7o8EefaLJlk"
+                        title="Villa Walkthrough Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="mt-6">
+                    <h3 class="text-xl md:text-2xl font-heading font-bold text-brown-dark">
+                        Complete Villa Walkthrough
+                    </h3>
+                    <p class="mt-2 text-sm text-brown-dark/60 leading-relaxed">
+                        A full walkthrough showcasing the villa’s layout, amenities, and living spaces.
                     </p>
                 </div>
+            </div>
 
-                <div class="grid lg:grid-cols-12 gap-12 items-start">
-                    <div class="lg:col-span-5 space-y-8 animate-on-scroll">
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="car" class="size-7 text-terracotta"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-heading font-bold mb-2 text-brown-dark">By Road from Mumbai</h3>
-                                <p class="text-brown-dark/60 leading-relaxed mb-2">2.5 hours drive (140 km) via NH66 and Pen-Khopoli Road. Well-maintained highways with clear signage.</p>
-                                <p class="text-sm text-brown-dark/40">GPS Coordinates: 18.6298° N, 72.8777° E</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="ship" class="size-7 text-terracotta"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-heading font-bold mb-2 text-brown-dark">Ferry Option</h3>
-                                <p class="text-brown-dark/60 leading-relaxed mb-2">Gateway of India to Mandwa Jetty (1 hour ferry), then 15 minutes by road to villa. Scenic and convenient.</p>
-                                <p class="text-sm text-brown-dark/40">Ferry Timings: 7am - 7pm (hourly)</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="waves" class="size-7 text-terracotta"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-heading font-bold mb-2 text-brown-dark">Nearby Beaches</h3>
-                                <ul class="text-brown-dark/60 leading-relaxed space-y-1">
-                                    <li>• Kihim Beach - 5 km (10 min drive)</li>
-                                    <li>• Awas Beach - 8 km (15 min drive)</li>
-                                    <li>• Alibaug Beach - 12 km (20 min drive)</li>
-                                    <li>• Kashid Beach - 35 km (45 min drive)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="coffee" class="size-7 text-terracotta"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-heading font-bold mb-2 text-brown-dark">Dining & Attractions</h3>
-                                <ul class="text-brown-dark/60 leading-relaxed space-y-1">
-                                    <li>• Sanman Restaurant - 3 km (seafood)</li>
-                                    <li>• Boardwalk by Flamboyante - 5 km (cafe)</li>
-                                    <li>• Alibaug Fort - 12 km (historic site)</li>
-                                    <li>• Kolaba Fort - 15 km (sea fort)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pt-4">
-                            <a href="https://www.google.com/maps/dir//18.6298,72.8777" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-brown-dark text-white rounded-full font-medium hover:bg-brown-dark/90 transition-colors">
-                                <i data-lucide="map-pin" class="size-5"></i>
-                                Get Directions
-                            </a>
-                        </div>
-                    </div>
+            <!-- Video 2 -->
+            <div>
+                <div class="relative aspect-video rounded-3xl overflow-hidden bg-brown-dark/10 shadow-lg">
+                    <iframe
+                        class="absolute inset-0 w-full h-full"
+                        src="https://www.youtube.com/embed/5UWhkCCDRwU"
+                        title="Villa Experience Highlights"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
 
-                    <div class="lg:col-span-7 animate-on-scroll">
-                        <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.3892498035643!2d72.87403629678954!3d18.780798600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d7d573f95589%3A0x5f4413d8627101a3!2sHestia%20Villas%20%E2%80%93%20Casa%20Frangipani%2C%20Alibag!5e0!3m2!1sen!2sin!4v1769708322420!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="mt-6">
+                    <h3 class="text-xl md:text-2xl font-heading font-bold text-brown-dark">
+                        Moments & Experiences
+                    </h3>
+                    <p class="mt-2 text-sm text-brown-dark/60 leading-relaxed">
+                        Capturing the atmosphere, comfort, and memorable moments during a stay.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Location Section -->
+<section id="location" class="bg-white py-20 md:py-32 px-4 md:px-10">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Heading -->
+        <div class="text-center mb-14 md:mb-24 animate-on-scroll">
+            <span class="text-xs uppercase tracking-[0.35em] text-brown-dark/40 font-medium block mb-3">
+                Location
+            </span>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark mb-4 md:mb-6">
+                Easy Access from Mumbai
+            </h2>
+            <p class="text-brown-dark/60 text-sm md:text-lg max-w-2xl mx-auto">
+                Just 2.5 hours from Mumbai, Casa Frangipani is ideal for weekend escapes with beaches,
+                dining spots, and attractions close by.
+            </p>
+        </div>
+
+        <!-- Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+            <!-- LEFT: INFO CARDS -->
+            <div class="lg:col-span-5 space-y-6 animate-on-scroll">
+
+                <!-- Card -->
+                <div class="bg-cream rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition">
+                    <div class="flex gap-5 items-start">
+                        <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0">
+                            <i data-lucide="car" class="size-7 text-terracotta"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg md:text-xl font-heading font-bold text-brown-dark mb-2">
+                                By Road from Mumbai
+                            </h3>
+                            <p class="text-brown-dark/60 leading-relaxed mb-2">
+                                Approx. 2.5 hours (140 km) via NH66 and Pen–Khopoli Road with smooth highways.
+                            </p>
+                            <p class="text-sm text-brown-dark/40">
+                                GPS: 18.6298° N, 72.8777° E
+                            </p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Card -->
+                <div class="bg-cream rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition">
+                    <div class="flex gap-5 items-start">
+                        <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0">
+                            <i data-lucide="ship" class="size-7 text-terracotta"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg md:text-xl font-heading font-bold text-brown-dark mb-2">
+                                Ferry Option
+                            </h3>
+                            <p class="text-brown-dark/60 leading-relaxed mb-2">
+                                Ferry from Gateway of India to Mandwa Jetty (1 hour),
+                                followed by a short 10-minute drive.
+                            </p>
+                            <p class="text-sm text-brown-dark/40">
+                                Ferry timings: 7 AM – 7 PM (hourly)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card -->
+                <div class="bg-cream rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition">
+                    <div class="flex gap-5 items-start">
+                        <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0">
+                            <i data-lucide="waves" class="size-7 text-terracotta"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg md:text-xl font-heading font-bold text-brown-dark mb-3">
+                                Nearby Beaches
+                            </h3>
+                            <ul class="text-brown-dark/60 space-y-1 text-sm md:text-base">
+                                <li>• Kihim Beach — 5 km (10 mins)</li>
+                                <li>• Awas Beach — 8 km (15 mins)</li>
+                                <li>• Alibaug Beach — 12 km (20 mins)</li>
+                                <li>• Kashid Beach — 35 km (45 mins)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card -->
+                <div class="bg-cream rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition">
+                    <div class="flex gap-5 items-start">
+                        <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0">
+                            <i data-lucide="coffee" class="size-7 text-terracotta"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg md:text-xl font-heading font-bold text-brown-dark mb-3">
+                                Dining & Attractions
+                            </h3>
+                            <ul class="text-brown-dark/60 space-y-1 text-sm md:text-base">
+                                <li>• Sanman Restaurant — 3 km (seafood)</li>
+                                <li>• Boardwalk by Flamboyante — 5 km (café)</li>
+                                <li>• Alibaug Fort — 12 km</li>
+                                <li>• Kolaba Fort — 15 km</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="pt-4">
+                    <a href="https://www.google.com/maps/dir//18.6298,72.8777"
+                       target="_blank"
+                       class="inline-flex items-center gap-3 px-8 py-4 bg-brown-dark text-white rounded-full font-medium hover:bg-brown-dark/90 transition">
+                        <i data-lucide="map-pin" class="size-5"></i>
+                        Get Directions
+                    </a>
+                </div>
+
             </div>
-        </section>
+
+            <!-- RIGHT: MAP -->
+            <div class="lg:col-span-7 animate-on-scroll">
+                <div class="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
+                    <iframe
+                        class="absolute inset-0 w-full h-full"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.3892498035643!2d72.87403629678954!3d18.780798600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d7d573f95589%3A0x5f4413d8627101a3!2sHestia%20Villas%20%E2%80%93%20Casa%20Frangipani%2C%20Alibag!5e0!3m2!1sen!2sin!4v1769708322420!5m2!1sen!2sin"
+                        style="border:0;"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
         <!-- Booking Form Section -->
         <section id="booking" class="py-32 px-6 md:px-10 bg-brown-dark text-white">
@@ -719,7 +877,7 @@
     </main>
 
 {{-- ================= FOOTER ================= --}}
-<footer class="py-8 md:py-12 px-6 md:px-12 border-t border-brown-dark/10 bg-cream">
+<footer class="py-12 md:py-16 px-6 md:px-12 border-t border-brown-dark/15 bg-gradient-to-b from-cream to-cream/80">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-col md:flex-row">
         <p class="text-brown-dark/40 text-xs md:text-sm">© {{ now()->year }} Casa Frangipani. All rights reserved.</p>
 

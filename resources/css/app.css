@@ -48,3 +48,50 @@
   @keyframes pulseSlower { 0%{ opacity: 1 } 50%{ opacity: 0.65 } 100%{ opacity: 1 } }
   @keyframes shimmerMove { 0%{ background-position: 200% 0 } 100%{ background-position: -200% 0 } }
 }
+
+/*GAllery css*/
+
+.gallery-thumb {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(14px);
+    transition: all 0.35s ease;
+}
+
+.gallery-thumb img {
+    width: 64px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    transition: transform 0.35s ease;
+}
+
+.gallery-thumb span {
+    font-weight: 600;
+    color: #4a2f1a;
+}
+
+.gallery-thumb:hover {
+    background: rgba(255,255,255,0.85);
+    transform: translateX(6px);
+}
+
+.gallery-thumb:hover img {
+    transform: scale(1.12);
+}
+
+.gallery-thumb.active {
+    background: #4a2f1a;
+}
+
+.gallery-thumb.active span {
+    color: #f7efe6;
+}
+
+.gallery-thumb.active img {
+    outline: 2px solid rgba(255,255,255,0.6);
+}
