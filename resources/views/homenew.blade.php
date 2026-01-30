@@ -81,7 +81,7 @@
 
         <span
             class="font-serif italic font-light text-white/60
-            text-[clamp(2.5rem,11vw,5rem)] 
+            text-[clamp(3rem,11vw,5rem)] 
             md:text-[clamp(3.5rem,5vw,4rem)] 
             lg:text-[4.5rem]">
             Private
@@ -371,7 +371,8 @@
 </section>
 
 <!-- Gallery Section -->
-       <section id="gallery" class="hidden lg:block bg-cream py-20 md:py-32 px-6 md:px-10">
+ <div id="gallery" > </div>
+       <section class="hidden lg:block bg-cream py-20 md:py-32 px-6 md:px-10">
 
     <div class="max-w-7xl mx-auto">
 
