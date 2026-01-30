@@ -69,7 +69,7 @@
     <!-- EXPERIENCE -->
     <span
         class="block 
-        text-[clamp(3rem,12vw,8rem)] 
+        text-[clamp(3.5rem,14vw,8rem)] 
         md:text-[clamp(4rem,8vw,6.5rem)] 
         lg:text-[clamp(6rem,7vw,9.5rem)] 
         xl:text-[10rem]
@@ -84,7 +84,7 @@
 
         <span
             class="font-serif italic font-light text-white/60
-            text-[clamp(3.2rem,9vw,5rem)] 
+            text-[clamp(3.6rem,11vw,5rem)] 
             md:text-[clamp(3.5rem,5vw,4rem)] 
             lg:text-[4.5rem]">
             Private
@@ -92,7 +92,7 @@
 
         <span
             class="font-heading font-bold drop-shadow-2xl
-            text-[clamp(3rem,11vw,7rem)] 
+            text-[clamp(3.4rem,13vw,7rem)] 
             md:text-[clamp(3.5rem,6vw,6rem)] 
             lg:text-[8rem]
             xl:text-[9.5rem]">
@@ -135,58 +135,106 @@
             </div>
         </header>
 
-        <!-- Villa Experience Section -->
-        <section id="villa" class="py-32 px-6 md:px-10 bg-white">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20 animate-on-scroll">
-                    <span class="text-xs uppercase tracking-[0.4em] text-brown-dark/40 font-medium mb-4 block">The Villa Experience</span>
-                    <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter text-brown-dark mb-6">A Private Villa Experience</h2>
-                    <p class="text-brown-dark/60 text-lg max-w-2xl mx-auto leading-relaxed">
-                        Focus on privacy, comfort, indoor-outdoor living and peaceful surroundings — the perfect setting for groups, celebrations and mindful getaways.
-                    </p>
+      <!-- Villa Experience Section -->
+<section id="villa" class="bg-white py-24 md:py-36 px-4 md:px-10">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Header -->
+        <div class="max-w-3xl mx-auto text-center mb-20 md:mb-28 animate-on-scroll">
+            <span class="inline-block text-xs uppercase tracking-[0.35em] text-brown-dark/40 mb-4">
+                The Villa Experience
+            </span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark mb-6">
+                Designed for Privacy,<br class="hidden sm:block">
+                Crafted for Comfort
+            </h2>
+            <p class="text-brown-dark/60 text-base md:text-lg leading-relaxed">
+                A thoughtfully curated private villa experience where space, calm,
+                and comfort come together — ideal for families, celebrations, and slow escapes.
+            </p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+            <!-- LEFT: FEATURES -->
+            <div class="lg:col-span-6 space-y-10 animate-on-scroll">
+
+                <!-- Feature Card -->
+                <div class="group flex gap-6 items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
+                        <i data-lucide="shield-check" class="size-7 text-terracotta"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-heading font-semibold text-brown-dark mb-2">
+                            Complete Privacy
+                        </h3>
+                        <p class="text-brown-dark/60 leading-relaxed">
+                            Set within expansive private grounds, the villa offers gated access,
+                            dedicated caretaking, and uninterrupted personal space.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-8 animate-on-scroll">
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="shield-check" class="size-7 text-terracotta"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-heading font-semibold mb-2">Complete Privacy</h3>
-                                <p class="text-brown-dark/60 leading-relaxed">Surrounded by 3-acre private grounds with secure perimeter, gated entry, and dedicated caretaker ensuring your peace of mind.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="heart" class="size-7 text-terracotta"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-heading font-semibold mb-2">Exceptional Comfort</h3>
-                                <p class="text-brown-dark/60 leading-relaxed">Four spacious bedrooms with premium linens, central AC, en-suite bathrooms, and thoughtful amenities for a 5-star experience.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="trees" class="size-7 text-terracotta"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-heading font-semibold mb-2">Indoor-Outdoor Living</h3>
-                                <p class="text-brown-dark/60 leading-relaxed">Seamless flow between air-conditioned interiors and tropical gardens, with covered verandas, outdoor dining, and poolside lounging.</p>
-                            </div>
-                        </div>
+                <!-- Feature Card -->
+                <div class="group flex gap-6 items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
+                        <i data-lucide="heart" class="size-7 text-terracotta"></i>
                     </div>
-                    <div class="grid grid-cols-2 gap-4 animate-on-scroll">
-                        <div class="aspect-[4/5] rounded-2xl overflow-hidden">
-                            <img src="https://img.vistarooms.com/gallery/casa-frangipani-657c43.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Modern living room with large windows overlooking tropical garden at Casa Frangipani villa">
-                        </div>
-                        <div class="aspect-[4/5] rounded-2xl overflow-hidden mt-12">
-                            <img src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Luxurious bedroom with king-size bed and contemporary furnishings in Alibaug villa">
-                        </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-heading font-semibold text-brown-dark mb-2">
+                            Elevated Comfort
+                        </h3>
+                        <p class="text-brown-dark/60 leading-relaxed">
+                            Spacious bedrooms, premium linens, climate-controlled interiors,
+                            and thoughtful amenities create a relaxed, hotel-like stay.
+                        </p>
                     </div>
                 </div>
+
+                <!-- Feature Card -->
+                <div class="group flex gap-6 items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
+                        <i data-lucide="trees" class="size-7 text-terracotta"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-heading font-semibold text-brown-dark mb-2">
+                            Indoor–Outdoor Living
+                        </h3>
+                        <p class="text-brown-dark/60 leading-relaxed">
+                            From airy interiors to verandas, gardens, and poolside spaces,
+                            every area is designed to flow naturally with the outdoors.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-        </section>
+
+            <!-- RIGHT: IMAGES -->
+            <div class="lg:col-span-6 grid grid-cols-2 gap-6 animate-on-scroll">
+
+                <!-- Image 1 -->
+                <div class="relative rounded-3xl overflow-hidden aspect-[3/4]">
+                    <img
+                        src="https://img.vistarooms.com/gallery/casa-frangipani-657c43.jpg"
+                        alt="Villa living space"
+                        class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                </div>
+
+                <!-- Image 2 (offset) -->
+                <div class="relative rounded-3xl overflow-hidden aspect-[3/4] mt-12">
+                    <img
+                        src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg"
+                        alt="Private pool at the villa"
+                        class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
        @php
     // Amenities Section
@@ -240,7 +288,7 @@
 @endphp
 
 
-<section id="amenities" class="bg-brown-dark border-t border-white/5 py-20 md:py-32 px-4 md:px-10 relative">
+<section id="amenities" class="bg-brown-dark border-t border-white/5 py-20 md:py-32 px-6 md:px-10 relative">
     <div class="w-full max-w-6xl mx-auto relative z-10">
 
         <!-- Heading -->
@@ -326,12 +374,13 @@
 </section>
 
 <!-- Gallery Section -->
-       <section id="gallery" class="bg-cream py-20 md:py-32 px-4 md:px-10">
+       <section id="gallery" class="hidden lg:block bg-cream py-20 md:py-32 px-6 md:px-10">
+
     <div class="max-w-7xl mx-auto">
 
         <!-- Heading -->
-        <div class="mb-16 md:mb-24 text-center">
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark">
+        <div class="mb-12 md:mb-16 lg:mb-24 text-center">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark">
                 Villa Gallery
             </h2>
             <p class="mt-4 text-brown-dark/50 max-w-xl mx-auto">
@@ -442,6 +491,99 @@
 </section>
 
 
+<!-- Mobile Gallery Grid -->
+<section id="gallery-mobile" class="lg:hidden bg-cream py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+
+        <!-- Heading -->
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-heading font-bold text-brown-dark">
+                Villa Gallery
+            </h2>
+            <p class="mt-2 text-sm text-brown-dark/50">
+                Explore the spaces at a glance
+            </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-2 gap-4">
+
+            <!-- Card -->
+            <div class="group relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <img src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <p class="text-white text-sm font-heading font-semibold">
+                        Private Pool
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <img src="https://img.vistarooms.com/gallery/casa-frangipani-5c1a08.jpg"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <p class="text-white text-sm font-heading font-semibold">
+                        Master Suite
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <img src="https://img.vistarooms.com/gallery/casa-frangipani-9e5e0c.jpg"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <p class="text-white text-sm font-heading font-semibold">
+                        Living Lounge
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <img src="https://img.vistarooms.com/gallery/casa-frangipani-9629f7.jpg"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <p class="text-white text-sm font-heading font-semibold">
+                        Dining Pavilion
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <img src="https://img.vistarooms.com/gallery/casa-frangipani-2c9b15.jpg"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <p class="text-white text-sm font-heading font-semibold">
+                        Recreation Room
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <img src="https://img.vistarooms.com/gallery/casa-frangipani-483f65.jpg"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <p class="text-white text-sm font-heading font-semibold">
+                        Entertainment Zone
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative aspect-[4/5] rounded-2xl overflow-hidden col-span-2">
+                <img src="https://img.vistarooms.com/gallery/casa-frangipani-a74712.jpg"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <p class="text-white text-sm font-heading font-semibold">
+                        Luxury Bathroom
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 
 <script>
     const thumbs = document.querySelectorAll('.gallery-thumb');
@@ -471,10 +613,10 @@
 
 
         <!-- Reviews Section -->
-        <section id="reviews" class="py-32 px-6 md:px-10 bg-white">
-            <div class="max-w-7xl mx-auto text-center mb-32 animate-on-scroll">
+        <section id="reviews" class="py-20 px-6 md:px-10 bg-white">
+            <div class="max-w-7xl mx-auto text-center  animate-on-scroll">
                 <span class="text-xs uppercase tracking-[0.4em] text-brown-dark/40 font-medium mb-4 block">Guest Experiences</span>
-                <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter text-brown-dark">What Our Guests Say</h2>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tighter text-brown-dark">What Our Guests Say</h2>
             </div>
 
             <div class="relative h-[600px] max-w-5xl mx-auto flex items-center justify-center mb-20">
@@ -608,15 +750,30 @@
         <!-- Ideal For Section -->
         <section class="py-32 px-6 md:px-10 bg-cream border-t border-brown-dark/5">
             <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8 animate-on-scroll">
-                    <div class="space-y-4">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-brown-dark/40">Perfect For</p>
-                        <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter text-brown-dark">Crafted for <br> Every Occasion</h2>
-                    </div>
-                    <p class="text-sm text-brown-dark/60 max-w-sm leading-relaxed">
-                        Whether celebrating, reconnecting, or collaborating, Casa Frangipani adapts to your needs with personalized services.
-                    </p>
-                </div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end 
+            mb-16 md:mb-24 gap-6 md:gap-8 animate-on-scroll">
+
+    <!-- Left: Heading -->
+    <div class="space-y-3 text-center md:text-left max-w-xl">
+        <p class="text-[10px] font-bold uppercase tracking-[0.35em] text-brown-dark/40">
+            Perfect For
+        </p>
+
+        <h2 class="font-heading font-bold tracking-tight text-brown-dark
+                   text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1]">
+            Crafted for Every Occasion
+        </h2>
+    </div>
+
+    <!-- Right: Description -->
+    <p class="text-sm md:text-base text-brown-dark/60 max-w-sm leading-relaxed
+              text-center md:text-right">
+        Whether celebrating, reconnecting, or collaborating, Casa Frangipani adapts
+        effortlessly to your needs with personalized services.
+    </p>
+
+</div>
+
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="group relative aspect-video rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer">
@@ -656,12 +813,12 @@
         </section>
 
         <!--Youtub Videos-->
-        <section id="villa-videos" class="bg-cream  pb-20 px-4 md:px-10">
+        <section id="villa-videos" class="bg-cream  pb-20 px-6 md:px-10">
     <div class="max-w-6xl mx-auto">
 
         <!-- Heading -->
         <div class="text-center mb-14 md:mb-20">
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark">
                 Experience the Villa
             </h2>
             <p class="mt-4 text-brown-dark/50 max-w-xl mx-auto">
@@ -726,7 +883,7 @@
 
 
 <!-- Location Section -->
-<section id="location" class="bg-white py-20 md:py-32 px-4 md:px-10">
+<section id="location" class="bg-white py-20 md:py-32 px-6 md:px-10">
     <div class="max-w-7xl mx-auto">
 
         <!-- Heading -->
@@ -734,7 +891,7 @@
             <span class="text-xs uppercase tracking-[0.35em] text-brown-dark/40 font-medium block mb-3">
                 Location
             </span>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark mb-4 md:mb-6">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark mb-4 md:mb-6">
                 Easy Access from Mumbai
             </h2>
             <p class="text-brown-dark/60 text-sm md:text-lg max-w-2xl mx-auto">
@@ -865,7 +1022,7 @@
         <section id="booking" class="py-32 px-6 md:px-10 bg-brown-dark text-white">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12 animate-on-scroll">
-                    <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter mb-6">Plan Your Stay</h2>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tighter mb-6">Plan Your Stay</h2>
                     <p class="text-white/60 text-lg">Fill out the form below and we'll get back to you within 2 hours to confirm your booking.</p>
                 </div>
 
@@ -909,6 +1066,15 @@
     mobileMenuClose?.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
         mobileMenu.classList.remove('flex');
+    });
+
+    // Close mobile menu when clicking on navigation links
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        });
     });
 
     document.getElementById('booking-form')?.addEventListener('submit', (e) => {
