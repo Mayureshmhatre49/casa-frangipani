@@ -46,7 +46,7 @@
         <!-- Hero Section -->
         <header class="relative w-full h-screen overflow-hidden flex flex-col justify-end pb-12 md:pb-24">
             <div class="absolute inset-0 z-0 bg-black">
-                <img src="https://img.vistarooms.com/gallery/casa-frangipani-657c43.jpg" class="w-full h-full object-cover animate-cinematic opacity-1" alt="Casa Frangipani luxury villa exterior with private swimming pool at sunset, surrounded by tropical gardens in Alibaug">
+                <img src="http://hestiavillas.in/wp-content/uploads/2026/01/Casa-Frangipani-Alibaug.webp" class="w-full h-full object-cover animate-cinematic opacity-1" alt="Casa Frangipani luxury villa exterior with private swimming pool at sunset, surrounded by tropical gardens in Alibaug">
                 <div class="absolute inset-0 bg-gradient-to-t from-brown-dark via-brown-dark/20 to-transparent opacity-80"></div>
                 <div class="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
             </div>
@@ -903,7 +903,7 @@
 
             <!-- LEFT: INFO CARDS -->
             <div class="lg:col-span-5 space-y-6 animate-on-scroll order-2 lg:order-1">
->
+
 
                 <!-- Card -->
                 <div class="bg-cream rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition">
@@ -1034,7 +1034,7 @@
     </main>
 
 {{-- ================= FOOTER ================= --}}
-<footer class="py-12 md:py-16 px-6 md:px-12 border-t border-brown-dark/15 bg-gradient-to-b from-cream to-cream/80">
+<footer class="py-6 md:py-6 px-6 md:px-12 border-t border-brown-dark/15 bg-gradient-to-b from-cream to-cream/80">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-col md:flex-row">
         <p class="text-brown-dark/40 text-xs md:text-sm">© {{ now()->year }} Casa Frangipani. All rights reserved.</p>
 
