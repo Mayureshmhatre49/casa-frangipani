@@ -46,7 +46,7 @@
         <!-- Hero Section -->
         <header class="relative w-full h-screen overflow-hidden flex flex-col justify-end pb-12 md:pb-24">
             <div class="absolute inset-0 z-0 bg-black">
-                <img src="http://hestiavillas.in/wp-content/uploads/2026/01/Casa-Frangipani-Alibaug.webp" class="w-full h-full object-cover animate-cinematic opacity-1" alt="Casa Frangipani luxury villa exterior with private swimming pool at sunset, surrounded by tropical gardens in Alibaug">
+                <img src="http://hestiavillas.in/wp-content/uploads/2026/01/CF-Cover-photo.png" class="w-full h-full object-cover animate-cinematic opacity-1" alt="Casa Frangipani luxury villa exterior with private swimming pool at sunset, surrounded by tropical gardens in Alibaug">
                 <div class="absolute inset-0 bg-gradient-to-t from-brown-dark via-brown-dark/20 to-transparent opacity-80"></div>
                 <div class="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
             </div>
