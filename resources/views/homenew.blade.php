@@ -1057,25 +1057,51 @@
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuClose = document.getElementById('mobile-menu-close');
-
+    // Toggle mobile menu open/close and lock body scroll while open
     mobileMenuBtn?.addEventListener('click', () => {
-        mobileMenu.classList.remove('hidden');
-        mobileMenu.classList.add('flex');
-    });
-
-    mobileMenuClose?.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('flex');
-    });
-
-    // Close mobile menu when clicking on navigation links
-    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        if (!mobileMenu) return;
+        if (mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        } else {
             mobileMenu.classList.add('hidden');
             mobileMenu.classList.remove('flex');
-        });
+            document.body.style.overflow = '';
+        }
     });
+
+    // Close button behavior
+    mobileMenuClose?.addEventListener('click', () => {
+        if (!mobileMenu) return;
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        document.body.style.overflow = '';
+    });
+
+    // Close mobile menu when clicking on navigation links AND smooth-scroll to section
+    if (mobileMenu) {
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (!href || !href.startsWith('#')) return;
+                e.preventDefault();
+                // close menu first
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = '';
+                // then smooth-scroll to target after a short delay so the menu close animation can run
+                const target = document.querySelector(href);
+                if (target) {
+                    setTimeout(() => {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        try { history.pushState(null, '', href); } catch(_){}
+                    }, 120);
+                }
+            });
+        });
+    }
 
     document.getElementById('booking-form')?.addEventListener('submit', (e) => {
         e.preventDefault();
