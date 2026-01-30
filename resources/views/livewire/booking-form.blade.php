@@ -103,9 +103,9 @@
     </div>
     <h3 class="text-2xl font-fraunces text-white">Thank you — Booking Received</h3>
     <p class="text-stone-300">We have received your request and will contact you shortly to confirm availability and next steps.</p>
-    <div class="flex items-center justify-center gap-4 mt-4">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-4">
         <a href="#" wire:click.prevent="resetForm" class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white hover:bg-white/10">Make another enquiry</a>
-        <a href="https://wa.me/919881149629" target="_blank" class="group relative overflow-hidden flex items-center gap-1 border-2 border-white/30 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white/10 hover:border-[#D4AF37] transition-all duration-300 backdrop-blur-md transform hover:scale-105 hover:-translate-y-1">
+        <a href="https://wa.me/919209479178" target="_blank" class="group relative overflow-hidden flex items-center gap-1 border-2 border-white/30 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white/10 hover:border-[#D4AF37] transition-all duration-300 backdrop-blur-md transform hover:scale-105 hover:-translate-y-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
                         <span>WhatsApp Enquiry</span>
                     </a>
