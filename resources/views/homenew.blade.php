@@ -156,7 +156,7 @@
         </section>
 
         <!-- Amenities Section -->
-        <section id="amenities" class="bg-brown-dark border-t border-white/5 py-32 px-6 relative">
+        <section id="amenities" class="bg-brown-dark border-t border-white/5 py-20 md:py-32 px-4 md:px-10 relative">
             <div class="w-full max-w-6xl mx-auto relative z-10">
                 <div class="text-center mb-16 animate-on-scroll">
                     <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Villa Amenities</h3>
@@ -170,8 +170,8 @@
                                 <i data-lucide="waves" class="size-10 text-white"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl text-white font-heading font-semibold">Private Swimming Pool</h4>
-                                <p class="text-xs text-white/40 mt-1 uppercase tracking-wider">Temperature Controlled</p>
+                                <h4 class="text-lg md:text-xl text-white font-heading font-semibold">Private Swimming Pool</h4>
+                                <p class="text-[10px] md:text-xs text-white/40 mt-1 uppercase tracking-wider">Temperature Controlled</p>
                             </div>
                         </div>
                         <div class="col-span-1 md:col-span-6 grid grid-cols-3 gap-y-4 gap-x-2 border-l border-white/10 pl-6">
@@ -343,12 +343,12 @@
         </section>
 
         <!-- Gallery Section -->
-        <section id="gallery" class="py-32 px-6 md:px-10 bg-cream">
+        <section id="gallery" class="py-20 md:py-32 px-4 md:px-10 bg-cream">
             <div class="max-w-7xl mx-auto">
-                <h2 class="text-5xl md:text-6xl font-heading font-bold text-center mb-24 tracking-tighter text-brown-dark animate-on-scroll">Villa Gallery</h2>
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-center mb-16 md:mb-24 tracking-tighter text-brown-dark animate-on-scroll">Villa Gallery</h2>
                 
-                <div class="grid lg:grid-cols-12 gap-20 items-start">
-                    <div class="lg:col-span-3 space-y-8 border-l border-brown-dark/10 pl-8 animate-on-scroll" id="gallery-list">
+                <div class="grid lg:grid-cols-12 gap-12 md:gap-20 items-start">
+                    <div class="lg:col-span-3 space-y-8 border-l border-brown-dark/10 pl-4 lg:pl-8 animate-on-scroll" id="gallery-list">
                         <div class="group cursor-pointer gallery-tab active" 
                              data-room="Pool View" 
                              data-image="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg"
@@ -407,9 +407,9 @@
                                  alt="Private 25ft swimming pool with sun loungers and tropical landscaping at Casa Frangipani luxury villa">
                         </div>
                         
-                        <div class="absolute top-10 right-10 w-80 bg-white/90 backdrop-blur-md p-10 rounded-2xl shadow-2xl">
-                            <h3 class="text-3xl font-heading font-bold mb-6 text-brown-dark" id="gallery-title">Pool View</h3>
-                            <p class="text-sm leading-relaxed text-brown-dark/60 mb-8" id="gallery-desc">
+                        <div class="hidden md:block absolute top-8 right-6 md:right-10 w-64 md:w-80 bg-white/90 backdrop-blur-md p-6 md:p-10 rounded-2xl shadow-2xl">
+                            <h3 class="text-2xl md:text-3xl font-heading font-bold mb-4 md:mb-6 text-brown-dark" id="gallery-title">Pool View</h3>
+                            <p class="text-xs md:text-sm leading-relaxed text-brown-dark/60 mb-6 md:mb-8" id="gallery-desc">
                                 25ft temperature-controlled private pool surrounded by tropical landscaping with sun loungers and outdoor shower.
                             </p>
                         </div>
@@ -628,10 +628,10 @@
         <!-- Location Section -->
         <section id="location" class="py-32 px-6 md:px-10 bg-white">
             <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20 animate-on-scroll">
-                    <span class="text-xs uppercase tracking-[0.4em] text-brown-dark/40 font-medium mb-4 block">Location</span>
-                    <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tighter text-brown-dark mb-6">Easy Access <br> from Mumbai</h2>
-                    <p class="text-brown-dark/60 text-lg max-w-2xl mx-auto">
+                <div class="text-center mb-12 md:mb-20 animate-on-scroll">
+                    <span class="text-xs uppercase tracking-[0.4em] text-brown-dark/40 font-medium mb-3 block">Location</span>
+                    <h2 class="text-2xl md:text-5xl font-heading font-bold tracking-tighter text-brown-dark mb-4 md:mb-6">Easy Access from Mumbai</h2>
+                    <p class="text-brown-dark/60 text-sm md:text-lg max-w-2xl mx-auto">
                         Just 2.5 hours from Mumbai, Casa Frangipani is perfectly positioned for weekend escapes with nearby beaches and attractions.
                     </p>
                 </div>
@@ -719,11 +719,10 @@
     </main>
 
 {{-- ================= FOOTER ================= --}}
-<footer class="py-16 px-6 md:px-12 border-t border-brown-dark/10 bg-cream">
-    <div class="max-w-7xl mx-auto text-center">
-        <p class="text-brown-dark/40 text-sm">
-            © {{ now()->year }} Casa Frangipani. All rights reserved.
-        </p>
+<footer class="py-8 md:py-12 px-6 md:px-12 border-t border-brown-dark/10 bg-cream">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-col md:flex-row">
+        <p class="text-brown-dark/40 text-xs md:text-sm">© {{ now()->year }} Casa Frangipani. All rights reserved.</p>
+
     </div>
 </footer>
 
@@ -769,38 +768,63 @@
     const gallerySize = document.getElementById('gallery-size');
     const galleryView = document.getElementById('gallery-view');
 
+    // Gallery interactivity + mobile support
+    const galleryArray = Array.from(galleryTabs);
+    function activateGalleryTab(tab){
+        galleryTabs.forEach(t => { t.classList.add('opacity-30'); t.classList.remove('active'); });
+        tab.classList.remove('opacity-30'); tab.classList.add('active');
+
+        const data = tab.dataset;
+        if (mainGalleryImage) {
+            mainGalleryImage.style.opacity = '0';
+            setTimeout(() => {
+                mainGalleryImage.src = data.image;
+                mainGalleryImage.alt = `${data.room} at Casa Frangipani luxury villa - ${data.desc}`;
+                if (galleryTitle) galleryTitle.textContent = data.room;
+                if (galleryDesc) galleryDesc.textContent = data.desc;
+                if (gallerySleeps) gallerySleeps.textContent = data.sleeps;
+                if (gallerySize) gallerySize.textContent = data.size;
+                if (galleryView) galleryView.textContent = data.view;
+                // mobile fields
+                const mTitle = document.getElementById('gallery-title-mobile');
+                const mDesc = document.getElementById('gallery-desc-mobile');
+                const mSleeps = document.getElementById('gallery-sleeps-mobile');
+                const mSize = document.getElementById('gallery-size-mobile');
+                const mView = document.getElementById('gallery-view-mobile');
+                if (mTitle) mTitle.textContent = data.room;
+                if (mDesc) mDesc.textContent = data.desc;
+                if (mSleeps) mSleeps.textContent = data.sleeps;
+                if (mSize) mSize.textContent = data.size;
+                if (mView) mView.textContent = data.view;
+
+                mainGalleryImage.onload = () => { mainGalleryImage.style.opacity = '1'; };
+                setTimeout(() => { mainGalleryImage.style.opacity = '1'; }, 100);
+            }, 250);
+        }
+    }
+
     galleryTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            galleryTabs.forEach(t => {
-                t.classList.add('opacity-30');
-                t.classList.remove('active');
-            });
-            tab.classList.remove('opacity-30');
-            tab.classList.add('active');
-
-            const data = tab.dataset;
-            if (mainGalleryImage) {
-                mainGalleryImage.style.opacity = '0';
-
-                setTimeout(() => {
-                    mainGalleryImage.src = data.image;
-                    mainGalleryImage.alt = `${data.room} at Casa Frangipani luxury villa - ${data.desc}`;
-                    if (galleryTitle) galleryTitle.textContent = data.room;
-                    if (galleryDesc) galleryDesc.textContent = data.desc;
-                    if (gallerySleeps) gallerySleeps.textContent = data.sleeps;
-                    if (gallerySize) gallerySize.textContent = data.size;
-                    if (galleryView) galleryView.textContent = data.view;
-
-                    mainGalleryImage.onload = () => {
-                        mainGalleryImage.style.opacity = '1';
-                    };
-                    setTimeout(() => {
-                        mainGalleryImage.style.opacity = '1';
-                    }, 100);
-                }, 300);
-            }
-        });
+        tab.addEventListener('click', () => activateGalleryTab(tab));
     });
+
+    // Enable swipe on main image container (mobile)
+    (function(){
+        const container = document.getElementById('main-gallery-image-container');
+        if (!container) return;
+        let startX = 0, dist = 0;
+        container.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; });
+        container.addEventListener('touchmove', function(e){ dist = e.touches[0].clientX - startX; });
+        container.addEventListener('touchend', function(){
+            if (Math.abs(dist) < 40) return; // not a swipe
+            const activeIndex = galleryArray.findIndex(t => t.classList.contains('active'));
+            if (dist < 0){ // swipe left -> next
+                const next = galleryArray[(activeIndex + 1) % galleryArray.length]; activateGalleryTab(next);
+            } else { // swipe right -> prev
+                const prev = galleryArray[(activeIndex -1 + galleryArray.length) % galleryArray.length]; activateGalleryTab(prev);
+            }
+            dist = 0; startX = 0;
+        });
+    })();
 
     // Intersection Observer for slide/cinematic reveals (hero elements)
     const observerOptions = { root: null, rootMargin: '0px', threshold: 0.05 };
@@ -818,8 +842,24 @@
         observer.observe(el);
     });
 
-    // Flatpickr date range -> populate Livewire form inputs (targets .date-range-picker)
+    // Responsive gallery helper styles (mobile horizontal tabs) and Flatpickr date range -> populate Livewire form inputs (targets .date-range-picker)
     (function(){
+        // Inject small responsive gallery CSS for mobile UX
+        const galleryStyles = document.createElement('style');
+        galleryStyles.textContent = `
+            @media (max-width: 1024px) {
+                #gallery-list{ display:flex; gap:1rem; overflow-x:auto; -webkit-overflow-scrolling:touch; padding-bottom:0.5rem; }
+                #gallery-list .gallery-tab{ min-width:70%; flex:0 0 auto; background:transparent; border-radius:12px; padding:12px; box-sizing:border-box; }
+                #gallery-list .gallery-tab h4{ font-size:1.05rem; }
+                #main-gallery-image-container{ scroll-snap-align:center; }
+            }
+            @media (max-width:640px){
+                #main-gallery-image{ object-position:center; }
+            }
+        `;
+        document.head.appendChild(galleryStyles);
+
+
         function initPickers(){
             if (typeof flatpickr === 'undefined') return;
 
