@@ -902,7 +902,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
             <!-- LEFT: INFO CARDS -->
-            <div class="lg:col-span-5 space-y-6 animate-on-scroll">
+            <div class="lg:col-span-5 space-y-6 animate-on-scroll order-2 lg:order-1">
+>
 
                 <!-- Card -->
                 <div class="bg-cream rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition">
@@ -998,7 +999,8 @@
             </div>
 
             <!-- RIGHT: MAP -->
-            <div class="lg:col-span-7 animate-on-scroll">
+            <div class="lg:col-span-7 animate-on-scroll order-1 lg:order-2">
+
                 <div class="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
                     <iframe
                         class="absolute inset-0 w-full h-full"
