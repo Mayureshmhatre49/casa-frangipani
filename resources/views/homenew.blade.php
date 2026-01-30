@@ -52,10 +52,7 @@
             </div>
 
             <div class="absolute top-32 right-6 md:right-12 z-20 flex flex-col items-end gap-2 animate-slide-up delay-2500 opacity-0">
-                <div class="px-4 py-2 rounded-lg bg-black/40 backdrop-blur-md border border-white/10 flex items-center gap-3">
-                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse"></span>
-                    <span class="text-xs font-mono tracking-wider uppercase text-white/90">Available This Weekend</span>
-                </div>
+            
             </div>
 
             <div class="relative z-10 w-full max-w-[90rem] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
@@ -84,7 +81,7 @@
 
         <span
             class="font-serif italic font-light text-white/60
-            text-[clamp(3.6rem,11vw,5rem)] 
+            text-[clamp(2.5rem,11vw,5rem)] 
             md:text-[clamp(3.5rem,5vw,4rem)] 
             lg:text-[4.5rem]">
             Private
