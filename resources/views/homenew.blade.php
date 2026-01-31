@@ -1226,6 +1226,39 @@
     </div>
 </footer>
 
+<!-- Fixed WhatsApp Button -->
+<!-- Fixed WhatsApp Button (Theme Aligned) -->
+<a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
+   target="_blank"
+   aria-label="Chat on WhatsApp"
+   class="fixed bottom-5 right-5 z-[999]
+          flex items-center justify-center
+          bg-brown-dark text-white
+          shadow-xl shadow-black/25
+          transition-all duration-300
+          hover:bg-terracotta
+          group
+
+          /* Desktop */
+          px-5 py-3 rounded-full
+
+          /* Mobile */
+          w-14 h-14 sm:w-auto sm:h-auto">
+
+    <!-- WhatsApp Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 32 32"
+         class="w-6 h-6 fill-white transition-transform duration-300 group-hover:scale-110">
+        <path d="M19.11 17.93c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.35-.8-.72-1.34-1.6-1.5-1.87-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.27.18 1.75.11.53-.08 1.6-.65 1.83-1.27.23-.61.23-1.14.16-1.27-.07-.14-.25-.21-.52-.34z"/>
+        <path d="M16.02 3.2c-7.08 0-12.83 5.75-12.83 12.83 0 2.27.6 4.47 1.74 6.4L3 29l6.79-1.78a12.78 12.78 0 0 0 6.23 1.59h.01c7.08 0 12.83-5.75 12.83-12.83S23.1 3.2 16.02 3.2zm0 23.3h-.01a10.4 10.4 0 0 1-5.31-1.46l-.38-.23-4.03 1.06 1.08-3.92-.25-.4a10.37 10.37 0 1 1 8.9 4.95z"/>
+    </svg>
+
+    <!-- Text (Desktop only) -->
+    <span class="ml-3 text-sm font-medium tracking-wide hidden sm:inline">
+        WhatsApp Us
+    </span>
+</a>
+
 
 @endsection
 
