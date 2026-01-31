@@ -61,7 +61,7 @@
              style="background-image:url('https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg')"
              data-title="Private Luxury Pool Villa in Alibaug"
              data-subtitle="Private Pool · Complete Privacy"
-             data-desc="A secluded private pool villa designed for peaceful escapes and relaxed weekend getaways near Mumbai.">
+             data-desc="A secluded private pool villa designed for peaceful escapes and relaxed weekend getaways near Mumbai, ideal for groups of 14–22 guests.">
         </div>
 
         <div class="hero-slide"
@@ -135,8 +135,12 @@
 
                     <p id="hero-desc"
                        class="text-base md:text-lg text-white/85 font-light leading-relaxed mb-8 antialiased drop-shadow-md transition-opacity duration-700">
-                        A secluded private pool villa designed for peaceful escapes and relaxed weekend getaways near Mumbai.
+                        A secluded private pool villa designed for peaceful escapes and relaxed weekend getaways near Mumbai, ideal for groups of 14–22 guests.
                     </p>
+                    <p class="text-sm text-white/70 font-medium mb-6">
+    Weekday villa rentals start from <span class="font-bold text-white">₹45,000 per night</span>.
+</p>
+
 
                     <div class="flex flex-col gap-4">
                         <a href="#booking"
@@ -1151,6 +1155,10 @@
                 A private luxury villa with limited availability to preserve comfort and
                 personalized service. Book early to secure your preferred dates.
             </p>
+            <p class="text-sm text-white/70 font-medium mb-6">
+    Weekday villa rentals start from <span class="font-bold text-white">₹45,000 per night</span>.
+</p>
+
         </div>
 
         <!-- CTAs -->
