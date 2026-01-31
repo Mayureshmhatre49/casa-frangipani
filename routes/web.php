@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('home');
 });
 
+// web.php
+Route::get('/thank-you', function () {
+    return view('thank-you');
+})->name('thank.you');
+
+
 
 Route::get('/casa-frangipani-luxury-villa-rental-alibaug', function () {
     return view('homenew');

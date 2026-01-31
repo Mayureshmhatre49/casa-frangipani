@@ -23,21 +23,20 @@ class BookingForm extends Component
     public $phone;
     public $email;
     public $customer_notes;
-    public $submitted = false;
 
     protected function rules()
     {
         return [
-            'check_in' => 'required|date',
-            'check_out' => 'required|date|after:check_in',
-            'guest_count' => 'required|integer|min:1',
+            'check_in'       => 'required|date',
+            'check_out'      => 'required|date|after:check_in',
+            'guest_count'    => 'required|integer|min:1',
 
-            'occasion' => 'nullable|string',
+            'occasion'       => 'nullable|string',
             'food_provision' => 'nullable|string',
 
-            'name' => 'required|string',
-            'phone' => 'required|string',
-            'email' => 'nullable|email',
+            'name'           => 'required|string',
+            'phone'          => 'required|string',
+            'email'          => 'nullable|email',
         ];
     }
 
@@ -45,62 +44,63 @@ class BookingForm extends Component
     {
         $this->validate();
 
-        $notes = trim((!empty($this->occasion) ? "Occasion: {$this->occasion}\n" : '') . (!empty($this->food_provision) ? "Food: {$this->food_provision}\n" : '') . ($this->customer_notes ?? ''));
+        // Combine notes safely (same logic as before)
+        $notes = trim(
+            (!empty($this->occasion) ? "Occasion: {$this->occasion}\n" : '') .
+            (!empty($this->food_provision) ? "Food: {$this->food_provision}\n" : '') .
+            ($this->customer_notes ?? '')
+        );
 
         $data = [
-            'check_in' => $this->check_in,
-            'check_out' => $this->check_out,
-            'guest_count' => $this->guest_count,
-            'customer_name' => $this->name,
-            'customer_phone' => $this->phone,
-            'customer_email' => $this->email,
-            'customer_notes' => $notes,
-            'status' => 'pending',
-            'source' => 'website',
+            'check_in'        => $this->check_in,
+            'check_out'       => $this->check_out,
+            'guest_count'     => $this->guest_count,
+            'customer_name'   => $this->name,
+            'customer_phone'  => $this->phone,
+            'customer_email'  => $this->email,
+            'customer_notes'  => $notes,
+            'status'          => 'pending',
+            'source'          => 'website',
         ];
 
         try {
             $prepared = $bookingService->prepareBookingData($data);
 
             $booking = null;
+
             DB::transaction(function () use ($prepared, &$booking) {
                 $booking = Booking::create($prepared);
             });
 
-            // Send notification email to admin and customer (if provided)
+            // 🔔 EMAILS (unchanged, high priority)
             try {
                 $adminEmail = env('ADMIN_EMAIL', config('mail.from.address')) ?: 'owner@example.com';
+
                 if ($adminEmail) {
                     Mail::to($adminEmail)->send(new BookingReceived($booking));
                 }
+
                 if (!empty($this->email)) {
                     Mail::to($this->email)->send(new BookingReceived($booking, true));
                 }
             } catch (\Exception $e) {
-                // Log but don't block user flow; admin mail failures shouldn't break booking
-                // logger()->error('Booking email send failed: '.$e->getMessage());
+                // Intentionally not blocking user flow
+                // logger()->error('Booking email failed: ' . $e->getMessage());
             }
 
-            // mark as submitted so the Livewire view can show a thank-you panel
-            $this->submitted = true;
-
-            // clear inputs (keep submitted state)
-            $this->reset(['check_in', 'check_out', 'guest_count', 'name', 'phone', 'email', 'customer_notes']);
+            // ✅ REDIRECT TO THANK YOU PAGE
+            return redirect()->route('thank.you');
 
         } catch (ValidationException $e) {
-            $this->addError('check_in', $e->validator->errors()->first('check_in'));
+            $this->addError(
+                'check_in',
+                $e->validator->errors()->first('check_in')
+            );
         }
     }
 
     public function render()
     {
         return view('livewire.booking-form');
-    }
-
-    public function resetForm()
-    {
-        $this->submitted = false;
-        session()->forget('success');
-        $this->reset(['check_in', 'check_out', 'guest_count', 'name', 'phone', 'email', 'customer_notes']);
     }
 }
