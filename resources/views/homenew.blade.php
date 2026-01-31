@@ -1251,7 +1251,7 @@
 
         <!-- Form -->
         <div id="booking-form" class="animate-on-scroll">
-            <livewire:booking-form />
+            <livewire:booking-form wire:key="booking-form-page" />
         </div>
 
         <!-- Trust Line -->
@@ -1291,7 +1291,7 @@
 
         <!-- FORM ONLY -->
         <div id="booking-form-modal">
-            <livewire:booking-form />
+            <livewire:booking-form wire:key="booking-form-modal" />
         </div>
 
     </div>
