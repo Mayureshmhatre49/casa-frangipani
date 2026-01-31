@@ -19,7 +19,7 @@
         <a href="#gallery" class="px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:bg-white/10">Gallery</a>
         <a href="#reviews" class="px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:bg-white/10">Reviews</a>
         <a href="#location" class="px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:bg-white/10">Location</a>
-        <a href="#booking" class="px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest bg-white text-brown-dark">Book Now</a>
+        <a href="#booking" class="px-6 py-2 open-booking-modal rounded-full text-[10px] font-bold uppercase tracking-widest bg-white text-brown-dark">Book Now</a>
     </div>
 
     <div class="md:hidden pointer-events-auto">
@@ -39,7 +39,7 @@
     <a href="#gallery" class="text-2xl font-heading text-white">Gallery</a>
     <a href="#reviews" class="text-2xl font-heading text-white">Reviews</a>
     <a href="#location" class="text-2xl font-heading text-white">Location</a>
-    <a href="#booking" class="px-8 py-4 bg-terracotta text-white rounded-full font-bold">Book Now</a>
+    <a href="#booking" class="px-8 py-4 open-booking-modal bg-terracotta text-white rounded-full font-bold">Book Now</a>
 </div>
 
 <main>
@@ -52,7 +52,7 @@
         <!-- Slides -->
          <div class="hero-slide active"
              style="background-image:url('http://hestiavillas.in/wp-content/uploads/2026/01/Casa-Frangipani-Alibaug-1.webp')"
-             data-title="Effortless Weekend Getaways"
+             data-title="An Ultra-Luxury 6 BHK Alibaug Villa"
              data-subtitle="Calm Surroundings · Fully Serviced"
              data-desc="A fully serviced villa experience surrounded by calm, greenery, and effortless comfort.">
         </div>
@@ -91,7 +91,7 @@
         <!-- LEFT -->
         <div class="md:col-span-7">
 
-            <div class="flex items-center gap-3 mb-6 animate-slide-up delay-1200 opacity-0">
+            <div class="flex items-center gap-3 mb-3 animate-slide-up delay-1200 opacity-0">
                 <span class="h-[1px] w-8 bg-white/60"></span>
                 <span class="text-xs font-mono uppercase tracking-widest text-white/80">
                     Alibaug, Maharashtra
@@ -106,7 +106,7 @@
                       md:text-[clamp(2.8rem,5vw,4.5rem)]
                       lg:text-[clamp(3.5rem,4vw,5.5rem)]
                       drop-shadow-2xl transition-opacity duration-700">
-                    Private Luxury Pool Villa in Alibaug
+                    An Ultra-Luxury 6 BHK Alibaug Villa
                 </span>
 
                 <span id="hero-subtitle"
@@ -143,15 +143,23 @@
 
 
                     <div class="flex flex-col gap-4">
-                        <a href="#booking"
-                           class="group flex items-center justify-between w-full p-1 border-b
-                                  border-white/30 hover:border-white transition-colors pb-2">
-                            <span class="text-sm font-medium tracking-wide text-white">
-                                Check Availability
-                            </span>
-                            <i data-lucide="arrow-right"
-                               class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>
-                        </a>
+                        <button
+    type="button"
+    class="open-booking-modal
+           group flex items-center justify-between w-full
+           bg-transparent p-0
+           border-0 border-b border-white/30 hover:border-white
+           transition-colors pb-2
+           text-left appearance-none">
+
+    <span class="text-sm font-medium tracking-wide text-white">
+        Check Availability
+    </span>
+
+    <i data-lucide="arrow-right"
+       class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>
+</button>
+
 
                         <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
                            target="_blank"
@@ -170,6 +178,36 @@
         </div>
 
     </div>
+    <!-- Hero Slider Controls -->
+<div class="absolute bottom-4 md:bottom-10 left-10 md:left-20
+            z-20 flex items-center gap-2">
+
+    <button id="hero-prev"
+            aria-label="Previous slide"
+            class="w-10 h-10 md:w-11 md:h-11
+                   rounded-full
+                   bg-white/10 backdrop-blur-md
+                   border border-white/20
+                   text-white
+                   flex items-center justify-center
+                   hover:bg-white/20 transition">
+        ‹
+    </button>
+
+    <button id="hero-next"
+            aria-label="Next slide"
+            class="w-10 h-10 md:w-11 md:h-11
+                   rounded-full
+                   bg-white/10 backdrop-blur-md
+                   border border-white/20
+                   text-white
+                   flex items-center justify-center
+                   hover:bg-white/20 transition">
+        ›
+    </button>
+
+</div>
+
 </header>
 
 
@@ -181,28 +219,64 @@
     const heroSubtitle = document.getElementById('hero-subtitle');
     const heroDesc = document.getElementById('hero-desc');
 
-    let heroIndex = 0;
+    const prevBtn = document.getElementById('hero-prev');
+    const nextBtn = document.getElementById('hero-next');
 
-    setInterval(() => {
-        heroSlides[heroIndex].classList.remove('active');
-        heroIndex = (heroIndex + 1) % heroSlides.length;
-        heroSlides[heroIndex].classList.add('active');
+    let heroIndex = 0;
+    let interval;
+
+    function showSlide(index) {
+        heroSlides.forEach(slide => slide.classList.remove('active'));
+        heroSlides[index].classList.add('active');
 
         heroTitle.style.opacity = 0;
         heroSubtitle.style.opacity = 0;
         heroDesc.style.opacity = 0;
 
         setTimeout(() => {
-            heroTitle.textContent = heroSlides[heroIndex].dataset.title;
-            heroSubtitle.textContent = heroSlides[heroIndex].dataset.subtitle;
-            heroDesc.textContent = heroSlides[heroIndex].dataset.desc;
+            heroTitle.textContent = heroSlides[index].dataset.title;
+            heroSubtitle.textContent = heroSlides[index].dataset.subtitle;
+            heroDesc.textContent = heroSlides[index].dataset.desc;
 
             heroTitle.style.opacity = 1;
             heroSubtitle.style.opacity = 1;
             heroDesc.style.opacity = 1;
-        }, 1200);
+        }, 400);
+    }
 
-    }, 8000);
+    function nextSlide() {
+        heroIndex = (heroIndex + 1) % heroSlides.length;
+        showSlide(heroIndex);
+    }
+
+    function prevSlide() {
+        heroIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
+        showSlide(heroIndex);
+    }
+
+    function startAutoSlide() {
+        interval = setInterval(nextSlide, 8000);
+    }
+
+    function resetAutoSlide() {
+        clearInterval(interval);
+        startAutoSlide();
+    }
+
+    // Init
+    showSlide(heroIndex);
+    startAutoSlide();
+
+    // Controls
+    nextBtn?.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+
+    prevBtn?.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
 
 })();
 </script>
@@ -211,13 +285,13 @@
 
 
    <!-- Villa Experience Section -->
-<section id="villa" class="bg-white py-24 md:py-36 px-4 md:px-10">
+<section id="villa" class="bg-white py-24 md:py-32 px-6 md:px-10">
     <div class="max-w-7xl mx-auto">
 
         <!-- Header -->
-        <div class="max-w-3xl mx-auto text-center mb-20 md:mb-28 animate-on-scroll">
+        <div class="max-w-3xl mx-auto text-center mb-14 md:mb-20 animate-on-scroll">
             <span class="inline-block text-xs uppercase tracking-[0.35em] text-brown-dark/40 mb-4">
-                A Private Luxury Stay
+                Casa Frangipani
             </span>
 
             <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark mb-6">
@@ -382,11 +456,11 @@
 @endphp
 
 
-<section id="amenities" class="bg-brown-dark border-t border-white/5 py-20 md:py-32 px-6 md:px-10 relative">
+<section id="amenities" class="bg-brown-dark border-t border-white/5 py-24 md:py-32 px-6 md:px-10 relative">
     <div class="w-full max-w-6xl mx-auto relative z-10">
 
         <!-- Heading -->
-        <div class="text-center mb-16 animate-on-scroll">
+        <div class="text-center mb-14 md:mb-20 animate-on-scroll">
             <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
                 Villa Amenities
             </h3>
@@ -471,12 +545,12 @@
 
 <!-- Gallery Section -->
  <div id="gallery" > </div>
-       <section class="hidden lg:block bg-cream pb-6 md:pb-6 pt-24 md:pt-24 px-6 md:px-10">
+       <section class="hidden lg:block bg-cream pt-32 md:py-24 pb-8 md:pb-8 px-6 md:px-10">
 
     <div class="max-w-7xl mx-auto">
 
         <!-- Heading -->
-        <div class="mb-12 md:mb-16 lg:mb-24 text-center">
+        <div class="mb-14 md:mb-20 text-center">
             <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark">
                 Villa Gallery
             </h2>
@@ -592,7 +666,7 @@
 
 
 <!-- Mobile Gallery Grid -->
-<section id="gallery-mobile" class="lg:hidden bg-cream py-4 px-4">
+<section id="gallery-mobile" class="lg:hidden bg-cream pt-32 md:py-24 pb-8 md:pb-8 px-6 md:px-10">
     <div class="max-w-6xl mx-auto">
 
         <!-- Heading -->
@@ -684,7 +758,7 @@
 
 </section>
 
-<div class="mt-4 mb-8 text-center">
+<div class="mt-4 mb-32 text-center">
     <button id="open-gallery-lightbox"
         class="inline-flex items-center gap-2 px-6 py-3
                bg-brown-dark text-white text-sm font-medium
@@ -734,13 +808,13 @@
 
 
         <!-- Reviews Section -->
-        <section id="reviews" class="py-20 px-6 md:px-10 bg-white">
-            <div class="max-w-7xl mx-auto text-center  animate-on-scroll">
+        <section id="reviews" class="py-24 md:py-32 px-6 md:px-10 bg-white">
+            <div class="max-w-7xl mx-auto text-center mb-14 md:mb-20 animate-on-scroll">
                 <span class="text-xs uppercase tracking-[0.4em] text-brown-dark/40 font-medium mb-4 block">Guest Experiences</span>
                 <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tighter text-brown-dark">What Our Guests Say</h2>
             </div>
 
-            <div class="relative h-[600px] max-w-5xl mx-auto flex items-center justify-center mb-20">
+            <div class="relative h-[600px] max-w-5xl mx-auto flex items-center justify-center mb-14 md:mb-20">
                 <div class="absolute left-0 top-1/2 -translate-y-1/2 -rotate-12 w-48 h-64 rounded-2xl overflow-hidden shadow-xl hidden md:block">
                     <img src="https://img.vistarooms.com/gallery/casa-frangipani-877335.jpg" class="w-full h-full object-cover grayscale" alt="Happy guest enjoying stay at Casa Frangipani villa">
                 </div>
@@ -869,10 +943,10 @@
         </section>
 
         <!-- Ideal For Section -->
-        <section class="py-32 px-6 md:px-10 bg-cream border-t border-brown-dark/5">
+        <section class="py-24 md:py-32 px-6 md:px-10 bg-cream border-t border-brown-dark/5">
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end 
-            mb-16 md:mb-24 gap-6 md:gap-8 animate-on-scroll">
+            mb-14 md:mb-20 gap-6 md:gap-8 animate-on-scroll">
 
     <!-- Left: Heading -->
     <div class="space-y-3 text-center md:text-left max-w-xl">
@@ -934,7 +1008,7 @@
         </section>
 
         <!--Youtub Videos-->
-        <section id="villa-videos" class="bg-cream  pb-20 px-6 md:px-10">
+        <section id="villa-videos" class="bg-cream py-24 md:py-32 px-6 md:px-10">
     <div class="max-w-6xl mx-auto">
 
         <!-- Heading -->
@@ -1004,11 +1078,11 @@
 
 
 <!-- Location Section -->
-<section id="location" class="bg-white py-20 md:py-32 px-6 md:px-10">
+<section id="location" class="bg-white py-24 md:py-32 px-6 md:px-10">
     <div class="max-w-7xl mx-auto">
 
         <!-- Heading -->
-        <div class="text-center mb-16 md:mb-24 animate-on-scroll">
+        <div class="text-center mb-14 md:mb-20 animate-on-scroll">
             <span class="text-xs uppercase tracking-[0.35em] text-brown-dark/40 font-medium block mb-4">
                 Location
             </span>
@@ -1138,11 +1212,11 @@
 
 
        <!-- Booking Form Section -->
-<section id="booking" class="py-28 md:py-36 px-6 md:px-10 bg-brown-dark text-white relative overflow-hidden">
+<section id="booking" class="py-24 md:py-32 px-6 md:px-10 bg-brown-dark text-white relative overflow-hidden">
     <div class="max-w-4xl mx-auto">
 
         <!-- Heading -->
-        <div class="text-center mb-14 animate-on-scroll">
+        <div class="text-center mb-14 md:mb-20 animate-on-scroll">
             <span class="text-xs uppercase tracking-[0.35em] text-white/50 font-medium block mb-4">
                 Reservations
             </span>
@@ -1187,6 +1261,42 @@
 
     </div>
 </section>
+
+
+<!-- Booking Modal -->
+<!-- Booking Modal (Minimal) -->
+<div id="booking-modal"
+     class="fixed inset-0 z-[999]
+            hidden
+            bg-black/80 backdrop-blur-sm
+            flex items-center justify-center px-4">
+
+    <div class="relative w-full max-w-xl
+                bg-brown-dark
+                rounded-2xl
+                shadow-2xl
+                p-5 md:p-6
+                max-h-[90vh] overflow-y-auto">
+
+        <!-- Close -->
+        <button
+            class="close-booking-modal
+                   absolute top-3 right-3
+                   w-8 h-8
+                   flex items-center justify-center
+                   text-white/70 hover:text-white
+                   text-2xl leading-none">
+            &times;
+        </button>
+
+        <!-- FORM ONLY -->
+        <div id="booking-form-modal">
+            <livewire:booking-form />
+        </div>
+
+    </div>
+</div>
+
 
     </main>
 
@@ -1659,6 +1769,54 @@
 
 })();
 </script>
+
+<!-- Popup madal -->
+
+<script>
+(function () {
+
+    const modal = document.getElementById('booking-modal');
+    if (!modal) return;
+
+    const openButtons = document.querySelectorAll('.open-booking-modal');
+    const closeButtons = modal.querySelectorAll('.close-booking-modal');
+
+    function openModal() {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+
+    openButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    });
+
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', closeModal);
+    });
+
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // ESC key support
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+})();
+</script>
+
 
 
 @endpush
