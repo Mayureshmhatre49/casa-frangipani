@@ -1432,11 +1432,8 @@
         });
     }
 
-    document.getElementById('booking-form')?.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you! We will contact you shortly.');
-        e.target.reset();
-    });
+    // Booking form submission is handled by Livewire wire:submit.prevent="submit"
+    // Do not interfere with Livewire form handling
 
     // Gallery Tab Switcher (matches Rocket reference)
     const galleryTabs = document.querySelectorAll('.gallery-tab');
