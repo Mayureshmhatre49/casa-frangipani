@@ -581,7 +581,10 @@
             </div>
         </div>
     </div>
+
+
 </section>
+
 
 
 <!-- Mobile Gallery Grid -->
@@ -674,7 +677,23 @@
 
         </div>
     </div>
+
 </section>
+
+<div class="mt-2 mb-4 text-center">
+    <button id="open-gallery-lightbox"
+        class="inline-flex items-center gap-2 px-6 py-3
+               bg-brown-dark text-white text-sm font-medium
+               rounded-full hover:bg-brown-dark/90 transition">
+        View Full Gallery
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+             stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6h8v12H4z" />
+        </svg>
+    </button>
+</div>
+
 
 
 
@@ -1158,6 +1177,33 @@
 
     </main>
 
+
+ <!-- GALLERY LIGHTBOX -->
+<div id="gallery-lightbox"
+     class="fixed inset-0 z-[999] bg-black/90 backdrop-blur-sm hidden">
+
+    <button id="close-gallery"
+        class="absolute top-6 right-6 text-white/80 hover:text-white text-3xl leading-none">
+        &times;
+    </button>
+
+    <button id="prev-image"
+        class="absolute left-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-4xl">
+        ‹
+    </button>
+
+    <button id="next-image"
+        class="absolute right-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-4xl">
+        ›
+    </button>
+
+    <div class="w-full h-full flex items-center justify-center px-6">
+        <img id="lightbox-image"
+             class="max-h-[85vh] max-w-full rounded-xl shadow-2xl transition-all duration-500">
+    </div>
+</div>
+   
+
 {{-- ================= FOOTER ================= --}}
 <footer class="py-6 md:py-6 px-6 md:px-12 border-t border-brown-dark/15 bg-gradient-to-b from-cream to-cream/80">
     <div class="max-w-7xl mx-auto flex items-center justify-center">
@@ -1465,4 +1511,108 @@
         }, 8000);
     })();
 </script>
+
+
+
+<!-- villa gallery popup -->
+
+<script>
+(function () {
+
+    const galleryImages = [
+  "https://img.vistarooms.com/gallery/casa-frangipani-657c43.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-2c9b15.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-483f65.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-9e5e0c.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-5c1a08.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-72d47e.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-a74712.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-7cef0e.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-73232f.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-8df5a1.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-6be961.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-845caa.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-2fd0ab.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-e90014.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-e08efc.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-877335.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-951391.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-179756.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-3b392f.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-38ce71.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-c43908.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-5cb0e2.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-0c3c0b.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-7b6ecf.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-03d218.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-445e24.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-2df609.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-a8d0fb.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-9629f7.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-16d491.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-77b6eb.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-46409e.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-71bb7f.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-5f41a0.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-6de412.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-bc6010.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-2c729c.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-624272.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-7045aa.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-2cafa4.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-cd9529.jpg",
+  "https://img.vistarooms.com/gallery/casa-frangipani-54d2da.jpg",
+  "https://img.vistarooms.com/website_assets/brand_of_the_year.webp",
+  "https://img.vistarooms.com/website_assets/trust_factor_15.jpg",
+  "https://img.vistarooms.com/website_assets/sv_certified_partner.webp"
+];
+
+    let currentIndex = 0;
+
+    const lightbox = document.getElementById("gallery-lightbox");
+    const lightboxImg = document.getElementById("lightbox-image");
+
+    document.getElementById("open-gallery-lightbox").addEventListener("click", () => {
+        currentIndex = 0;
+        lightboxImg.src = galleryImages[currentIndex];
+        lightbox.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+    });
+
+    document.getElementById("close-gallery").addEventListener("click", closeLightbox);
+
+    document.getElementById("next-image").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        updateImage();
+    });
+
+    document.getElementById("prev-image").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateImage();
+    });
+
+    function updateImage() {
+        lightboxImg.classList.add("opacity-0");
+        setTimeout(() => {
+            lightboxImg.src = galleryImages[currentIndex];
+            lightboxImg.classList.remove("opacity-0");
+        }, 200);
+    }
+
+    function closeLightbox() {
+        lightbox.classList.add("hidden");
+        document.body.style.overflow = "";
+    }
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") document.getElementById("next-image").click();
+        if (e.key === "ArrowLeft") document.getElementById("prev-image").click();
+    });
+
+})();
+</script>
+
+
 @endpush
