@@ -1109,11 +1109,13 @@
 
 {{-- ================= FOOTER ================= --}}
 <footer class="py-6 md:py-6 px-6 md:px-12 border-t border-brown-dark/15 bg-gradient-to-b from-cream to-cream/80">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-col md:flex-row">
-        <p class="text-brown-dark/40 text-xs md:text-sm">© {{ now()->year }} Casa Frangipani. All rights reserved.</p>
-
+    <div class="max-w-7xl mx-auto flex items-center justify-center">
+        <p class="text-brown-dark/40 text-center text-xs md:text-sm">
+            © {{ now()->year }} Casa Frangipani. All rights reserved.
+        </p>
     </div>
 </footer>
+
 
 @endsection
 
