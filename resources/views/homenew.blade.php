@@ -467,7 +467,7 @@
 
 <!-- Gallery Section -->
  <div id="gallery" > </div>
-       <section class="hidden lg:block bg-cream py-20 md:py-32 px-6 md:px-10">
+       <section class="hidden lg:block bg-cream pb-6 md:pb-6 pt-24 md:pt-24 px-6 md:px-10">
 
     <div class="max-w-7xl mx-auto">
 
@@ -497,7 +497,7 @@
                     <button class="gallery-thumb active"
                         data-image="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg"
                         data-title="Private Pool"
-                        data-desc="A temperature-controlled private pool surrounded by lush tropical landscaping and sun loungers.">
+                        data-desc="A private pool surrounded by lush tropical landscaping and sun loungers.">
                         <img src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg">
                         <span>Private Pool</span>
                     </button>
@@ -574,7 +574,7 @@
 
                     <p id="gallery-desc"
                         class="text-sm text-brown-dark/70 leading-relaxed">
-                        A temperature-controlled private pool surrounded by lush tropical landscaping and sun loungers.
+                        A private pool surrounded by lush tropical landscaping and sun loungers.
                     </p>
                 </div>
 
@@ -588,7 +588,7 @@
 
 
 <!-- Mobile Gallery Grid -->
-<section id="gallery-mobile" class="lg:hidden bg-cream py-16 px-4">
+<section id="gallery-mobile" class="lg:hidden bg-cream py-4 px-4">
     <div class="max-w-6xl mx-auto">
 
         <!-- Heading -->
@@ -680,17 +680,22 @@
 
 </section>
 
-<div class="mt-2 mb-4 text-center">
+<div class="mt-4 mb-8 text-center">
     <button id="open-gallery-lightbox"
         class="inline-flex items-center gap-2 px-6 py-3
                bg-brown-dark text-white text-sm font-medium
                rounded-full hover:bg-brown-dark/90 transition">
         View Full Gallery
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6h8v12H4z" />
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg"
+     width="24" height="24" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="2"
+     stroke-linecap="round" stroke-linejoin="round"
+     class="lucide lucide-camera text-white size-5 group-hover:translate-x-1 transition-transform"
+     aria-hidden="true">
+  <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+  <circle cx="12" cy="13" r="3"/>
+</svg>
+
     </button>
 </div>
 
