@@ -42,7 +42,7 @@
                wire:model.defer="check_out"
                value="{{ old('check_out', $check_out ?? '') }}">
 
-        <div class="flex justify-between mt-1 text-[11px] text-stone-400">
+        <div class="flex justify-between text-[11px] text-stone-400">
             <span>
                 In:
                 <strong id="display_check_in" class="text-white font-medium">
@@ -209,7 +209,7 @@
             Make another enquiry
         </a>
 
-        <a href="https://wa.me/919209479178"
+        <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
            target="_blank"
            class="flex items-center gap-2
                   border border-white/30 text-white
