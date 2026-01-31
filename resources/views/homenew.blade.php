@@ -49,7 +49,7 @@
     <!-- Background -->
     <div class="absolute inset-0 z-0 bg-black">
         <img
-            src="http://hestiavillas.in/wp-content/uploads/2026/01/CF-Cover-photo.png"
+            src="http://hestiavillas.in/wp-content/uploads/2026/01/Casa-Frangipani-Alibaug-1.webp"
             class="w-full h-full object-cover animate-cinematic"
             alt="Private luxury villa with pool in Alibaug – Casa Frangipani">
         <div class="absolute inset-0 bg-gradient-to-t from-brown-dark via-brown-dark/20 to-transparent opacity-80"></div>
