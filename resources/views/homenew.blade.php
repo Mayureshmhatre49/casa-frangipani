@@ -46,23 +46,51 @@
         <!-- Hero Section -->
 <header class="relative w-full h-screen overflow-hidden flex flex-col justify-end pb-12 md:pb-24">
 
-    <!-- Background -->
+    <!-- Background Slider -->
     <div class="absolute inset-0 z-0 bg-black">
-        <img
-            src="http://hestiavillas.in/wp-content/uploads/2026/01/Casa-Frangipani-Alibaug-1.webp"
-            class="w-full h-full object-cover animate-cinematic"
-            alt="Private luxury villa with pool in Alibaug – Casa Frangipani">
-        <div class="absolute inset-0 bg-gradient-to-t from-brown-dark via-brown-dark/20 to-transparent opacity-80"></div>
+
+        <!-- Slides -->
+         <div class="hero-slide active"
+             style="background-image:url('http://hestiavillas.in/wp-content/uploads/2026/01/Casa-Frangipani-Alibaug-1.webp')"
+             data-title="Effortless Weekend Getaways"
+             data-subtitle="Calm Surroundings · Fully Serviced"
+             data-desc="A fully serviced villa experience surrounded by calm, greenery, and effortless comfort.">
+        </div>
+
+        <div class="hero-slide"
+             style="background-image:url('https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg')"
+             data-title="Private Luxury Pool Villa in Alibaug"
+             data-subtitle="Private Pool · Complete Privacy"
+             data-desc="A secluded private pool villa designed for peaceful escapes and relaxed weekend getaways near Mumbai.">
+        </div>
+
+        <div class="hero-slide"
+             style="background-image:url('https://img.vistarooms.com/gallery/casa-frangipani-5c1a08.jpg')"
+             data-title="6 Spacious Air-Conditioned Bedrooms"
+             data-subtitle="Perfect for Families & Groups"
+             data-desc="Six well-appointed bedrooms with air-conditioning, offering comfort, space, and restful nights.">
+        </div>
+
+        <div class="hero-slide"
+             style="background-image:url('https://img.vistarooms.com/gallery/casa-frangipani-9e5e0c.jpg')"
+             data-title="Designed for Comfort & Leisure"
+             data-subtitle="Living Room · Games Room"
+             data-desc="Thoughtfully designed living spaces with room to relax, unwind, and enjoy quality time together.">
+        </div>
+
+        
+
+        <!-- Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-t from-brown-dark via-brown-dark/25 to-transparent opacity-90"></div>
         <div class="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
     </div>
 
     <!-- Content -->
     <div class="relative z-10 w-full max-w-[90rem] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
 
-        <!-- LEFT: HEADLINE -->
+        <!-- LEFT -->
         <div class="md:col-span-7">
 
-            <!-- Location -->
             <div class="flex items-center gap-3 mb-6 animate-slide-up delay-1200 opacity-0">
                 <span class="h-[1px] w-8 bg-white/60"></span>
                 <span class="text-xs font-mono uppercase tracking-widest text-white/80">
@@ -70,51 +98,46 @@
                 </span>
             </div>
 
-            <!-- H1 -->
             <h1 class="font-heading font-bold text-white tracking-tight leading-tight md:leading-[1.05]">
 
-                <span
-                    class="block
-                    text-[clamp(2.2rem,8vw,3.5rem)]
-                    md:text-[clamp(2.8rem,5vw,4.5rem)]
-                    lg:text-[clamp(3.5rem,4vw,5.5rem)]
-                    animate-slide-up delay-1400 opacity-0 drop-shadow-2xl">
-                    Private Luxury Villa with Pool in Alibaug
+                <span id="hero-title"
+                      class="block
+                      text-[clamp(2.2rem,8vw,3.5rem)]
+                      md:text-[clamp(2.8rem,5vw,4.5rem)]
+                      lg:text-[clamp(3.5rem,4vw,5.5rem)]
+                      drop-shadow-2xl transition-opacity duration-700">
+                    Private Luxury Pool Villa in Alibaug
                 </span>
 
-                <span
-                    class="block mt-2 md:mt-4
-                    text-[clamp(1.4rem,6vw,2.2rem)]
-                    md:text-[clamp(1.6rem,3vw,2.5rem)]
-                    font-serif italic font-light text-white/70
-                    animate-slide-up delay-1600 opacity-0">
-                    Casa Frangipani
+                <span id="hero-subtitle"
+                      class="block mt-2 md:mt-4
+                      text-[clamp(1.4rem,6vw,2.2rem)]
+                      md:text-[clamp(1.6rem,3vw,2.5rem)]
+                      font-serif italic font-light text-white/70 transition-opacity duration-700">
+                    Private Pool · Complete Privacy
                 </span>
 
             </h1>
         </div>
 
-        <!-- RIGHT: GLASS CTA CARD -->
+        <!-- RIGHT CTA -->
         <div class="md:col-span-4 md:col-start-9 flex flex-col justify-end pb-4 md:pb-8">
 
             <div class="relative overflow-hidden bg-brown-dark/60 backdrop-blur-2xl border border-white/10
                         p-8 rounded-2xl shadow-2xl animate-slide-up delay-1800 opacity-0
                         ring-1 ring-white/5">
 
-                <!-- Shimmer -->
                 <div class="absolute inset-0 -translate-x-full bg-gradient-to-r
                             from-transparent via-white/5 to-transparent
                             pointer-events-none animate-shimmer"></div>
 
                 <div class="relative z-10">
 
-                    <!-- Description -->
-                    <p class="text-base md:text-lg text-white/85 font-light leading-relaxed mb-8 antialiased drop-shadow-md">
-                        A fully serviced private pool villa offering complete privacy, calm surroundings,
-                        and effortless comfort-ideal for weekend getaways and relaxed stays near Mumbai.
+                    <p id="hero-desc"
+                       class="text-base md:text-lg text-white/85 font-light leading-relaxed mb-8 antialiased drop-shadow-md transition-opacity duration-700">
+                        A secluded private pool villa designed for peaceful escapes and relaxed weekend getaways near Mumbai.
                     </p>
 
-                    <!-- CTAs -->
                     <div class="flex flex-col gap-4">
                         <a href="#booking"
                            class="group flex items-center justify-between w-full p-1 border-b
@@ -143,16 +166,44 @@
         </div>
 
     </div>
-
-    <!-- Scroll Indicator -->
-    <!-- <div class="absolute bottom-8 left-1/2 -translate-x-1/2
-                flex flex-col items-center gap-2
-                animate-slide-up delay-2200 opacity-0">
-        <span class="text-[10px] uppercase tracking-widest text-white/40">Scroll</span>
-        <div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
-    </div> -->
-
 </header>
+
+
+<script>
+(function () {
+
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroTitle = document.getElementById('hero-title');
+    const heroSubtitle = document.getElementById('hero-subtitle');
+    const heroDesc = document.getElementById('hero-desc');
+
+    let heroIndex = 0;
+
+    setInterval(() => {
+        heroSlides[heroIndex].classList.remove('active');
+        heroIndex = (heroIndex + 1) % heroSlides.length;
+        heroSlides[heroIndex].classList.add('active');
+
+        heroTitle.style.opacity = 0;
+        heroSubtitle.style.opacity = 0;
+        heroDesc.style.opacity = 0;
+
+        setTimeout(() => {
+            heroTitle.textContent = heroSlides[heroIndex].dataset.title;
+            heroSubtitle.textContent = heroSlides[heroIndex].dataset.subtitle;
+            heroDesc.textContent = heroSlides[heroIndex].dataset.desc;
+
+            heroTitle.style.opacity = 1;
+            heroSubtitle.style.opacity = 1;
+            heroDesc.style.opacity = 1;
+        }, 1200);
+
+    }, 8000);
+
+})();
+</script>
+
+
 
 
    <!-- Villa Experience Section -->
