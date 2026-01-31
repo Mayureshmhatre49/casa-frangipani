@@ -44,120 +44,168 @@
 
 <main>
         <!-- Hero Section -->
-        <header class="relative w-full h-screen overflow-hidden flex flex-col justify-end pb-12 md:pb-24">
-            <div class="absolute inset-0 z-0 bg-black">
-                <img src="http://hestiavillas.in/wp-content/uploads/2026/01/CF-Cover-photo.png" class="w-full h-full object-cover animate-cinematic opacity-1" alt="Casa Frangipani luxury villa exterior with private swimming pool at sunset, surrounded by tropical gardens in Alibaug">
-                <div class="absolute inset-0 bg-gradient-to-t from-brown-dark via-brown-dark/20 to-transparent opacity-80"></div>
-                <div class="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
+<header class="relative w-full h-screen overflow-hidden flex flex-col justify-end pb-12 md:pb-24">
+
+    <!-- Background -->
+    <div class="absolute inset-0 z-0 bg-black">
+        <img
+            src="http://hestiavillas.in/wp-content/uploads/2026/01/CF-Cover-photo.png"
+            class="w-full h-full object-cover animate-cinematic"
+            alt="Private luxury villa with pool in Alibaug – Casa Frangipani">
+        <div class="absolute inset-0 bg-gradient-to-t from-brown-dark via-brown-dark/20 to-transparent opacity-80"></div>
+        <div class="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 w-full max-w-[90rem] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
+
+        <!-- LEFT: HEADLINE -->
+        <div class="md:col-span-7">
+
+            <!-- Location -->
+            <div class="flex items-center gap-3 mb-6 animate-slide-up delay-1200 opacity-0">
+                <span class="h-[1px] w-8 bg-white/60"></span>
+                <span class="text-xs font-mono uppercase tracking-widest text-white/80">
+                    Alibaug, Maharashtra
+                </span>
             </div>
 
-            <div class="absolute top-32 right-6 md:right-12 z-20 flex flex-col items-end gap-2 animate-slide-up delay-2500 opacity-0">
-            
-            </div>
+            <!-- H1 -->
+            <h1 class="font-heading font-bold text-white tracking-tight leading-tight md:leading-[1.05]">
 
-            <div class="relative z-10 w-full max-w-[90rem] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
-                <div class="md:col-span-7 relative">
-                    <div class="flex items-center gap-3 mb-6 animate-slide-up delay-1200 opacity-0">
-                        <span class="h-[1px] w-8 bg-white/60"></span>
-                        <span class="text-xs font-mono uppercase tracking-widest text-white/80">Alibaug, Maharashtra</span>
+                <span
+                    class="block
+                    text-[clamp(2.2rem,8vw,3.5rem)]
+                    md:text-[clamp(2.8rem,5vw,4.5rem)]
+                    lg:text-[clamp(3.5rem,4vw,5.5rem)]
+                    animate-slide-up delay-1400 opacity-0 drop-shadow-2xl">
+                    Private Luxury Villa with Pool in Alibaug
+                </span>
+
+                <span
+                    class="block mt-2 md:mt-4
+                    text-[clamp(1.4rem,6vw,2.2rem)]
+                    md:text-[clamp(1.6rem,3vw,2.5rem)]
+                    font-serif italic font-light text-white/70
+                    animate-slide-up delay-1600 opacity-0">
+                    Casa Frangipani
+                </span>
+
+            </h1>
+        </div>
+
+        <!-- RIGHT: GLASS CTA CARD -->
+        <div class="md:col-span-4 md:col-start-9 flex flex-col justify-end pb-4 md:pb-8">
+
+            <div class="relative overflow-hidden bg-brown-dark/60 backdrop-blur-2xl border border-white/10
+                        p-8 rounded-2xl shadow-2xl animate-slide-up delay-1800 opacity-0
+                        ring-1 ring-white/5">
+
+                <!-- Shimmer -->
+                <div class="absolute inset-0 -translate-x-full bg-gradient-to-r
+                            from-transparent via-white/5 to-transparent
+                            pointer-events-none animate-shimmer"></div>
+
+                <div class="relative z-10">
+
+                    <!-- Description -->
+                    <p class="text-base md:text-lg text-white/85 font-light leading-relaxed mb-8 antialiased drop-shadow-md">
+                        A fully serviced private pool villa offering complete privacy, calm surroundings,
+                        and effortless comfort-ideal for weekend getaways and relaxed stays near Mumbai.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col gap-4">
+                        <a href="#booking"
+                           class="group flex items-center justify-between w-full p-1 border-b
+                                  border-white/30 hover:border-white transition-colors pb-2">
+                            <span class="text-sm font-medium tracking-wide text-white">
+                                Check Availability
+                            </span>
+                            <i data-lucide="arrow-right"
+                               class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+
+                        <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
+                           target="_blank"
+                           class="group flex items-center justify-between w-full p-1 border-b
+                                  border-white/30 hover:border-white transition-colors pb-2">
+                            <span class="text-sm font-medium tracking-wide text-white">
+                                WhatsApp for Booking
+                            </span>
+                            <i data-lucide="message-circle"
+                               class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
-                    <h1 class="font-heading font-bold text-white tracking-tight leading-none md:leading-[0.95]">
-
-    <!-- EXPERIENCE -->
-    <span
-        class="block 
-        text-[clamp(3.5rem,14vw,8rem)] 
-        md:text-[clamp(4rem,8vw,6.5rem)] 
-        lg:text-[clamp(6rem,7vw,9.5rem)] 
-        xl:text-[10rem]
-        animate-slide-up delay-1400 opacity-0 drop-shadow-2xl">
-        Experience
-    </span>
-
-    <!-- PRIVATE LUXURY -->
-    <span
-        class="flex items-baseline gap-3 md:gap-6 mt-1 md:mt-0
-        animate-slide-up delay-1600 opacity-0">
-
-        <span
-            class="font-serif italic font-light text-white/60
-            text-[clamp(3rem,11vw,5rem)] 
-            md:text-[clamp(3.5rem,5vw,4rem)] 
-            lg:text-[4.5rem]">
-            Private
-        </span>
-
-        <span
-            class="font-heading font-bold drop-shadow-2xl
-            text-[clamp(3.4rem,13vw,7rem)] 
-            md:text-[clamp(3.5rem,6vw,6rem)] 
-            lg:text-[8rem]
-            xl:text-[9.5rem]">
-            Luxury
-        </span>
-
-    </span>
-
-</h1>
-
 
                 </div>
-
-                <div class="md:col-span-4 md:col-start-9 flex flex-col justify-end pb-4 md:pb-8">
-                    <div class="relative overflow-hidden bg-brown-dark/60 backdrop-blur-2xl border border-white/10 p-8 rounded-2xl shadow-2xl animate-slide-up delay-1800 opacity-0 ring-1 ring-white/5">
-                        <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/5 to-transparent z-0 pointer-events-none animate-shimmer"></div>
-
-                        <div class="relative z-10">
-                            <p class="text-lg md:text-xl text-white font-light leading-relaxed mb-8 antialiased drop-shadow-md">
-                                An exclusive private villa in Alibaug with fully serviced pool, premium amenities, and personalized concierge service.
-                            </p>
-                            <div class="flex flex-col gap-4">
-                                <a href="#booking" class="group flex items-center justify-between w-full p-1 border-b border-white/30 hover:border-white transition-colors pb-2">
-                                    <span class="text-sm font-medium tracking-wide text-white">Check Availability</span>
-                                    <i data-lucide="arrow-right" class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>
-                                </a>
-                                <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani" class="group flex items-center justify-between w-full p-1 border-b border-white/30 hover:border-white transition-colors pb-2">
-                                    <span class="text-sm font-medium tracking-wide text-white">WhatsApp for Booking</span>
-                                    <i data-lucide="message-circle" class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+        </div>
 
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-slide-up delay-2200 opacity-0">
-                <span class="text-[10px] uppercase tracking-widest text-white/40">Scroll</span>
-                <div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
-            </div>
-        </header>
+    </div>
 
-      <!-- Villa Experience Section -->
+    <!-- Scroll Indicator -->
+    <!-- <div class="absolute bottom-8 left-1/2 -translate-x-1/2
+                flex flex-col items-center gap-2
+                animate-slide-up delay-2200 opacity-0">
+        <span class="text-[10px] uppercase tracking-widest text-white/40">Scroll</span>
+        <div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
+    </div> -->
+
+</header>
+
+
+   <!-- Villa Experience Section -->
 <section id="villa" class="bg-white py-24 md:py-36 px-4 md:px-10">
     <div class="max-w-7xl mx-auto">
 
         <!-- Header -->
         <div class="max-w-3xl mx-auto text-center mb-20 md:mb-28 animate-on-scroll">
             <span class="inline-block text-xs uppercase tracking-[0.35em] text-brown-dark/40 mb-4">
-                The Villa Experience
+                A Private Luxury Stay
             </span>
+
             <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark mb-6">
-                Designed for Privacy,<br class="hidden sm:block">
-                Crafted for Comfort
+                A Private Luxury Stay
             </h2>
-            <p class="text-brown-dark/60 text-base md:text-lg leading-relaxed">
-                A thoughtfully curated private villa experience where space, calm,
-                and comfort come together — ideal for families, celebrations, and slow escapes.
+
+            <p class="text-brown-dark/60 text-base md:text-lg leading-relaxed mb-8">
+                Casa Frangipani is designed for guests who value space, silence, and refined living.
+                The villa features seamless indoor–outdoor spaces, a private pool, and a peaceful
+                residential setting—perfect for unwinding without interruption.
             </p>
+
+            <!-- Highlights -->
+            <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4">
+    
+    <span class="px-4 py-2 rounded-full bg-cream border border-brown-dark/10
+                 text-sm font-medium text-brown-dark
+                 shadow-sm">
+        Private swimming pool
+    </span>
+
+    <span class="px-4 py-2 rounded-full bg-cream border border-brown-dark/10
+                 text-sm font-medium text-brown-dark
+                 shadow-sm">
+        Spacious indoor–outdoor living
+    </span>
+
+    <span class="px-4 py-2 rounded-full bg-cream border border-brown-dark/10
+                 text-sm font-medium text-brown-dark
+                 shadow-sm">
+        Quiet, low-density neighborhood
+    </span>
+
+</div>
+
         </div>
 
-        <!-- Content Grid -->
+        <!-- Content Grid (UNCHANGED) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
             <!-- LEFT: FEATURES -->
             <div class="lg:col-span-6 space-y-10 animate-on-scroll">
 
-                <!-- Feature Card -->
                 <div class="group flex gap-6 items-start">
                     <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
                         <i data-lucide="shield-check" class="size-7 text-terracotta"></i>
@@ -173,7 +221,6 @@
                     </div>
                 </div>
 
-                <!-- Feature Card -->
                 <div class="group flex gap-6 items-start">
                     <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
                         <i data-lucide="heart" class="size-7 text-terracotta"></i>
@@ -189,7 +236,6 @@
                     </div>
                 </div>
 
-                <!-- Feature Card -->
                 <div class="group flex gap-6 items-start">
                     <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
                         <i data-lucide="trees" class="size-7 text-terracotta"></i>
@@ -207,25 +253,21 @@
 
             </div>
 
-            <!-- RIGHT: IMAGES -->
+            <!-- RIGHT: IMAGES (UNCHANGED) -->
             <div class="lg:col-span-6 grid grid-cols-2 gap-6 animate-on-scroll">
-
-                <!-- Image 1 -->
                 <div class="relative rounded-3xl overflow-hidden aspect-[3/4]">
                     <img
-                        src="https://img.vistarooms.com/gallery/casa-frangipani-657c43.jpg"
+                        src="http://hestiavillas.in/wp-content/uploads/2026/01/CF-Cover-photo.png"
                         alt="Villa living space"
                         class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                 </div>
 
-                <!-- Image 2 (offset) -->
                 <div class="relative rounded-3xl overflow-hidden aspect-[3/4] mt-12">
                     <img
                         src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg"
                         alt="Private pool at the villa"
                         class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                 </div>
-
             </div>
 
         </div>
@@ -370,6 +412,8 @@
     </div>
 </section>
 
+
+
 <!-- Gallery Section -->
  <div id="gallery" > </div>
        <section class="hidden lg:block bg-cream py-20 md:py-32 px-6 md:px-10">
@@ -382,7 +426,7 @@
                 Villa Gallery
             </h2>
             <p class="mt-4 text-brown-dark/50 max-w-xl mx-auto">
-                A curated walkthrough of spaces designed for comfort, leisure, and togetherness.
+                Explore the villa’s interiors, pool, and outdoor spaces through our gallery and experience the charm of Casa Frangipani before you arrive.
             </p>
         </div>
 
@@ -499,7 +543,7 @@
                 Villa Gallery
             </h2>
             <p class="mt-2 text-sm text-brown-dark/50">
-                Explore the spaces at a glance
+                Explore the villa’s interiors, pool, and outdoor spaces through our gallery and experience the charm of Casa Frangipani before you arrive.
             </p>
         </div>
 
@@ -885,109 +929,105 @@
     <div class="max-w-7xl mx-auto">
 
         <!-- Heading -->
-        <div class="text-center mb-14 md:mb-24 animate-on-scroll">
-            <span class="text-xs uppercase tracking-[0.35em] text-brown-dark/40 font-medium block mb-3">
+        <div class="text-center mb-16 md:mb-24 animate-on-scroll">
+            <span class="text-xs uppercase tracking-[0.35em] text-brown-dark/40 font-medium block mb-4">
                 Location
             </span>
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark mb-4 md:mb-6">
-                Easy Access from Mumbai
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark mb-6">
+                Perfectly Placed in Alibaug
             </h2>
-            <p class="text-brown-dark/60 text-sm md:text-lg max-w-2xl mx-auto">
-                Just 2.5 hours from Mumbai, Casa Frangipani is ideal for weekend escapes with beaches,
-                dining spots, and attractions close by.
+            <p class="text-brown-dark/60 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                Located in Alibaug, Casa Frangipani offers easy access to beaches, cafés,
+                and local experiences while maintaining a calm residential ambiance.
+                Just 2–3 hours from Mumbai, it’s perfect for spontaneous trips and planned holidays.
             </p>
         </div>
 
         <!-- Layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
 
-            <!-- LEFT: INFO CARDS -->
-            <div class="lg:col-span-5 space-y-6 animate-on-scroll order-2 lg:order-1">
-
+            <!-- LEFT: INFO -->
+            <div class="lg:col-span-5 space-y-4 animate-on-scroll order-2 lg:order-1">
 
                 <!-- Card -->
-                <div class="bg-cream rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition">
-                    <div class="flex gap-5 items-start">
-                        <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0">
-                            <i data-lucide="car" class="size-7 text-terracotta"></i>
+                <div class="bg-cream rounded-2xl p-5 md:p-6 transition hover:shadow-md">
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-terracotta/15 flex items-center justify-center shrink-0">
+                            <i data-lucide="car" class="size-5 text-terracotta"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg md:text-xl font-heading font-bold text-brown-dark mb-2">
+                            <h3 class="text-base md:text-lg font-heading font-semibold text-brown-dark mb-1">
                                 By Road from Mumbai
                             </h3>
-                            <p class="text-brown-dark/60 leading-relaxed mb-2">
-                                Approx. 2.5 hours (140 km) via NH66 and Pen–Khopoli Road with smooth highways.
-                            </p>
-                            <p class="text-sm text-brown-dark/40">
-                                GPS: 18.6298° N, 72.8777° E
+                            <p class="text-brown-dark/60 text-sm leading-snug">
+                                Approx. 2.5 hours (140 km) via NH66 and Pen–Khopoli Road.
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card -->
-                <div class="bg-cream rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition">
-                    <div class="flex gap-5 items-start">
-                        <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0">
-                            <i data-lucide="ship" class="size-7 text-terracotta"></i>
+                <div class="bg-cream rounded-2xl p-5 md:p-6 transition hover:shadow-md">
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-terracotta/15 flex items-center justify-center shrink-0">
+                            <i data-lucide="ship" class="size-5 text-terracotta"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg md:text-xl font-heading font-bold text-brown-dark mb-2">
+                            <h3 class="text-base md:text-lg font-heading font-semibold text-brown-dark mb-1">
                                 Ferry Option
                             </h3>
-                            <p class="text-brown-dark/60 leading-relaxed mb-2">
+                            <p class="text-brown-dark/60 text-sm leading-snug">
                                 Ferry from Gateway of India to Mandwa Jetty (1 hour),
-                                followed by a short 10-minute drive.
-                            </p>
-                            <p class="text-sm text-brown-dark/40">
-                                Ferry timings: 7 AM – 7 PM (hourly)
+                                followed by a 10-minute drive.
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card -->
-                <div class="bg-cream rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition">
-                    <div class="flex gap-5 items-start">
-                        <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0">
-                            <i data-lucide="waves" class="size-7 text-terracotta"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg md:text-xl font-heading font-bold text-brown-dark mb-3">
-                                Nearby Beaches
-                            </h3>
-                            <ul class="text-brown-dark/60 space-y-1 text-sm md:text-base">
-                                <li>• Kihim Beach — 5 km (10 mins)</li>
-                                <li>• Awas Beach — 8 km (15 mins)</li>
-                                <li>• Alibaug Beach — 12 km (20 mins)</li>
-                                <li>• Kashid Beach — 35 km (45 mins)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <div class="bg-cream rounded-2xl p-5 md:p-6 transition hover:shadow-md">
+    <div class="flex gap-4 items-start">
+        <div class="w-10 h-10 rounded-lg bg-terracotta/15 flex items-center justify-center shrink-0">
+            <i data-lucide="waves" class="size-5 text-terracotta"></i>
+        </div>
+        <div>
+            <h3 class="text-base md:text-lg font-heading font-semibold text-brown-dark mb-2">
+                Nearby Beaches
+            </h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 text-xs bg-white/60 rounded-full text-brown-dark/70">Kihim · 10 min</span>
+                <span class="px-3 py-1 text-xs bg-white/60 rounded-full text-brown-dark/70">Awas · 15 min</span>
+                <span class="px-3 py-1 text-xs bg-white/60 rounded-full text-brown-dark/70">Alibaug · 20 min</span>
+                <span class="px-3 py-1 text-xs bg-white/60 rounded-full text-brown-dark/70">Kashid · 45 min</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 
                 <!-- Card -->
-                <div class="bg-cream rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition">
-                    <div class="flex gap-5 items-start">
-                        <div class="w-14 h-14 rounded-2xl bg-terracotta/15 flex items-center justify-center shrink-0">
-                            <i data-lucide="coffee" class="size-7 text-terracotta"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg md:text-xl font-heading font-bold text-brown-dark mb-3">
-                                Dining & Attractions
-                            </h3>
-                            <ul class="text-brown-dark/60 space-y-1 text-sm md:text-base">
-                                <li>• Sanman Restaurant — 3 km (seafood)</li>
-                                <li>• Boardwalk by Flamboyante — 5 km (café)</li>
-                                <li>• Alibaug Fort — 12 km</li>
-                                <li>• Kolaba Fort — 15 km</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <div class="bg-cream rounded-2xl p-5 md:p-6 transition hover:shadow-md">
+    <div class="flex gap-4 items-start">
+        <div class="w-10 h-10 rounded-lg bg-terracotta/15 flex items-center justify-center shrink-0">
+            <i data-lucide="coffee" class="size-5 text-terracotta"></i>
+        </div>
+        <div>
+            <h3 class="text-base md:text-lg font-heading font-semibold text-brown-dark mb-2">
+                Dining & Attractions
+            </h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 text-xs bg-white/60 rounded-full text-brown-dark/70">Sanman · Seafood</span>
+                <span class="px-3 py-1 text-xs bg-white/60 rounded-full text-brown-dark/70">Boardwalk Café</span>
+                <span class="px-3 py-1 text-xs bg-white/60 rounded-full text-brown-dark/70">Alibaug Fort</span>
+                <span class="px-3 py-1 text-xs bg-white/60 rounded-full text-brown-dark/70">Kolaba Fort</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 
                 <!-- CTA -->
-                <div class="pt-4">
+                <div class="pt-6">
                     <a href="https://www.google.com/maps/dir//18.6298,72.8777"
                        target="_blank"
                        class="inline-flex items-center gap-3 px-8 py-4 bg-brown-dark text-white rounded-full font-medium hover:bg-brown-dark/90 transition">
@@ -998,9 +1038,8 @@
 
             </div>
 
-            <!-- RIGHT: MAP -->
+            <!-- RIGHT: MAP (UNCHANGED) -->
             <div class="lg:col-span-7 animate-on-scroll order-1 lg:order-2">
-
                 <div class="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
                     <iframe
                         class="absolute inset-0 w-full h-full"
@@ -1018,19 +1057,54 @@
 </section>
 
 
-        <!-- Booking Form Section -->
-        <section id="booking" class="py-32 px-6 md:px-10 bg-brown-dark text-white">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12 animate-on-scroll">
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tighter mb-6">Plan Your Stay</h2>
-                    <p class="text-white/60 text-lg">Fill out the form below and we'll get back to you within 2 hours to confirm your booking.</p>
-                </div>
 
-                <div class="animate-on-scroll">
-                    <livewire:booking-form />
-                </div>
-            </div>
-        </section>
+       <!-- Booking Form Section -->
+<section id="booking" class="py-28 md:py-36 px-6 md:px-10 bg-brown-dark text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto">
+
+        <!-- Heading -->
+        <div class="text-center mb-14 animate-on-scroll">
+            <span class="text-xs uppercase tracking-[0.35em] text-white/50 font-medium block mb-4">
+                Reservations
+            </span>
+
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight mb-6">
+                Plan Your Stay
+            </h2>
+
+            <p class="text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                A private luxury villa with limited availability to preserve comfort and
+                personalized service. Book early to secure your preferred dates.
+            </p>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4  animate-on-scroll">
+           
+            <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
+               target="_blank"
+               class="inline-flex items-center gap-3 px-8 py-4 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition">
+                 <i data-lucide="message-circle"
+                               class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>  WhatsApp for Booking
+            </a>
+        </div>
+<p class="text-center text-sm md:text-sm font-heading font-bold text-white/50 my-6 select-none">
+    OR
+</p>
+
+        <!-- Form -->
+        <div id="booking-form" class="animate-on-scroll">
+            <livewire:booking-form />
+        </div>
+
+        <!-- Trust Line -->
+        <p class="text-center text-white/40 text-sm mt-10">
+            We typically respond within 2 hours · Your details are kept private
+        </p>
+
+    </div>
+</section>
+
     </main>
 
 {{-- ================= FOOTER ================= --}}

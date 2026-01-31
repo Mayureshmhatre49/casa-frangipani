@@ -39,23 +39,7 @@
         @error('guest_count') <div class="text-red-400 text-xs mt-1">{{ $message }}</div> @enderror
     </div>
 
-    <div>
-        <label class="block text-xs text-stone-400 mb-1">Occasion (optional)</label>
-        <input type="text" name="occasion" wire:model.defer="occasion" placeholder="e.g. Birthday, Anniversary" class="rounded-lg p-3 w-full bg-black/60 border border-white/10 text-white" value="{{ old('occasion', $occasion ?? '') }}" />
-        @error('occasion') <div class="text-red-400 text-xs mt-1">{{ $message }}</div> @enderror
-    </div>
-
-    <div>
-        <label class="block text-xs text-stone-400 mb-1">Food Provision (optional)</label>
-        <select name="food_provision" wire:model.defer="food_provision" class="rounded-lg p-3 w-full bg-black/60 border border-white/10 text-white">
-            <option value="">None</option>
-            <option value="Breakfast">Breakfast</option>
-            <option value="Lunch">Lunch</option>
-            <option value="Dinner">Dinner</option>
-            <option value="All Meals">All Meals</option>
-        </select>
-        @error('food_provision') <div class="text-red-400 text-xs mt-1">{{ $message }}</div> @enderror
-    </div>
+ 
 
     <div class="grid grid-cols-1 gap-3">
         <div>
