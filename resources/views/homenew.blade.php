@@ -311,7 +311,7 @@
 
 
    <!-- Villa Experience Section -->
-<section id="villa" class="bg-white py-24 md:py-32 px-6 md:px-10">
+<section id="villa" class="bg-white py-12 md:py-32 px-6 md:px-10">
     <div class="max-w-7xl mx-auto">
 
         <!-- Header -->
@@ -482,7 +482,7 @@
 @endphp
 
 
-<section id="amenities" class="bg-brown-dark border-t border-white/5 py-24 md:py-32 px-6 md:px-10 relative">
+<section id="amenities" class="bg-brown-dark border-t border-white/5 py-14 md:py-32 px-6 md:px-10 relative">
     <div class="w-full max-w-6xl mx-auto relative z-10">
 
         <!-- Heading -->
@@ -571,7 +571,7 @@
 
 <!-- Gallery Section -->
  <div id="gallery" > </div>
-       <section class="hidden lg:block bg-cream pt-32 md:py-24 pb-8 md:pb-8 px-6 md:px-10">
+       <section class="hidden lg:block bg-cream pt-12 md:py-24 pb-8 md:pb-8 px-6 md:px-10">
 
     <div class="max-w-7xl mx-auto">
 
@@ -692,7 +692,7 @@
 
 
 <!-- Mobile Gallery Grid -->
-<section id="gallery-mobile" class="lg:hidden bg-cream pt-32 md:py-24 pb-8 md:pb-8 px-6 md:px-10">
+<section id="gallery-mobile" class="lg:hidden bg-cream pt-12 md:py-24 pb-8 md:pb-8 px-6 md:px-10">
     <div class="max-w-6xl mx-auto">
 
         <!-- Heading -->
@@ -784,7 +784,7 @@
 
 </section>
 
-<div class="mt-4 mb-32 text-center">
+<div class="mt-4 mb-12  md:mb-32 text-center">
     <button id="open-gallery-lightbox"
         class="inline-flex items-center gap-2 px-6 py-3
                bg-brown-dark text-white text-sm font-medium
@@ -831,11 +831,157 @@
 
 
 
+<!-- Ideal For Section -->
+<section class="py-12 md:py-20 px-6 md:px-10 bg-cream border-t border-brown-dark/5">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end
+                    mb-12 md:mb-20 gap-6 md:gap-8">
+
+            <!-- Left -->
+            <div class="space-y-3 text-center md:text-left max-w-xl">
+                <p class="text-[10px] font-bold uppercase tracking-[0.35em] text-brown-dark/40">
+                    Perfect For
+                </p>
+
+                <h2 class="font-heading font-bold tracking-tight text-brown-dark
+                           text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1]">
+                    Crafted for Every Occasion
+                </h2>
+            </div>
+
+            <!-- Right -->
+            <p class="text-sm md:text-base text-brown-dark/60 max-w-sm leading-relaxed
+                      text-center md:text-right">
+                Whether celebrating, reconnecting, or collaborating, Casa Frangipani
+                adapts effortlessly to your needs with personalized services.
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+
+            <!-- Card 1 -->
+            <div class="group rounded-2xl overflow-hidden bg-white border border-brown-dark/10
+                        shadow-sm transition hover:shadow-xl hover:-translate-y-1">
+
+                <div class="relative aspect-[16/10] overflow-hidden">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_133b50765-1769318194008.png"
+                         class="w-full h-full object-cover transition-transform duration-700
+                                md:group-hover:scale-105"
+                         alt="Family enjoying pool time at luxury villa in Alibaug">
+                </div>
+
+                <div class="p-5 md:p-6 space-y-2">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-brown-dark/40">
+                        Family Retreats
+                    </span>
+
+                    <h3 class="text-lg md:text-2xl font-heading font-bold text-brown-dark">
+                        Space to reconnect
+                    </h3>
+
+                    <p class="text-sm text-brown-dark/60 leading-relaxed">
+                        Kid-friendly pool, indoor games, Netflix access, and a safe gated
+                        layout designed for relaxed family time.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group rounded-2xl overflow-hidden bg-white border border-brown-dark/10
+                        shadow-sm transition hover:shadow-xl hover:-translate-y-1">
+
+                <div class="relative aspect-[16/10] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1563782043-62aeffcf5093"
+                         class="w-full h-full object-cover transition-transform duration-700
+                                md:group-hover:scale-105"
+                         alt="Romantic dinner setup on villa deck for couples">
+                </div>
+
+                <div class="p-5 md:p-6 space-y-2">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-brown-dark/40">
+                        Romantic Getaways
+                    </span>
+
+                    <h3 class="text-lg md:text-2xl font-heading font-bold text-brown-dark">
+                        Private & intimate
+                    </h3>
+
+                    <p class="text-sm text-brown-dark/60 leading-relaxed">
+                        Secluded spaces, optional candle-light dinners, and personalized
+                        experiences for couples seeking quiet luxury.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group rounded-2xl overflow-hidden bg-white border border-brown-dark/10
+                        shadow-sm transition hover:shadow-xl hover:-translate-y-1">
+
+                <div class="relative aspect-[16/10] overflow-hidden">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1efa8c9a1-1769536965141.png"
+                         class="w-full h-full object-cover transition-transform duration-700
+                                md:group-hover:scale-105"
+                         alt="Corporate team meeting in villa living area">
+                </div>
+
+                <div class="p-5 md:p-6 space-y-2">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-brown-dark/40">
+                        Corporate Offsites
+                    </span>
+
+                    <h3 class="text-lg md:text-2xl font-heading font-bold text-brown-dark">
+                        Work without distractions
+                    </h3>
+
+                    <p class="text-sm text-brown-dark/60 leading-relaxed">
+                        High-speed WiFi, flexible meeting layouts, and calm surroundings
+                        ideal for focused team retreats.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group rounded-2xl overflow-hidden bg-white border border-brown-dark/10
+                        shadow-sm transition hover:shadow-xl hover:-translate-y-1">
+
+                <div class="relative aspect-[16/10] overflow-hidden">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_172b6b9da-1767942355283.png"
+                         class="w-full h-full object-cover transition-transform duration-700
+                                md:group-hover:scale-105"
+                         alt="Birthday celebration setup by pool at luxury villa">
+                </div>
+
+                <div class="p-5 md:p-6 space-y-2">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-brown-dark/40">
+                        Celebrations
+                    </span>
+
+                    <h3 class="text-lg md:text-2xl font-heading font-bold text-brown-dark">
+                        Designed for gatherings
+                    </h3>
+
+                    <p class="text-sm text-brown-dark/60 leading-relaxed">
+                        Birthdays, anniversaries, and private parties with décor,
+                        catering, and music arrangements available.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
 
 
         <!-- Reviews Section -->
-        <section id="reviews" class="py-24 md:py-32 px-6 md:px-10 bg-white">
-            <div class="max-w-7xl mx-auto text-center mb-14 md:mb-20 animate-on-scroll">
+        <section id="reviews" class="py-12 md:py-32 px-6 md:px-10 bg-white">
+            <div class="max-w-7xl mx-auto text-center mb-4 md:mb-4 animate-on-scroll">
                 <span class="text-xs uppercase tracking-[0.4em] text-brown-dark/40 font-medium mb-4 block">Guest Experiences</span>
                 <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tighter text-brown-dark">What Our Guests Say</h2>
             </div>
@@ -968,73 +1114,10 @@
             </div>
         </section>
 
-        <!-- Ideal For Section -->
-        <section class="py-24 md:py-32 px-6 md:px-10 bg-cream border-t border-brown-dark/5">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-end 
-            mb-14 md:mb-20 gap-6 md:gap-8 animate-on-scroll">
-
-    <!-- Left: Heading -->
-    <div class="space-y-3 text-center md:text-left max-w-xl">
-        <p class="text-[10px] font-bold uppercase tracking-[0.35em] text-brown-dark/40">
-            Perfect For
-        </p>
-
-        <h2 class="font-heading font-bold tracking-tight text-brown-dark
-                   text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1]">
-            Crafted for Every Occasion
-        </h2>
-    </div>
-
-    <!-- Right: Description -->
-    <p class="text-sm md:text-base text-brown-dark/60 max-w-sm leading-relaxed
-              text-center md:text-right">
-        Whether celebrating, reconnecting, or collaborating, Casa Frangipani adapts
-        effortlessly to your needs with personalized services.
-    </p>
-
-</div>
-
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="group relative aspect-video rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer">
-                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_133b50765-1769318194008.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" alt="Family enjoying pool time at luxury villa in Alibaug">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-2">01</span>
-                            <h3 class="text-2xl font-heading font-bold mb-3">Family Retreats</h3>
-                            <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">Kids' pool toys, board games, Netflix access, safe gated environment, and family-friendly outdoor spaces.</p>
-                        </div>
-                    </div>
-                    <div class="group relative aspect-video rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1563782043-62aeffcf5093" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" alt="Romantic dinner setup on villa deck for couples">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-2">02</span>
-                            <h3 class="text-2xl font-heading font-bold mb-3">Romantic Getaways</h3>
-                            <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">Private dinner setup, rose petals, champagne on arrival (₹5,000 add-on), couples spa arrangements available.</p>
-                        </div>
-                    </div>
-                    <div class="group relative aspect-video rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer">
-                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1efa8c9a1-1769536965141.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" alt="Corporate team meeting in villa living area">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-2">03</span>
-                            <h3 class="text-2xl font-heading font-bold mb-3">Corporate Offsites</h3>
-                            <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">Projector + screen, conference table setup, high-speed WiFi, catering partners, team-building space.</p>
-                        </div>
-                    </div>
-                    <div class="group relative aspect-video rounded-2xl overflow-hidden bg-brown-dark/10 cursor-pointer">
-                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_172b6b9da-1767942355283.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" alt="Birthday celebration setup by pool at luxury villa">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-2">04</span>
-                            <h3 class="text-2xl font-heading font-bold mb-3">Celebrations</h3>
-                            <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">Birthday/anniversary decoration services, cake arrangements, DJ setup available, party-friendly layout.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <!--Youtub Videos-->
-        <section id="villa-videos" class="bg-cream py-24 md:py-32 px-6 md:px-10">
+        <section id="villa-videos" class="bg-cream py-12 md:py-32 px-6 md:px-10">
     <div class="max-w-6xl mx-auto">
 
         <!-- Heading -->
@@ -1104,7 +1187,7 @@
 
 
 <!-- Location Section -->
-<section id="location" class="bg-white py-24 md:py-32 px-6 md:px-10">
+<section id="location" class="bg-white py-12 md:py-32 px-6 md:px-10">
     <div class="max-w-7xl mx-auto">
 
         <!-- Heading -->
@@ -1239,7 +1322,7 @@
 
 <!-- ================= BOOKING + FAQ (MERGED) ================= -->
 <section id="booking"
-         class="py-20 md:py-28 px-6 md:px-10 bg-brown-dark/90 text-white relative overflow-hidden">
+         class="py-12 md:py-28 px-6 md:px-10 bg-brown-dark/90 text-white relative overflow-hidden">
 
     <div class="max-w-7xl mx-auto">
 
@@ -1270,7 +1353,7 @@
             <div class="lg:col-span-6 order-1">
 
                 <div class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-heading font-bold mb-2">
+                    <h3 class="text-2xl md:text-3xl font-heading font-bold mb-2 text-center md:text-left">
                         FAQs
                     </h3>
                     <p class="text-white/60 text-sm">
