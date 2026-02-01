@@ -205,7 +205,7 @@
 
     </div>
     <!-- Hero Slider Controls -->
-<div class="absolute bottom-7 md:bottom-10 left-10 md:left-20
+<div class="absolute bottom-[0.4rem] md:bottom-10 left-10 md:left-20
             z-20 flex items-center gap-2">
 
     <button id="hero-prev"
