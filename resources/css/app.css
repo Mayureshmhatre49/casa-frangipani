@@ -115,3 +115,51 @@
     transform: scale(1);
 }
 
+/* MOBILE HERO HEIGHT OPTIMIZATION */
+@media (max-width: 640px) {
+  header {
+    min-height: 85svh;   /* modern mobile-safe viewport */
+    height: 85svh;
+    padding-bottom: 3rem; /* tighter bottom spacing */
+  }
+}
+
+@media (max-width: 640px) {
+
+  /* Reduce hero content vertical gap */
+  header .grid {
+    row-gap: 1.25rem;
+  }
+
+  /* Reduce title + subtitle spacing */
+  #hero-subtitle {
+    margin-top: 0.5rem;
+  }
+
+  /* CTA card slightly tighter */
+  header .rounded-2xl {
+    padding: 1.25rem;
+  }
+}
+/* MOBILE TYPOGRAPHY BOOST – HERO ONLY */
+@media (max-width: 640px) {
+
+  /* Main hero title */
+  #hero-title {
+    font-size: clamp(2.2rem, 9vw, 2.8rem);
+    line-height: 1.1;
+  }
+
+  /* Subtitle */
+  #hero-subtitle {
+    font-size: clamp(1.4rem, 5.5vw, 1.8rem);
+  }
+
+  /* Description text */
+  #hero-desc {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+}
+
+
