@@ -1326,25 +1326,7 @@
 
     <div class="max-w-7xl mx-auto">
 
-        <!-- Heading -->
-        <div class="text-center mb-14 md:mb-20 animate-on-scroll">
-            <span class="text-xs uppercase tracking-[0.35em] text-white/50 font-medium block mb-4">
-                Reservations
-            </span>
-
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight mb-6">
-                Plan Your Stay
-            </h2>
-
-            <p class="text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-                A private luxury villa with limited availability to preserve comfort and
-                personalized service. Book early to secure your preferred dates.
-            </p>
-
-            <p class="text-sm text-white/70 font-medium mt-4">
-                Weekday villa rentals start from <span class="font-bold text-white">₹45,000 per night</span>
-            </p>
-        </div>
+             
 
         <!-- GRID -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -1354,7 +1336,7 @@
 
                 <div class="mb-8">
                     <h3 class="text-2xl md:text-3xl font-heading font-bold mb-2 text-center md:text-left">
-                        FAQs
+                        FAQs About Luxury Villa Stay in Alibaug
                     </h3>
                     <p class="text-white/60 text-sm">
                         Everything you need to know before booking.
@@ -1428,6 +1410,15 @@
 
             <!-- ================= FORM (RIGHT on desktop, SECOND on mobile) ================= -->
             <div class="lg:col-span-6 order-2">
+
+            <div class="mb-8">
+                    <h3 class="text-2xl md:text-3xl font-heading font-bold mb-2 text-center md:text-left">
+                       Plan Your Stay
+                    </h3>
+                     <p class="text-sm text-white/70 font-medium mt-4">
+                Weekday villa rentals start from <span class="font-bold text-white">₹45,000 per night</span>
+            </p>
+                </div>
 
                 <!-- WhatsApp CTA (important for ads) -->
                 <div class="flex justify-center lg:justify-start mb-6">
