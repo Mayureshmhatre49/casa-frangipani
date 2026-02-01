@@ -69,7 +69,8 @@
 
 <main>
         <!-- Hero Section -->
-<header class="relative w-full h-screen overflow-hidden flex flex-col justify-end pb-12 md:pb-24">
+<header class="hero-header relative w-full h-screen overflow-hidden flex flex-col justify-end pb-12 md:pb-24">
+
 
     <!-- Background Slider -->
     <div class="absolute inset-0 z-0 bg-black">

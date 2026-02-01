@@ -115,32 +115,29 @@
     transform: scale(1);
 }
 
-/* MOBILE HERO HEIGHT OPTIMIZATION */
-@media (max-width: 640px) {
-  header {
-    min-height: 85svh;   /* modern mobile-safe viewport */
-    height: 85svh;
-    padding-bottom: 3rem; /* tighter bottom spacing */
+
+/* MOBILE HERO HEIGHT – FINAL FIX */
+@media (max-width: 767px) {
+  .hero-header {
+    height: auto !important;
+    min-height: 85svh !important;
+    padding-bottom: 2.5rem;
   }
-}
 
-@media (max-width: 640px) {
-
-  /* Reduce hero content vertical gap */
-  header .grid {
+  /* tighter vertical rhythm */
+  .hero-header .grid {
     row-gap: 1.25rem;
   }
 
-  /* Reduce title + subtitle spacing */
   #hero-subtitle {
     margin-top: 0.5rem;
   }
 
-  /* CTA card slightly tighter */
-  header .rounded-2xl {
+  .hero-header .rounded-2xl {
     padding: 1.25rem;
   }
 }
+
 /* MOBILE TYPOGRAPHY BOOST – HERO ONLY */
 @media (max-width: 640px) {
 
