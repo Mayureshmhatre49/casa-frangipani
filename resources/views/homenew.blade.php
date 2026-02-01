@@ -412,14 +412,14 @@
             <div class="lg:col-span-6 grid grid-cols-2 gap-6 animate-on-scroll">
                 <div class="relative rounded-3xl overflow-hidden aspect-[3/4]">
                     <img
-                        src="https://img.vistarooms.com/gallery/casa-frangipani-5c1a08.jpg"
+                        src="http://hestiavillas.in/wp-content/uploads/2026/02/casa-frangipani.jpeg"
                         alt="Villa living space"
                         class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                 </div>
 
                 <div class="relative rounded-3xl overflow-hidden aspect-[3/4] mt-12">
                     <img
-                        src="https://img.vistarooms.com/gallery/casa-frangipani-e90014.jpg"
+                        src="http://hestiavillas.in/wp-content/uploads/2026/02/casa-frangipani-enterrance.jpeg"
                         alt="Private pool at the villa"
                         class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                 </div>
