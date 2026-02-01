@@ -1567,9 +1567,9 @@
     const nav = document.getElementById('main-nav');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            nav.classList.add('bg-brown-dark/80','backdrop-blur-xl','border-b','border-white/10');
+            nav.classList.add('bg-brown-dark/80','backdrop-blur-xl','border-b','border-white/10', 'p-3', 'md:p-4');
         } else {
-            nav.classList.remove('bg-brown-dark/80','backdrop-blur-xl','border-b','border-white/10');
+            nav.classList.remove('bg-brown-dark/80','backdrop-blur-xl','border-b','border-white/10', 'p-6', 'md:p-10');
         }
     });
 
