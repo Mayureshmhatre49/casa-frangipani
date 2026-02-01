@@ -120,7 +120,7 @@
 @media (max-width: 767px) {
   .hero-header {
     height: auto !important;
-    min-height: 85svh !important;
+    min-height: 95svh !important;
     padding-bottom: 2.5rem;
   }
 
