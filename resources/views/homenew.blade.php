@@ -1290,7 +1290,6 @@
 
 
 <!-- Booking Modal -->
-<!-- Booking Modal (Minimal) -->
 <div id="booking-modal"
      class="fixed inset-0 z-[999]
             hidden
@@ -1301,7 +1300,7 @@
                 bg-brown-dark
                 rounded-2xl
                 shadow-2xl
-                p-5 md:p-6
+                
                 max-h-[90vh] overflow-y-auto">
 
         <!-- Close -->

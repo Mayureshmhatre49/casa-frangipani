@@ -1,6 +1,6 @@
 <form id="bookingFormHero"
       wire:submit.prevent="submit"
-      class="space-y-4 bg-black/40 p-4 md:p-5 rounded-2xl shadow-lg">
+      class="space-y-4 bg-brown-dark p-4 md:p-5 rounded-2xl shadow-lg">
 
     @csrf
 
