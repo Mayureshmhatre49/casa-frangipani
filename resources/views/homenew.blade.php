@@ -321,7 +321,7 @@
             </span>
 
             <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brown-dark mb-6">
-                A Private Luxury Stay
+                A Private Luxury Villa Stay
             </h2>
 
             <p class="text-brown-dark/60 text-base md:text-lg leading-relaxed mb-8">
@@ -1237,9 +1237,11 @@
 
 
 
-       <!-- Booking Form Section -->
-<section id="booking" class="py-24 md:py-32 px-6 md:px-10 bg-brown-dark/90 text-white relative overflow-hidden">
-    <div class="max-w-4xl mx-auto">
+<!-- ================= BOOKING + FAQ (MERGED) ================= -->
+<section id="booking"
+         class="py-20 md:py-28 px-6 md:px-10 bg-brown-dark/90 text-white relative overflow-hidden">
+
+    <div class="max-w-7xl mx-auto">
 
         <!-- Heading -->
         <div class="text-center mb-14 md:mb-20 animate-on-scroll">
@@ -1255,38 +1257,123 @@
                 A private luxury villa with limited availability to preserve comfort and
                 personalized service. Book early to secure your preferred dates.
             </p>
-            <p class="text-sm text-white/70 font-medium mb-6">
-    Weekday villa rentals start from <span class="font-bold text-white">₹45,000 per night</span>.
-</p>
 
+            <p class="text-sm text-white/70 font-medium mt-4">
+                Weekday villa rentals start from <span class="font-bold text-white">₹45,000 per night</span>
+            </p>
         </div>
 
-        <!-- CTAs -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4  animate-on-scroll">
-           
-            <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
-               target="_blank"
-               class="inline-flex items-center gap-3 px-8 py-4 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition">
-                 <i data-lucide="message-circle"
-                               class="text-white size-5 group-hover:translate-x-1 transition-transform"></i>  WhatsApp for Booking
-            </a>
+        <!-- GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+            <!-- ================= FAQ (LEFT on desktop, FIRST on mobile) ================= -->
+            <div class="lg:col-span-6 order-1">
+
+                <div class="mb-8">
+                    <h3 class="text-2xl md:text-3xl font-heading font-bold mb-2">
+                        FAQs
+                    </h3>
+                    <p class="text-white/60 text-sm">
+                        Everything you need to know before booking.
+                    </p>
+                </div>
+
+                <div class="space-y-3">
+
+                    <!-- FAQ ITEM -->
+                    <details class="group bg-white/95 rounded-2xl border border-white/10 text-brown-dark shadow-sm">
+                        <summary class="flex items-center justify-between cursor-pointer px-5 py-4 text-sm font-medium">
+                            What is Casa Frangipani?
+                            <span class="text-xl transition-transform group-open:rotate-45">+</span>
+                        </summary>
+                        <div class="px-5 pb-4 text-sm text-brown-dark/70 leading-relaxed">
+                            Casa Frangipani is a premium, fully serviced luxury villa in the peaceful
+                            Dhokawade area of Alibaug, ideal for families, groups, and celebrations.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white/95 rounded-2xl border border-white/10 text-brown-dark shadow-sm">
+                        <summary class="flex items-center justify-between cursor-pointer px-5 py-4 text-sm font-medium">
+                            How many guests can the villa accommodate?
+                            <span class="text-xl transition-transform group-open:rotate-45">+</span>
+                        </summary>
+                        <div class="px-5 pb-4 text-sm text-brown-dark/70">
+                            The villa accommodates <strong>15–18 guests</strong> across 6 bedrooms,
+                            depending on bedding configuration.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white/95 rounded-2xl border border-white/10 text-brown-dark shadow-sm">
+                        <summary class="flex items-center justify-between cursor-pointer px-5 py-4 text-sm font-medium">
+                            What amenities are included?
+                            <span class="text-xl transition-transform group-open:rotate-45">+</span>
+                        </summary>
+                        <div class="px-5 pb-4 text-sm text-brown-dark/70 grid grid-cols-1 sm:grid-cols-2 gap-1">
+                            <span>• Private swimming pool</span>
+                            <span>• Lawn & garden</span>
+                            <span>• AC in all rooms</span>
+                            <span>• Wi-Fi & TV</span>
+                            <span>• BBQ & parking</span>
+                            <span>• Housekeeping</span>
+                        </div>
+                    </details>
+
+                    <details class="group bg-white/95 rounded-2xl border border-white/10 text-brown-dark shadow-sm">
+                        <summary class="flex items-center justify-between cursor-pointer px-5 py-4 text-sm font-medium">
+                            Are meals available?
+                            <span class="text-xl transition-transform group-open:rotate-45">+</span>
+                        </summary>
+                        <div class="px-5 pb-4 text-sm text-brown-dark/70">
+                            Yes, vegetarian and non-vegetarian meals can be arranged at an additional
+                            cost with advance notice.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white/95 rounded-2xl border border-white/10 text-brown-dark shadow-sm">
+                        <summary class="flex items-center justify-between cursor-pointer px-5 py-4 text-sm font-medium">
+                            Is the villa suitable for celebrations?
+                            <span class="text-xl transition-transform group-open:rotate-45">+</span>
+                        </summary>
+                        <div class="px-5 pb-4 text-sm text-brown-dark/70">
+                            Yes — Casa Frangipani is ideal for birthdays, anniversaries, and group
+                            retreats. Add-on services may be available.
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+
+            <!-- ================= FORM (RIGHT on desktop, SECOND on mobile) ================= -->
+            <div class="lg:col-span-6 order-2">
+
+                <!-- WhatsApp CTA (important for ads) -->
+                <div class="flex justify-center lg:justify-start mb-6">
+                    <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
+                       target="_blank"
+                       class="inline-flex items-center gap-3 px-6 py-3
+                              border border-white/30 text-white rounded-full
+                              font-medium hover:bg-white/10 transition">
+                        <i data-lucide="message-circle" class="size-5"></i>
+                        WhatsApp for Booking
+                    </a>
+                </div>
+
+                <!-- FORM -->
+                <div id="booking-form" class="animate-on-scroll">
+                    <livewire:booking-form wire:key="booking-form-page" />
+                </div>
+
+                <!-- Trust -->
+                <p class="text-center lg:text-left text-white/40 text-sm mt-8">
+                    We typically respond within 2 hours · Your details are kept private
+                </p>
+
+            </div>
+
         </div>
-<p class="text-center text-sm md:text-sm font-heading font-bold text-white/50 my-6 select-none">
-    OR
-</p>
-
-        <!-- Form -->
-        <div id="booking-form" class="animate-on-scroll">
-            <livewire:booking-form wire:key="booking-form-page" />
-        </div>
-
-        <!-- Trust Line -->
-        <p class="text-center text-white/40 text-sm mt-10">
-            We typically respond within 2 hours · Your details are kept private
-        </p>
-
     </div>
 </section>
+
 
 
 <!-- Booking Modal -->
@@ -1321,6 +1408,8 @@
 
     </div>
 </div>
+
+
 
 
     </main>
