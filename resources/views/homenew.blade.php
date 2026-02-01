@@ -1238,7 +1238,7 @@
 
 
        <!-- Booking Form Section -->
-<section id="booking" class="py-24 md:py-32 px-6 md:px-10 bg-brown-dark text-white relative overflow-hidden">
+<section id="booking" class="py-24 md:py-32 px-6 md:px-10 bg-brown-dark/90 text-white relative overflow-hidden">
     <div class="max-w-4xl mx-auto">
 
         <!-- Heading -->
