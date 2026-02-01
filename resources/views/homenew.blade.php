@@ -1420,7 +1420,7 @@
             </p>
                 </div>
 
-                <!-- WhatsApp CTA (important for ads) -->
+                <!-- WhatsApp CTA (important for ads) 
                 <div class="flex justify-center lg:justify-start mb-6">
                     <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
                        target="_blank"
@@ -1430,7 +1430,7 @@
                         <i data-lucide="message-circle" class="size-5"></i>
                         WhatsApp for Booking
                     </a>
-                </div>
+                </div> -->
 
                 <!-- FORM -->
                 <div id="booking-form" class="animate-on-scroll">
