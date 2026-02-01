@@ -119,8 +119,8 @@
 /* MOBILE HERO HEIGHT – FINAL FIX */
 @media (max-width: 767px) {
   .hero-header {
-    height: auto !important;
-    min-height: 100svh !important;
+        height: 100svh !important;
+    min-height: unset !important;
     padding-bottom: 2.5rem;
   }
 
