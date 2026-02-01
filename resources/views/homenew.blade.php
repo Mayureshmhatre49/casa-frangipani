@@ -6,6 +6,31 @@
 
 @section('content')
 
+<style>
+
+    /* HERO TITLE – force meaningful 2-line wrap */
+#hero-title {
+  max-width: 14ch; /* desktop sweet spot */
+  text-wrap: balance;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #hero-title {
+    max-width: 16ch;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  #hero-title {
+    max-width: 18ch;
+  }
+}
+
+
+    </style>
+
 
 {{-- ================= NAVIGATION ================= --}}
 <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 p-6 md:p-10 flex items-center justify-between pointer-events-none transition-all duration-500">
@@ -52,15 +77,15 @@
         <!-- Slides -->
          <div class="hero-slide active"
              style="background-image:url('http://hestiavillas.in/wp-content/uploads/2026/01/Casa-Frangipani-Alibaug-1.webp')"
-             data-title="An Ultra-Luxury 6 BHK Alibaug Villa"
+             data-title="An Ultra-Luxury 6 BHK Villa"
              data-subtitle="Calm Surroundings · Fully Serviced"
              data-desc="A fully serviced villa experience surrounded by calm, greenery, and effortless comfort.">
         </div>
 
         <div class="hero-slide"
              style="background-image:url('https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg')"
-             data-title="Private Luxury Pool Villa in Alibaug"
-             data-subtitle="Private Pool · Complete Privacy"
+             data-title="Private Luxury Pool Villa"
+             data-subtitle="Complete Privacy"
              data-desc="A secluded private pool villa designed for peaceful escapes and relaxed weekend getaways near Mumbai, ideal for groups of 14–22 guests.">
         </div>
 
@@ -102,11 +127,11 @@
 
                 <span id="hero-title"
                       class="block
-                      text-[clamp(2.2rem,8vw,3.5rem)]
+                      text-[clamp(1.8rem,8vw,3.5rem)]
                       md:text-[clamp(2.8rem,5vw,4.5rem)]
                       lg:text-[clamp(3.5rem,4vw,5.5rem)]
                       drop-shadow-2xl transition-opacity duration-700">
-                    An Ultra-Luxury 6 BHK Alibaug Villa
+                    An Ultra-Luxury 6 BHK Villa
                 </span>
 
                 <span id="hero-subtitle"
@@ -1337,7 +1362,6 @@
 </footer>
 
 <!-- Fixed WhatsApp Button -->
-<!-- Fixed WhatsApp Button (Theme Aligned) -->
 <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
    target="_blank"
    aria-label="Chat on WhatsApp"
@@ -1353,7 +1377,10 @@
           px-5 py-3 rounded-full
 
           /* Mobile */
-          w-14 h-14 sm:w-auto sm:h-auto">
+          w-16 h-16 sm:w-auto sm:h-auto
+
+          opacity-0 pointer-events-none translate-y-4"
+   id="whatsapp-float">
 
     <!-- WhatsApp Icon -->
     <svg xmlns="http://www.w3.org/2000/svg"
@@ -1814,6 +1841,29 @@
 })();
 </script>
 
+<!-- Whatsapp Scroll appearance -->
+ <script>
+(function () {
+    const btn = document.getElementById('whatsapp-float');
+    if (!btn) return;
+
+    function toggleWhatsApp() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        if (scrollPercent > 6) {
+            btn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+            btn.classList.add('opacity-100', 'translate-y-0');
+        } else {
+            btn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+            btn.classList.remove('opacity-100', 'translate-y-0');
+        }
+    }
+
+    window.addEventListener('scroll', toggleWhatsApp, { passive: true });
+})();
+</script>
 
 
 @endpush
