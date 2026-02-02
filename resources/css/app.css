@@ -49,6 +49,27 @@
   @keyframes shimmerMove { 0%{ background-position: 200% 0 } 100%{ background-position: -200% 0 } }
 }
 
+/*Slider text*/
+@layer components {
+  #hero-title {
+    max-width: 14ch;
+    text-wrap: balance;
+  }
+
+  @media (max-width: 1024px) {
+    #hero-title {
+      max-width: 16ch;
+    }
+  }
+
+  @media (max-width: 640px) {
+    #hero-title {
+      max-width: 18ch;
+    }
+  }
+}
+
+
 /*GAllery css*/
 
 .gallery-thumb {

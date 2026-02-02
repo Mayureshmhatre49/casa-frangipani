@@ -28,6 +28,10 @@ Route::get('/casa-frangipani-luxury-villa-rental-alibaug', function () {
     return view('homenew');
 })->name('home.new');
 
+Route::get('/homev2', function () {
+    return view('homev2');
+})->name('home.v2');
+
 
 
 use App\Http\Controllers\BookingController;

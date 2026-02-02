@@ -6,30 +6,6 @@
 
 @section('content')
 
-<style>
-
-    /* HERO TITLE – force meaningful 2-line wrap */
-#hero-title {
-  max-width: 14ch; /* desktop sweet spot */
-  text-wrap: balance;
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-  #hero-title {
-    max-width: 16ch;
-  }
-}
-
-/* Mobile */
-@media (max-width: 640px) {
-  #hero-title {
-    max-width: 18ch;
-  }
-}
-
-
-    </style>
 
 
 {{-- ================= NAVIGATION ================= --}}
@@ -867,7 +843,7 @@
                         shadow-sm transition hover:shadow-xl hover:-translate-y-1">
 
                 <div class="relative aspect-[16/10] overflow-hidden">
-                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_133b50765-1769318194008.png"
+                    <img src="https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg"
                          class="w-full h-full object-cover transition-transform duration-700
                                 md:group-hover:scale-105"
                          alt="Family enjoying pool time at luxury villa in Alibaug">
@@ -894,7 +870,7 @@
                         shadow-sm transition hover:shadow-xl hover:-translate-y-1">
 
                 <div class="relative aspect-[16/10] overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1563782043-62aeffcf5093"
+                    <img src="https://img.vistarooms.com/gallery/casa-frangipani-483f65.jpg"
                          class="w-full h-full object-cover transition-transform duration-700
                                 md:group-hover:scale-105"
                          alt="Romantic dinner setup on villa deck for couples">
@@ -921,7 +897,7 @@
                         shadow-sm transition hover:shadow-xl hover:-translate-y-1">
 
                 <div class="relative aspect-[16/10] overflow-hidden">
-                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1efa8c9a1-1769536965141.png"
+                    <img src="https://img.vistarooms.com/gallery/casa-frangipani-9e5e0c.jpg"
                          class="w-full h-full object-cover transition-transform duration-700
                                 md:group-hover:scale-105"
                          alt="Corporate team meeting in villa living area">
@@ -948,7 +924,7 @@
                         shadow-sm transition hover:shadow-xl hover:-translate-y-1">
 
                 <div class="relative aspect-[16/10] overflow-hidden">
-                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_172b6b9da-1767942355283.png"
+                    <img src="https://img.vistarooms.com/gallery/casa-frangipani-a8d0fb.jpg"
                          class="w-full h-full object-cover transition-transform duration-700
                                 md:group-hover:scale-105"
                          alt="Birthday celebration setup by pool at luxury villa">
@@ -1563,6 +1539,22 @@
 @endsection
 
 @push('scripts')
+
+<script>
+function initLucide() {
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+}
+
+/* First load */
+document.addEventListener('DOMContentLoaded', initLucide);
+
+/* After Livewire renders */
+document.addEventListener('livewire:load', initLucide);
+document.addEventListener('livewire:update', initLucide);
+</script>
+
 <script>
     const nav = document.getElementById('main-nav');
     window.addEventListener('scroll', () => {
@@ -1860,7 +1852,8 @@
 <!-- villa gallery popup -->
 
 <script>
-(function () {
+
+window.addEventListener('load', () => {
 
     const galleryImages = [
   "https://img.vistarooms.com/gallery/casa-frangipani-657c43.jpg",
@@ -1911,29 +1904,36 @@
   "https://img.vistarooms.com/website_assets/sv_certified_partner.webp"
 ];
 
-    let currentIndex = 0;
+   let currentIndex = 0;
 
     const lightbox = document.getElementById("gallery-lightbox");
     const lightboxImg = document.getElementById("lightbox-image");
 
-    document.getElementById("open-gallery-lightbox").addEventListener("click", () => {
-        currentIndex = 0;
-        lightboxImg.src = galleryImages[currentIndex];
-        lightbox.classList.remove("hidden");
-        document.body.style.overflow = "hidden";
-    });
+    // SAFETY CHECK (important)
+    if (!lightbox || !lightboxImg) return;
 
-    document.getElementById("close-gallery").addEventListener("click", closeLightbox);
+    document.getElementById("open-gallery-lightbox")
+        ?.addEventListener("click", () => {
+            currentIndex = 0;
+            lightboxImg.src = galleryImages[currentIndex];
+            lightbox.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+        });
 
-    document.getElementById("next-image").addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % galleryImages.length;
-        updateImage();
-    });
+    document.getElementById("close-gallery")
+        ?.addEventListener("click", closeLightbox);
 
-    document.getElementById("prev-image").addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        updateImage();
-    });
+    document.getElementById("next-image")
+        ?.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            updateImage();
+        });
+
+    document.getElementById("prev-image")
+        ?.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateImage();
+        });
 
     function updateImage() {
         lightboxImg.classList.add("opacity-0");
@@ -1950,11 +1950,12 @@
 
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeLightbox();
-        if (e.key === "ArrowRight") document.getElementById("next-image").click();
-        if (e.key === "ArrowLeft") document.getElementById("prev-image").click();
+        if (e.key === "ArrowRight") document.getElementById("next-image")?.click();
+        if (e.key === "ArrowLeft") document.getElementById("prev-image")?.click();
     });
 
-})();
+});
+
 </script>
 
 <!-- Popup madal -->
