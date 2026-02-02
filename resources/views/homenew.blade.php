@@ -102,12 +102,12 @@
 
             <h1 class="font-heading font-bold text-white tracking-tight leading-tight md:leading-[1.05]">
 
-                <span id="hero-title"
-                      class="block
-                      text-[clamp(1.8rem,8vw,3.5rem)]
-                      md:text-[clamp(2.8rem,5vw,4.5rem)]
-                      lg:text-[clamp(3.5rem,4vw,5.5rem)]
-                      drop-shadow-2xl transition-opacity duration-700">
+               <span id="hero-title"
+      class="block
+      text-[clamp(1.8rem,8vw,3.5rem)]
+      md:text-[clamp(2.8rem,5vw,4.5rem)]
+      lg:text-[clamp(3.5rem,4vw,5.5rem)]
+      drop-shadow-2xl">
                     An Ultra-Luxury 6 BHK Villa
                 </span>
 
@@ -228,23 +228,25 @@
     let interval;
 
     function showSlide(index) {
-        heroSlides.forEach(slide => slide.classList.remove('active'));
-        heroSlides[index].classList.add('active');
+    heroSlides.forEach(slide => slide.classList.remove('active'));
+    heroSlides[index].classList.add('active');
 
-        heroTitle.style.opacity = 0;
-        heroSubtitle.style.opacity = 0;
-        heroDesc.style.opacity = 0;
+    // ✅ LCP-safe: title updates instantly
+    heroTitle.textContent = heroSlides[index].dataset.title;
 
-        setTimeout(() => {
-            heroTitle.textContent = heroSlides[index].dataset.title;
-            heroSubtitle.textContent = heroSlides[index].dataset.subtitle;
-            heroDesc.textContent = heroSlides[index].dataset.desc;
+    // Subtitle & description can animate (NOT LCP)
+    heroSubtitle.style.opacity = 0;
+    heroDesc.style.opacity = 0;
 
-            heroTitle.style.opacity = 1;
-            heroSubtitle.style.opacity = 1;
-            heroDesc.style.opacity = 1;
-        }, 400);
-    }
+    setTimeout(() => {
+        heroSubtitle.textContent = heroSlides[index].dataset.subtitle;
+        heroDesc.textContent = heroSlides[index].dataset.desc;
+
+        heroSubtitle.style.opacity = 1;
+        heroDesc.style.opacity = 1;
+    }, 300);
+}
+
 
     function nextSlide() {
         heroIndex = (heroIndex + 1) % heroSlides.length;

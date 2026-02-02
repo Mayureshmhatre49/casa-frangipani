@@ -36,9 +36,9 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-    {{-- Rocket scripts (keep) --}}
+    {{-- Rocket scripts (keep)
     <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fvillabook6347back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.15"></script>
-    <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+    <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script> --}}
 
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
