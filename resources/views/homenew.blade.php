@@ -1119,6 +1119,7 @@
                         src="https://www.youtube.com/embed/7o8EefaLJlk"
                         title="Villa Walkthrough Video"
                         frameborder="0"
+                        loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen>
@@ -1143,6 +1144,7 @@
                         src="https://www.youtube.com/embed/5UWhkCCDRwU"
                         title="Villa Experience Highlights"
                         frameborder="0"
+                        loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen>
