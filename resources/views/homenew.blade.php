@@ -10,9 +10,31 @@
 
 {{-- ================= NAVIGATION ================= --}}
 <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 p-6 md:p-10 flex items-center justify-between pointer-events-none transition-all duration-500">
-    <a href="#" class="text-2xl font-heading font-bold tracking-tight pointer-events-auto text-white" id="nav-logo">
-        Casa Frangipani
-    </a>
+   <a href="#" 
+   class="flex items-center gap-3 pointer-events-auto text-white group" 
+   id="nav-logo">
+
+    <!-- Logo -->
+    <img 
+        src="http://hestiavillas.in/wp-content/uploads/2026/02/logo.webp" 
+        alt="Casa Frangipani Logo"
+        class="h-8 md:h-24 w-auto transition-transform duration-300 group-hover:scale-105"
+    >
+
+    <!-- Brand Text -->
+    <div class="flex flex-col leading-tight">
+        <span class="font-heading font-semibold tracking-wide text-sm md:text-xl">
+            Casa Frangipani
+        </span>
+
+        <!-- Tagline (desktop only) -->
+        <span class="hidden md:block text-[10px] uppercase tracking-[0.25em] text-white/60">
+            Luxury Private Villa
+        </span>
+    </div>
+
+    <span class="sr-only">Casa Frangipani</span>
+</a>
 
     <div class="hidden md:flex items-center gap-2 p-1 bg-white/10 backdrop-blur-md rounded-full border border-white/10 pointer-events-auto">
         <a href="#villa" class="px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:bg-white/10">Villa</a>
@@ -53,7 +75,7 @@
 
         <!-- Slides -->
          <div class="hero-slide active"
-             style="background-image:url('http://hestiavillas.in/wp-content/uploads/2026/01/Casa-Frangipani-Alibaug-1.webp')"
+             style="background-image:url('https://hestiavillas.in/wp-content/uploads/2026/02/banner.webp')"
              data-title="An Ultra-Luxury 6 BHK Villa"
              data-subtitle="Calm Surroundings · Fully Serviced"
              data-desc="A fully serviced villa experience surrounded by calm, greenery, and effortless comfort.">
