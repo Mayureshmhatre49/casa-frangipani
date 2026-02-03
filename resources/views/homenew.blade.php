@@ -163,7 +163,7 @@
 </button>
 
 
-                        <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
+                        <a href="https://wa.me/918010234802?text=Hi%20%F0%9F%91%8B%0A%0AI%E2%80%99m%20interested%20in%20*Casa%20Frangipani*%20%E2%80%93%20a%20private%206%20BHK%20luxury%20villa%20in%20Alibaug.%0A%0AI%20understand%20that%20*villa%20rentals%20start%20from%20%E2%82%B945%2C000%20for%20a%20weekend*.%0A%0APlease%20share%20availability%20and%20exact%20pricing%20for%20my%20dates.%0A%0A*My%20details%3A*%0A%E2%80%A2%20Preferred%20check-in%20date%3A%0A%E2%80%A2%20Number%20of%20guests%3A%0A%E2%80%A2%20Number%20of%20nights%3A%0A%E2%80%A2%20Occasion%20(if%20any)%3A%0A%E2%80%A2%20Contact%20number%3A%0A%0ALooking%20forward%20to%20your%20response.%20Thanks!"
                            target="_blank"
                            class="group flex items-center justify-between w-full p-1 border-b
                                   border-white/30 hover:border-white transition-colors pb-2">
@@ -1402,7 +1402,7 @@
 
                 <!-- WhatsApp CTA (important for ads) 
                 <div class="flex justify-center lg:justify-start mb-6">
-                    <a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
+                    <a href="https://wa.me/918010234802?text=Hi%20%F0%9F%91%8B%0A%0AI%E2%80%99m%20interested%20in%20*Casa%20Frangipani*%20%E2%80%93%20a%20private%206%20BHK%20luxury%20villa%20in%20Alibaug.%0A%0AI%20understand%20that%20*villa%20rentals%20start%20from%20%E2%82%B945%2C000%20for%20a%20weekend*.%0A%0APlease%20share%20availability%20and%20exact%20pricing%20for%20my%20dates.%0A%0A*My%20details%3A*%0A%E2%80%A2%20Preferred%20check-in%20date%3A%0A%E2%80%A2%20Number%20of%20guests%3A%0A%E2%80%A2%20Number%20of%20nights%3A%0A%E2%80%A2%20Occasion%20(if%20any)%3A%0A%E2%80%A2%20Contact%20number%3A%0A%0ALooking%20forward%20to%20your%20response.%20Thanks!"
                        target="_blank"
                        class="inline-flex items-center gap-3 px-6 py-3
                               border border-white/30 text-white rounded-full
@@ -1505,7 +1505,7 @@
 </footer>
 
 <!-- Fixed WhatsApp Button -->
-<a href="https://wa.me/919881149629?text=Hi%2C%20I%27m%20interested%20in%20booking%20Casa%20Frangipani"
+<a href="https://wa.me/918010234802?text=Hi%20%F0%9F%91%8B%0A%0AI%E2%80%99m%20interested%20in%20*Casa%20Frangipani*%20%E2%80%93%20a%20private%206%20BHK%20luxury%20villa%20in%20Alibaug.%0A%0AI%20understand%20that%20*villa%20rentals%20start%20from%20%E2%82%B945%2C000%20for%20a%20weekend*.%0A%0APlease%20share%20availability%20and%20exact%20pricing%20for%20my%20dates.%0A%0A*My%20details%3A*%0A%E2%80%A2%20Preferred%20check-in%20date%3A%0A%E2%80%A2%20Number%20of%20guests%3A%0A%E2%80%A2%20Number%20of%20nights%3A%0A%E2%80%A2%20Occasion%20(if%20any)%3A%0A%E2%80%A2%20Contact%20number%3A%0A%0ALooking%20forward%20to%20your%20response.%20Thanks!"
    target="_blank"
    aria-label="Chat on WhatsApp"
    class="fixed bottom-5 right-5 z-[999]
