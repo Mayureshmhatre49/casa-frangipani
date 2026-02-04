@@ -1564,6 +1564,151 @@
 
 @endsection
 
+@push('schema')
+
+{{-- Lodging / Vacation Rental Schema --}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VacationRental",
+  "name": "Casa Frangipani by Hestia Villas",
+  "description": "A luxury 6-bedroom private pool villa in Alibaug featuring 100-year-old teak wood architecture and mountain views.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Dhokawade, Near Dhokawade Hospital, Taluka Alibaug",
+    "addressLocality": "Alibaug",
+    "addressRegion": "Maharashtra",
+    "postalCode": "402201",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-8010234802",
+  "url": "{{ url()->current() }}",
+  "image": "https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg",
+  "numberOfRooms": 6,
+  "occupancy": {
+    "@type": "QuantitativeValue",
+    "maxValue": 22
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Private Swimming Pool", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "BBQ Facilities", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Caretaker Support", "value": true }
+  ],
+  "checkinTime": "14:00",
+  "checkoutTime": "11:00"
+}
+</script>
+
+{{-- Product + Offer --}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Casa Frangipani Villa Stay",
+  "description": "Luxury villa rental in Alibaug for groups and families.",
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ url()->current() }}",
+    "priceCurrency": "INR",
+    "price": "49461",
+    "priceValidUntil": "2026-03-31",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2026-02-01"
+  }
+}
+</script>
+
+{{-- Aggregate Rating --}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Casa Frangipani",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "15",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+
+{{-- FAQ Schema --}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Casa Frangipani?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Casa Frangipani is a premium, fully serviced luxury villa in the peaceful Dhokawade area of Alibaug, ideal for families, groups, and celebrations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many guests can the villa accommodate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The villa accommodates 15–18 guests across 6 bedrooms, depending on bedding configuration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What amenities are included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Private swimming pool, lawn & garden, AC in all rooms, Wi-Fi & TV, BBQ, parking, and housekeeping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are meals available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, vegetarian and non-vegetarian meals can be arranged at an additional cost with advance notice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the villa suitable for celebrations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Casa Frangipani is ideal for birthdays, anniversaries, and group retreats. Add-on services may be available."
+      }
+    }
+  ]
+}
+</script>
+
+{{-- Organization --}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hestia Villas",
+  "url": "https://villa.hestiavillas.in/",
+  "logo": "https://hestiavillas.in/wp-content/uploads/2026/02/logo.webp",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-8010234802",
+    "contactType": "customer service"
+  },
+  "sameAs": [
+    "https://www.facebook.com/hestiavillas",
+    "https://www.instagram.com/hestiavillas/"
+  ]
+}
+</script>
+
+@endpush
+
+
 @push('scripts')
 
 <script>
