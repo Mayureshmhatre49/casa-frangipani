@@ -74,7 +74,7 @@ class BookingForm extends Component
 
             // 🔔 EMAILS (unchanged, high priority)
             try {
-                $adminEmail = env('ADMIN_EMAIL', config('mail.from.address')) ?: 'owner@example.com';
+                $adminEmail = 'nishant.mhatre@gmail.com';
 
                 if ($adminEmail) {
                     Mail::to($adminEmail)->send(new BookingReceived($booking));
