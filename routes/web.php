@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,10 @@ Route::get('/homev2', function () {
 
 
 
-use App\Http\Controllers\BookingController;
+Route::get('/chatbot', function () {
+    return view('home');
+})->name('home.chatbot');
+
 
 Route::post('/booking/enquire', [BookingController::class, 'enquire'])->name('booking.enquire');
 

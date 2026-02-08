@@ -744,6 +744,8 @@
         </div>
     </section>
 
+    <livewire:bot.chat-bot />
+
     <style>/* Force true viewport floating */
 #floating-video {
 position: fixed !important;

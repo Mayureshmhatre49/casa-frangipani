@@ -1517,6 +1517,9 @@
 </div>
    
 
+
+
+
 {{-- ================= FOOTER ================= --}}
 <footer class="py-6 md:py-6 px-6 md:px-12 border-t border-brown-dark/15 bg-gradient-to-b from-cream to-cream/80">
     <div class="max-w-7xl mx-auto flex items-center justify-center">
