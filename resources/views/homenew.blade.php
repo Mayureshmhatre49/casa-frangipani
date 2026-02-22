@@ -144,8 +144,8 @@
             </h1>
         </div>
 
-        <!-- RIGHT CTA -->
-        <div class="md:col-span-4 md:col-start-9 flex flex-col justify-end pb-4 md:pb-8">
+        <!-- RIGHT CTA (Desktop only) -->
+        <div class="hidden md:flex md:col-span-4 md:col-start-9 flex-col justify-end pb-4 md:pb-8">
 
             <div class="relative overflow-hidden bg-brown-dark/60 backdrop-blur-2xl border border-white/10
                         p-8 rounded-2xl shadow-2xl animate-slide-up delay-1800 opacity-0
@@ -201,18 +201,52 @@
             </div>
         </div>
 
+        {{-- ═══ MOBILE-ONLY Hero Bottom Overlay ═══ --}}
+        <div class="md:hidden col-span-1 flex flex-col gap-5 pb-2">
+
+            {{-- Selling-point pills --}}
+            <div class="flex items-center gap-3">
+                <span class="hero-mobile-pill">
+                    <i data-lucide="indian-rupee" class="size-3 text-white/70"></i>
+                    From ₹45,000 / night
+                </span>
+                <span class="hero-mobile-pill">
+                    <i data-lucide="users" class="size-3 text-white/70"></i>
+                    14–22 Guests
+                </span>
+            </div>
+
+            {{-- CTA + controls row --}}
+            <div class="flex items-center gap-2.5">
+                <button type="button"
+                    class="open-booking-modal hero-mobile-cta flex-1">
+                    Check Availability
+                    <i data-lucide="arrow-right" class="size-4"></i>
+                </button>
+
+                {{-- 3 circle icons: prev · next · WhatsApp --}}
+                <button class="hero-mobile-circle-btn hero-mobile-prev" aria-label="Previous slide">‹</button>
+                <button class="hero-mobile-circle-btn hero-mobile-next" aria-label="Next slide">›</button>
+                <a href="https://wa.me/918010234802?text=Hi%20%F0%9F%91%8B%0A%0AI%E2%80%99m%20interested%20in%20*Casa%20Frangipani*%20%E2%80%93%20a%20private%206%20BHK%20luxury%20villa%20in%20Alibaug.%0A%0AI%20understand%20that%20*villa%20rentals%20start%20from%20%E2%82%B945%2C000%20for%20a%20weekend*.%0A%0APlease%20share%20availability%20and%20exact%20pricing%20for%20my%20dates.%0A%0A*My%20details%3A*%0A%E2%80%A2%20Preferred%20check-in%20date%3A%0A%E2%80%A2%20Number%20of%20guests%3A%0A%E2%80%A2%20Number%20of%20nights%3A%0A%E2%80%A2%20Occasion%20(if%20any)%3A%0A%E2%80%A2%20Contact%20number%3A%0A%0ALooking%20forward%20to%20your%20response.%20Thanks!"
+                   target="_blank"
+                   class="hero-mobile-wa">
+                    <i data-lucide="message-circle" class="size-5"></i>
+                </a>
+            </div>
+        </div>
+
     </div>
-    <!-- Hero Slider Controls -->
-<div class="absolute bottom-[0.4rem] md:bottom-10 left-10 md:left-20
-            z-20 flex items-center gap-2">
+    <!-- Hero Slider Controls (desktop only; mobile controls are inline above) -->
+<div class="absolute hidden md:flex bottom-10 left-20
+            z-20 items-center gap-2">
 
     <button id="hero-prev"
             aria-label="Previous slide"
-            class="w-10 h-10 md:w-11 md:h-11
+            class="w-9 h-9 md:w-11 md:h-11
                    rounded-full
                    bg-white/10 backdrop-blur-md
                    border border-white/20
-                   text-white
+                   text-white text-sm
                    flex items-center justify-center
                    hover:bg-white/20 transition">
         ‹
@@ -220,11 +254,11 @@
 
     <button id="hero-next"
             aria-label="Next slide"
-            class="w-10 h-10 md:w-11 md:h-11
+            class="w-9 h-9 md:w-11 md:h-11
                    rounded-full
                    bg-white/10 backdrop-blur-md
                    border border-white/20
-                   text-white
+                   text-white text-sm
                    flex items-center justify-center
                    hover:bg-white/20 transition">
         ›
@@ -293,13 +327,23 @@
     showSlide(heroIndex);
     startAutoSlide();
 
-    // Controls
+    // Controls (desktop)
     nextBtn?.addEventListener('click', () => {
         nextSlide();
         resetAutoSlide();
     });
 
     prevBtn?.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    // Controls (mobile inline buttons)
+    document.querySelector('.hero-mobile-next')?.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+    document.querySelector('.hero-mobile-prev')?.addEventListener('click', () => {
         prevSlide();
         resetAutoSlide();
     });
