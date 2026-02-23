@@ -75,17 +75,17 @@
 
         <!-- Slides -->
          <div class="hero-slide active"
-             style="background-image:url('https://hestiavillas.in/wp-content/uploads/2026/02/banner.webp')"
-             data-title="An Ultra-Luxury 6 BHK Villa"
-             data-subtitle="Calm Surroundings · Fully Serviced"
-             data-desc="A fully serviced villa experience surrounded by calm, greenery, and effortless comfort.">
-        </div>
-
-        <div class="hero-slide"
              style="background-image:url('https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg')"
              data-title="Private Luxury Pool Villa"
              data-subtitle="Complete Privacy"
              data-desc="A secluded private pool villa designed for peaceful escapes and relaxed weekend getaways near Mumbai, ideal for groups of 14–22 guests.">
+        </div>
+
+        <div class="hero-slide"
+             style="background-image:url('https://hestiavillas.in/wp-content/uploads/2026/02/banner.webp')"
+             data-title="An Ultra-Luxury 6 BHK Villa"
+             data-subtitle="Calm Surroundings · Fully Serviced"
+             data-desc="A fully serviced villa experience surrounded by calm, greenery, and effortless comfort.">
         </div>
 
         <div class="hero-slide"
@@ -126,19 +126,19 @@
 
                <span id="hero-title"
       class="block
-      text-[clamp(1.8rem,8vw,3.5rem)]
+      text-[clamp(1.3rem,6vw,1.6rem)]
       md:text-[clamp(2.8rem,5vw,4.5rem)]
       lg:text-[clamp(3.5rem,4vw,5.5rem)]
       drop-shadow-2xl">
-                    An Ultra-Luxury 6 BHK Villa
+                    Private Luxury Pool Villa
                 </span>
 
                 <span id="hero-subtitle"
                       class="block mt-2 md:mt-4
-                      text-[clamp(1.4rem,6vw,2.2rem)]
+                      text-[clamp(0.8rem,4vw,1.0rem)]
                       md:text-[clamp(1.6rem,3vw,2.5rem)]
                       font-serif italic font-light text-white/70 transition-opacity duration-700">
-                    Private Pool · Complete Privacy
+                    Complete Privacy
                 </span>
 
             </h1>

@@ -45,17 +45,17 @@ HERO — EDITORIAL SPLIT
     <div class="absolute inset-0 z-0">
 
         <div class="hero-slide-v2 active"
-             style="background-image:url('http://hestiavillas.in/wp-content/uploads/2026/01/Casa-Frangipani-Alibaug-1.webp')"
-             data-title="An Ultra-Luxury 6 BHK Villa"
-             data-subtitle="Calm Surroundings · Fully Serviced"
-             data-desc="A fully serviced villa experience surrounded by calm, greenery, and effortless comfort.">
-        </div>
-
-        <div class="hero-slide-v2"
              style="background-image:url('https://img.vistarooms.com/gallery/casa-frangipani-8b5e9e.jpg')"
              data-title="Private Luxury Pool Villa"
              data-subtitle="Complete Privacy"
              data-desc="A secluded private pool villa designed for peaceful escapes and relaxed weekend getaways near Mumbai.">
+        </div>
+
+        <div class="hero-slide-v2"
+             style="background-image:url('http://hestiavillas.in/wp-content/uploads/2026/01/Casa-Frangipani-Alibaug-1.webp')"
+             data-title="An Ultra-Luxury 6 BHK Villa"
+             data-subtitle="Calm Surroundings · Fully Serviced"
+             data-desc="A fully serviced villa experience surrounded by calm, greenery, and effortless comfort.">
         </div>
 
         <div class="hero-slide-v2"
@@ -88,17 +88,17 @@ HERO — EDITORIAL SPLIT
                     class="font-heading font-bold text-brown-dark
                            text-[clamp(1.6rem,4vw,2.6rem)]
                            leading-tight mt-3">
-                    An Ultra-Luxury 6 BHK Villa
+                    Private Luxury Pool Villa
                 </h1>
 
                 <p id="hero-subtitle"
                    class="mt-2 font-serif italic text-brown-dark/70">
-                    Calm Surroundings · Fully Serviced
+                    Complete Privacy
                 </p>
 
                 <p id="hero-desc"
                    class="mt-4 text-sm text-brown-dark/60 leading-relaxed">
-                    A fully serviced villa experience surrounded by calm, greenery, and effortless comfort.
+                    A secluded private pool villa designed for peaceful escapes and relaxed weekend getaways near Mumbai.
                 </p>
 
                 <div class="mt-6 flex items-center gap-4">

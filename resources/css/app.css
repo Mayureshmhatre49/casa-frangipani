@@ -385,13 +385,13 @@
 
   /* Main hero title */
   #hero-title {
-    font-size: clamp(2.2rem, 9vw, 2.8rem);
+    font-size: clamp(1.3rem, 6vw, 1.6rem);
     line-height: 1.1;
   }
 
   /* Subtitle */
   #hero-subtitle {
-    font-size: clamp(1.4rem, 5.5vw, 1.8rem);
+    font-size: clamp(0.8rem, 4vw, 1.0rem);
   }
 
   /* Description text */
