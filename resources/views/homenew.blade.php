@@ -1973,10 +1973,24 @@ document.addEventListener('livewire:update', initLucide);
                         // Handle range extension after an auto-selection
                         if (selectedDates.length === 1 && start && el._autoStart) {
                             if (start.getTime() > el._autoStart.getTime()) {
-                                // User clicked a later date, extend the auto-selected range!
+                                // User clicked a later date, try to extend the auto-selected range!
                                 const originalStart = el._autoStart;
                                 el._autoStart = null; // Clear the state
                                 
+                                const dayOfWeek = originalStart.getDay();
+                                const diffTime = start.getTime() - originalStart.getTime();
+                                const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+                                
+                                // Enforce minimum 2 calendar nights for Friday/Saturday
+                                if ((dayOfWeek === 5 || dayOfWeek === 6) && diffDays < 2) {
+                                     const minCheckout = new Date(originalStart);
+                                     minCheckout.setDate(minCheckout.getDate() + 2);
+                                     setTimeout(() => {
+                                         instance.setDate([originalStart, minCheckout], true);
+                                     }, 10);
+                                     return;
+                                }
+
                                 setTimeout(() => {
                                     instance.setDate([originalStart, start], true);
                                 }, 10);
@@ -1987,13 +2001,30 @@ document.addEventListener('livewire:update', initLucide);
                         // Clear state if they start a totally new range
                         el._autoStart = null;
 
+                        // Enforce minimum if they manage to select a full range naturally (e.g. typing)
+                        if (selectedDates.length === 2 && start && end) {
+                            const dayOfWeek = start.getDay();
+                            if (dayOfWeek === 5 || dayOfWeek === 6) {
+                                const diffTime = end.getTime() - start.getTime();
+                                const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+                                if (diffDays < 2) {
+                                    const minCheckout = new Date(start);
+                                    minCheckout.setDate(minCheckout.getDate() + 2);
+                                    setTimeout(() => {
+                                        instance.setDate([start, minCheckout], true);
+                                    }, 10);
+                                    return;
+                                }
+                            }
+                        }
+
                         // Auto-select minimum required checkout for Friday/Saturday
                         if (selectedDates.length === 1 && start) {
                             const dayOfWeek = start.getDay();
                             // Day 5 is Friday, Day 6 is Saturday
                             if (dayOfWeek === 5 || dayOfWeek === 6) {
                                 const autoCheckoutDate = new Date(start);
-                                autoCheckoutDate.setDate(autoCheckoutDate.getDate() + 1);
+                                autoCheckoutDate.setDate(autoCheckoutDate.getDate() + 2);
                                 
                                 el._autoStart = start; // Remember this start date for possible extensions
                                 
@@ -2020,8 +2051,13 @@ document.addEventListener('livewire:update', initLucide);
                         
                         // If they only selected the start date and closed the calendar
                         if (selectedDates.length === 1 && start) {
+                            const dayOfWeek = start.getDay();
                             const nextDay = new Date(start);
-                            nextDay.setDate(nextDay.getDate() + 1);
+                            if (dayOfWeek === 5 || dayOfWeek === 6) {
+                                nextDay.setDate(nextDay.getDate() + 2);
+                            } else {
+                                nextDay.setDate(nextDay.getDate() + 1);
+                            }
                             end = nextDay;
                             endStr = instance.formatDate(end, 'Y-m-d');
                             instance.setDate([start, end], false);
