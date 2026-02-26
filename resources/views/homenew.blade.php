@@ -1969,16 +1969,64 @@ document.addEventListener('livewire:update', initLucide);
                     onChange: function(selectedDates, dateStr, instance){
                         const start = selectedDates[0] ?? null;
                         const end = selectedDates[1] ?? null;
+
+                        // Handle range extension after an auto-selection
+                        if (selectedDates.length === 1 && start && el._autoStart) {
+                            if (start.getTime() > el._autoStart.getTime()) {
+                                // User clicked a later date, extend the auto-selected range!
+                                const originalStart = el._autoStart;
+                                el._autoStart = null; // Clear the state
+                                
+                                setTimeout(() => {
+                                    instance.setDate([originalStart, start], true);
+                                }, 10);
+                                return; // Will re-enter onChange
+                            }
+                        }
+                        
+                        // Clear state if they start a totally new range
+                        el._autoStart = null;
+
+                        // Auto-select minimum required checkout for Friday/Saturday
+                        if (selectedDates.length === 1 && start) {
+                            const dayOfWeek = start.getDay();
+                            // Day 5 is Friday, Day 6 is Saturday
+                            if (dayOfWeek === 5 || dayOfWeek === 6) {
+                                const autoCheckoutDate = new Date(start);
+                                autoCheckoutDate.setDate(autoCheckoutDate.getDate() + 1);
+                                
+                                el._autoStart = start; // Remember this start date for possible extensions
+                                
+                                setTimeout(() => {
+                                    // Use false so it doesn't recursively re-trigger onChange and keeps calendar active
+                                    instance.setDate([start, autoCheckoutDate], false);
+                                    const startStr = instance.formatDate(start, 'Y-m-d');
+                                    const endStr = instance.formatDate(autoCheckoutDate, 'Y-m-d');
+                                    setHiddenDates(startStr, endStr);
+                                }, 10);
+                                return;
+                            }
+                        }
+
                         const startStr = start ? instance.formatDate(start, 'Y-m-d') : '';
                         const endStr = end ? instance.formatDate(end, 'Y-m-d') : '';
                         setHiddenDates(startStr, endStr);
                     },
                     onClose: function(selectedDates, dateStr, instance){
-                        // ensure hidden inputs set on close
                         const start = selectedDates[0] ?? null;
-                        const end = selectedDates[1] ?? null;
-                        const startStr = start ? instance.formatDate(start, 'Y-m-d') : '';
-                        const endStr = end ? instance.formatDate(end, 'Y-m-d') : '';
+                        let end = selectedDates[1] ?? null;
+                        let startStr = start ? instance.formatDate(start, 'Y-m-d') : '';
+                        let endStr = end ? instance.formatDate(end, 'Y-m-d') : '';
+                        
+                        // If they only selected the start date and closed the calendar
+                        if (selectedDates.length === 1 && start) {
+                            const nextDay = new Date(start);
+                            nextDay.setDate(nextDay.getDate() + 1);
+                            end = nextDay;
+                            endStr = instance.formatDate(end, 'Y-m-d');
+                            instance.setDate([start, end], false);
+                        }
+                        
                         setHiddenDates(startStr, endStr);
                     },
                     onValueUpdate: function(selectedDates, dateStr, instance){
