@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\BuyEnquiryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,13 @@ Route::get('/chatbot', function () {
 
 
 Route::post('/booking/enquire', [BookingController::class, 'enquire'])->name('booking.enquire');
+
+// Buy page
+Route::get('/casa-frangipani-luxury-villa-buy-alibaug', function () {
+    return view('buy');
+})->name('buy.page');
+
+Route::post('/buy-enquiry/store', [BuyEnquiryController::class, 'store'])->name('buy.enquiry.store');
 
 // Admin: simple calendar view
 Route::get('/admin/calendar', function () {
