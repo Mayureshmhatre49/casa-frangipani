@@ -897,6 +897,7 @@ position: fixed !important;
                     flatpickr(el, {
                         mode: 'range',
                         dateFormat: 'Y-m-d',
+                        disable: @json(\App\Models\Booking::where('status', 'confirmed')->get()->map(function($b) { return ['from' => $b->check_in->format('Y-m-d'), 'to' => $b->check_out->gt($b->check_in) ? $b->check_out->copy()->subDay()->format('Y-m-d') : $b->check_out->format('Y-m-d')]; })->values()->toArray()),
                         onChange: function(selectedDates, dateStr, instance){
                             if (!selectedDates.length) return;
                             const [start, end] = selectedDates;

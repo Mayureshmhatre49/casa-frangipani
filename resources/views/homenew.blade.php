@@ -1966,6 +1966,7 @@ document.addEventListener('livewire:update', initLucide);
                     mode: 'range',
                     dateFormat: 'Y-m-d',
                     allowInput: true,
+                    disable: @json(\App\Models\Booking::where('status', 'confirmed')->get()->map(function($b) { return ['from' => $b->check_in->format('Y-m-d'), 'to' => $b->check_out->gt($b->check_in) ? $b->check_out->copy()->subDay()->format('Y-m-d') : $b->check_out->format('Y-m-d')]; })->values()->toArray()),
                     onChange: function(selectedDates, dateStr, instance){
                         const start = selectedDates[0] ?? null;
                         const end = selectedDates[1] ?? null;
